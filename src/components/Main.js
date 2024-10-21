@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import ImageMoi from '../assets/images/1024px-0698Amaura.png';
 import CVfr from '../assets/files/CV_French.pdf';

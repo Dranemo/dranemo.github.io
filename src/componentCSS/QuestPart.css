@@ -1,0 +1,26 @@
+.titleQuests {
+    text-decoration: underline;
+}
+
+.PartQuest {
+
+    width: 90%;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    margin-bottom: 1%;
+
+
+    text-align: left;
+    line-height: 1.5;
+
+    background-color: #eeccc0;
+    border-radius: 1vw;
+}
+
+.titleBarQuest {
+    border: none;
+    height: 2px;
+    width: 90%;
+    background-color: #001c73;
+}
