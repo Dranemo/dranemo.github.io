@@ -90,10 +90,10 @@ function QuetsPart( {title, status, endDate, location, dateDesc, timeDesc, rewar
                 ): null}
                 
                 <p><span id='colorBlue' className='titleQuests'>REWARDS{status !== StatusEnum.COMPLETED ? ' (EXPECTED)' : ''}:</span></p>
-                <ul>
+                <ul id='removeStyleList'>
                     {rewards.map((reward, index) => (
                         <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
-                            {reward.name} ({reward.rarity})
+                            - {reward.name} ({reward.rarity})
                         </li>
                     ))}
                 </ul>

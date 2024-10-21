@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
 import ImageMoi from '../assets/images/1024px-0698Amaura.png';
 import CVfr from '../assets/files/CV_French.pdf';
@@ -12,6 +13,51 @@ import '../componentCSS/Card.css';
 
 
 function Main() {
+
+
+
+    // Détecter si la page est affichée sur un téléphone
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+  
+      // Vérifier la taille de la fenêtre au chargement
+      handleResize();
+  
+      // Ajouter un écouteur d'événement pour les changements de taille de la fenêtre
+      window.addEventListener('resize', handleResize);
+  
+      // Nettoyer l'écouteur d'événement lors du démontage du composant
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+  
+    // Afficher un message si la page est affichée sur un téléphone
+    if (isMobile) {
+      return (
+        <div className='Card' id='CardMobile'>
+          <h3>Sorry, the mobile version is currently under development.</h3>
+          <p>Please check back later, or use the desktop version!</p>
+          <img src={ImageMoi} alt="Moi"/>
+        </div>
+      );
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     return (
       <div className='Card' id='MainCard'>
         <img src={ImageMoi} alt="Moi" className='imageMoi'/>

@@ -67,7 +67,7 @@ const PGWVolunteeringVolume3 = {
   timeDesc: "5 days",
   rewards: [
     {name: "[Skill] Customer Communication", rarity: RarityEnum.COMMON},
-    {name: "[Title] PGW Veteran", rarity: RarityEnum.UNCOMMON}
+    {name: "[Title] PGW Veteran", rarity: RarityEnum.RARE}
   ],
   description: "Having completed your third year volunteering at Paris Games Week, you've now earned the title of PGW Veteran. Assisting the Jeux Made In France stand, you’ve refined your customer communication and event management skills, supporting the gaming community through your service."
 };
@@ -152,7 +152,7 @@ function Quests() {
   return (
     <div className='Card' id='QuestCard'>
         <div>
-            <h2 id='colorBlue'>Yanaël CAILLOT</h2>
+            <h2 id='colorBlue'>Quest Log</h2>
             <hr className='titleBar'/>
         </div>
         <p></p>

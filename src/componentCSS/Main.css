@@ -15,6 +15,7 @@
 
 .MainTitle {
     text-align: center;
+    
     width: 100%;
 
     align-self: flex-start; /* Aligns the title to the top */
@@ -38,7 +39,10 @@
 
 
 .MainSections {
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
     margin-left: 2.5%; /* Ensure it is aligned to the left */
     margin-right: 2.5%; /* Ensure it is aligned to the right */
     width: 100%;
@@ -69,5 +73,5 @@
     font-size: 15px;
     line-height: 1.5;
 
-    align-items: center;
+
 }

@@ -3,7 +3,7 @@ import React from 'react';
 
 function Skills() {
   return (
-    <div className='Card'>
+    <div className='Card' id='CardSkill'>
       <h2>My Skills</h2>
       <ul>
         <li>Algorithm Development (Epic)</li>
