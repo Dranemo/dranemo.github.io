@@ -61,7 +61,7 @@ const DevelopBasicSkills = {
 // ------------------------------------------------ Side Quests ------------------------------------------------
 const PGWVolunteeringVolume3 = {
   title: "Student Volunteering PGW - Volume 3",
-  status: StatusEnum.NOT_STARTED,
+  status: StatusEnum.COMPLETED,
   location: "Paris Games Week - Paris",
   dateDesc: "October 2024",
   timeDesc: "5 days",
@@ -156,91 +156,92 @@ function Quests() {
             <hr className='titleBar'/>
         </div>
         <p></p>
-        <h3 id='colorBlue' className='questSecondTitle'>Main Quests</h3>
-        <QuetsPart
-              title={GamingCampusStudent.title}
-              status={GamingCampusStudent.status}
-              location={GamingCampusStudent.location}
-              dateDesc={GamingCampusStudent.dateDesc}
-              timeDesc={GamingCampusStudent.timeDesc}
-              rewards={GamingCampusStudent.rewards}
-              description={GamingCampusStudent.description}
-        />
-
-        <QuetsPart 
-              title={DevelopBasicSkills.title}
-              status={DevelopBasicSkills.status}
-              location={DevelopBasicSkills.location}
-              dateDesc={DevelopBasicSkills.dateDesc}
-              timeDesc={DevelopBasicSkills.timeDesc}
-              rewards={DevelopBasicSkills.rewards}
-              description={DevelopBasicSkills.description}
-        />
-
-        
-        <p></p>
-        <h3 id='colorBlue' className='questSecondTitle'>Side Quests</h3>
-        <QuetsPart
-              title={PGWVolunteeringVolume3.title}
-              status={PGWVolunteeringVolume3.status}
-              location={PGWVolunteeringVolume3.location}
-              dateDesc={PGWVolunteeringVolume3.dateDesc}
-              timeDesc={PGWVolunteeringVolume3.timeDesc}
-              rewards={PGWVolunteeringVolume3.rewards}
-              description={PGWVolunteeringVolume3.description}
-            />
-
+        <div className='QuestBigPart'>
+          <h3 id='colorBlue' className='questSecondTitle'>Main Quests</h3>
           <QuetsPart
-              title={StudentCouncilCommunicationDept.title}
-              status={StudentCouncilCommunicationDept.status}
-              location={StudentCouncilCommunicationDept.location}
-              dateDesc={StudentCouncilCommunicationDept.dateDesc}
-              timeDesc={StudentCouncilCommunicationDept.timeDesc}
-              rewards={StudentCouncilCommunicationDept.rewards}
-              description={StudentCouncilCommunicationDept.description}
-            />
+                title={GamingCampusStudent.title}
+                status={GamingCampusStudent.status}
+                location={GamingCampusStudent.location}
+                dateDesc={GamingCampusStudent.dateDesc}
+                timeDesc={GamingCampusStudent.timeDesc}
+                rewards={GamingCampusStudent.rewards}
+                description={GamingCampusStudent.description}
+          />
 
-          <QuetsPart
-              title={PGWVolunteeringVolume2.title}
-              status={PGWVolunteeringVolume2.status}
-              location={PGWVolunteeringVolume2.location}
-              dateDesc={PGWVolunteeringVolume2.dateDesc}
-              timeDesc={PGWVolunteeringVolume2.timeDesc}
-              rewards={PGWVolunteeringVolume2.rewards}
-              description={PGWVolunteeringVolume2.description}
-            />
-
-          <QuetsPart
-              title={StudentCouncilITDept.title}
-              status={StudentCouncilITDept.status}
-              location={StudentCouncilITDept.location}
-              dateDesc={StudentCouncilITDept.dateDesc}
-              timeDesc={StudentCouncilITDept.timeDesc}
-              rewards={StudentCouncilITDept.rewards}
-              description={StudentCouncilITDept.description}
-            />
-          
-          <QuetsPart
-              title={PGWVolunteeringVolume1.title}
-              status={PGWVolunteeringVolume1.status}
-              location={PGWVolunteeringVolume1.location}
-              dateDesc={PGWVolunteeringVolume1.dateDesc}
-              timeDesc={PGWVolunteeringVolume1.timeDesc}
-              rewards={PGWVolunteeringVolume1.rewards}
-              description={PGWVolunteeringVolume1.description}
-            />
-          
-          <QuetsPart
-              title={RecombinantProtein.title}
-              status={RecombinantProtein.status}
-              location={RecombinantProtein.location}
-              dateDesc={RecombinantProtein.dateDesc}
-              timeDesc={RecombinantProtein.timeDesc}
-              rewards={RecombinantProtein.rewards}
-              description={RecombinantProtein.description}
-            />
+          <QuetsPart 
+                title={DevelopBasicSkills.title}
+                status={DevelopBasicSkills.status}
+                location={DevelopBasicSkills.location}
+                dateDesc={DevelopBasicSkills.dateDesc}
+                timeDesc={DevelopBasicSkills.timeDesc}
+                rewards={DevelopBasicSkills.rewards}
+                description={DevelopBasicSkills.description}
+          />
 
           
+          <p></p>
+          <h3 id='colorBlue' className='questSecondTitle'>Side Quests</h3>
+          <QuetsPart
+                title={PGWVolunteeringVolume3.title}
+                status={PGWVolunteeringVolume3.status}
+                location={PGWVolunteeringVolume3.location}
+                dateDesc={PGWVolunteeringVolume3.dateDesc}
+                timeDesc={PGWVolunteeringVolume3.timeDesc}
+                rewards={PGWVolunteeringVolume3.rewards}
+                description={PGWVolunteeringVolume3.description}
+              />
+
+            <QuetsPart
+                title={StudentCouncilCommunicationDept.title}
+                status={StudentCouncilCommunicationDept.status}
+                location={StudentCouncilCommunicationDept.location}
+                dateDesc={StudentCouncilCommunicationDept.dateDesc}
+                timeDesc={StudentCouncilCommunicationDept.timeDesc}
+                rewards={StudentCouncilCommunicationDept.rewards}
+                description={StudentCouncilCommunicationDept.description}
+              />
+
+            <QuetsPart
+                title={PGWVolunteeringVolume2.title}
+                status={PGWVolunteeringVolume2.status}
+                location={PGWVolunteeringVolume2.location}
+                dateDesc={PGWVolunteeringVolume2.dateDesc}
+                timeDesc={PGWVolunteeringVolume2.timeDesc}
+                rewards={PGWVolunteeringVolume2.rewards}
+                description={PGWVolunteeringVolume2.description}
+              />
+
+            <QuetsPart
+                title={StudentCouncilITDept.title}
+                status={StudentCouncilITDept.status}
+                location={StudentCouncilITDept.location}
+                dateDesc={StudentCouncilITDept.dateDesc}
+                timeDesc={StudentCouncilITDept.timeDesc}
+                rewards={StudentCouncilITDept.rewards}
+                description={StudentCouncilITDept.description}
+              />
+            
+            <QuetsPart
+                title={PGWVolunteeringVolume1.title}
+                status={PGWVolunteeringVolume1.status}
+                location={PGWVolunteeringVolume1.location}
+                dateDesc={PGWVolunteeringVolume1.dateDesc}
+                timeDesc={PGWVolunteeringVolume1.timeDesc}
+                rewards={PGWVolunteeringVolume1.rewards}
+                description={PGWVolunteeringVolume1.description}
+              />
+            
+            <QuetsPart
+                title={RecombinantProtein.title}
+                status={RecombinantProtein.status}
+                location={RecombinantProtein.location}
+                dateDesc={RecombinantProtein.dateDesc}
+                timeDesc={RecombinantProtein.timeDesc}
+                rewards={RecombinantProtein.rewards}
+                description={RecombinantProtein.description}
+              />
+
+        </div>
 
     </div>
   );

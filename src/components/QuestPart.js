@@ -24,7 +24,7 @@ const RarityEnum = {
   };
 
 
-function QuetsPart( {title, status, endDate, location, dateDesc, timeDesc, rewards, description} ) {
+function QuetsPart( {title, status, location, dateDesc, timeDesc, rewards, description} ) {
     const [questOpen, setQuestOpen] = useState(false);
     const changeQuestOpen = () => {
         setQuestOpen(!questOpen);
@@ -80,7 +80,7 @@ function QuetsPart( {title, status, endDate, location, dateDesc, timeDesc, rewar
                         <span id='colorBlue' className='titleQuests'>TIME UNTIL COMPLETION:</span> {timeDesc}
                     </p>
                 ) : status === StatusEnum.COMPLETED ? (
-                    <p><span id='colorBlue' className='titleQuests'>QUEST CCOMPLETED:</span> {dateDesc} <br/>
+                    <p><span id='colorBlue' className='titleQuests'>QUEST COMPLETED:</span> {dateDesc} <br/>
                         <span id='colorBlue' className='titleQuests'>TIME TAKEN:</span> {timeDesc}
                     </p>
                 ) : status === StatusEnum.NOT_STARTED ? (

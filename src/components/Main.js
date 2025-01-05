@@ -6,7 +6,7 @@ import CVfr from '../assets/files/CV_French.pdf';
 import CVen from '../assets/files/CV_English.pdf';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload} from '@fortawesome/free-solid-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 import '../componentCSS/Main.css';
 import '../componentCSS/Card.css';

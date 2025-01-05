@@ -1,16 +1,14 @@
 // src/components/Skills.js
 import React from 'react';
 
+import '../componentCSS/Skills.css';
+
 function Skills() {
   return (
     <div className='Card' id='CardSkill'>
-      <h2>My Skills</h2>
-      <ul>
-        <li>Algorithm Development (Epic)</li>
-        <li>Game Engine (Unity) (Rare)</li>
-        <li>Teamwork (Common)</li>
-        {/* Ajoute ici tes autres compétences */}
-      </ul>
+      <h2>Skills</h2>
+      <hr className='titleBar'/>
+
     </div>
   );
 }

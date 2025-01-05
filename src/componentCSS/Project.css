@@ -1,0 +1,93 @@
+.ProjectTitlePart {
+    width: 20vw;
+    height: auto;
+
+    
+
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+}
+
+.ProjectPart {
+    display: flex;align-items: center;
+    flex-direction: column;
+
+}
+
+
+.MedalImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Medal {
+    position: absolute;
+
+    width: 20vw;
+    height: auto;
+
+    z-index: 2;
+}
+
+.projectImg {
+    position: relative;
+
+    object-fit: cover;
+    width: 9vw;
+    height: 9vw;
+
+    z-index: 1;
+}
+
+.ProjectTitle {
+    margin-top: 5vw;
+}
+
+.ProjectDetails {
+    margin-top: 2vw;
+    margin-bottom: 5vw;
+
+    background-color: #eeccc0;
+    border-radius: 5vh;
+
+    width: 70%;
+
+    padding-right: 10vw;
+    padding-left: 10vw;
+
+    padding-top: 2wh;
+    padding-bottom: 2wh;
+}
+
+.projectImgDesc {
+    margin-top: 2vh;
+    border-radius: 1vh;
+
+    height: 30vh;
+    width: auto;
+}
+
+.DescProject {
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+}
+
+
+
+
+.titleBarProj {
+    
+    border: none;
+    height: 2px;
+    width: 40%;
+    background-color: #001c73;
+}
+
+.titleBarProj2 {
+    
+    border: none;
+    height: 2px;
+    width: 90%;
+    background-color: #001c73;
+}
