@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import '../componentCSS/Achievements.css';
 import ProjectMedal from './ProjectMedal';
@@ -46,7 +46,9 @@ const PortfolioProject = {
         { name: "[Skill] UI/UX Design", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Aspiring Web Developer", rarity: RarityEnum.UNCOMMON }
       ]
-    }
+    },
+
+    links: []
   };
   
   const PathfindingSimulationProject = {
@@ -67,7 +69,12 @@ const PortfolioProject = {
         { name: "[Skill] Algorithm Visualization", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Pathfinding Explorer", rarity: RarityEnum.RARE }
       ]
-    }
+    },
+
+    links: [
+        { name: "GitHub Repository", url: ""},
+        { name: "Zip File", url: ""}
+    ]
   };
   
   const BranCastleProject = {
@@ -88,7 +95,11 @@ const PortfolioProject = {
         { name: "[Skill] Strategic Planning", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Autonomous Game Developer", rarity: RarityEnum.EPIC }
       ]
-    }
+    },
+
+    links: [
+        { name: "Itch.io", url: ""},
+    ]
   };
   
   const BuildToScaleProject = {
@@ -109,7 +120,11 @@ const PortfolioProject = {
         { name: "[Title] Solo Game Jam Developer", rarity: RarityEnum.EPIC },
         { name: "[Skill] Rapid Problem Solving", rarity: RarityEnum.UNCOMMON }
       ]
-    }
+    },
+
+    links: [
+        { name: "Itch.io", url: ""},
+    ]
   };
   
   const FoxLeagueProject = {
@@ -129,7 +144,11 @@ const PortfolioProject = {
         { name: "[Skill] Game Design", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Aspiring Game Developer", rarity: RarityEnum.UNCOMMON }
       ]
-    }
+    },
+
+    links: [
+        { name: "Zip File", url: ""},
+    ]
   };
   
   const PokemonRedBlueCSharpProject = {
@@ -149,7 +168,12 @@ const PortfolioProject = {
         { name: "[Skill] Turn-based Combat System", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Novice C# Developer", rarity: RarityEnum.RARE }
       ]
-    }
+    },
+
+    links: [
+        { name: "GitHub Repository", url: ""},
+        { name: "Zip File", url: ""}
+    ]
   };
   
   const ZoryaSistersProject = {
@@ -170,7 +194,12 @@ const PortfolioProject = {
         { name: "[Skill] Team Collaboration", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Platformer Creator", rarity: RarityEnum.RARE }
       ]
-    }
+    },
+
+    links: [
+        { name: "GitHub Repository", url: ""},
+        { name: "Zip File", url: ""}
+    ]
   };
   
   const GameOfLifeCProject = {
@@ -190,7 +219,12 @@ const PortfolioProject = {
         { name: "[Skill] Memory Management", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Novice C Programmer", rarity: RarityEnum.RARE }
       ]
-    }
+    },
+
+    links: [
+        { name: "GitHub Repository", url: ""},
+        { name: "Zip File", url: ""}
+    ]
   };
   
 
@@ -198,14 +232,94 @@ const PortfolioProject = {
 
 
 
-
 function Achievements() {
+
+    const [displayedProject, setDisplayedProject] = useState(null);
+
+    useEffect(() => {
+        if (displayedProject) {
+            console.log('Achievements useEffect', displayedProject);
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }, [displayedProject]);
+
+    const handleProjectClick = (project) => {
+        console.log('ProjectMedal clicked', project);
+        setDisplayedProject(project);
+    };
+
+
+
+    const getRarityColor = (rarity) => {
+        switch (rarity) {
+            case RarityEnum.COMMON:
+                return '#737373';
+            case RarityEnum.UNCOMMON:
+                return '#5ea041';
+            case RarityEnum.RARE:
+                return '#004aad';
+            case RarityEnum.EPIC:
+                return '#8c52ff';
+            case RarityEnum.LEGENDARY:
+                return '#b8860b';
+            default:
+                return 'black';
+        }
+    };
+
+
+
+
     return (
       <div className='Card' id='CardAch'>
           <div>
               <h2 id='colorBlue'>Achievements</h2>
               <hr className='titleBar'/>
           </div>
+
+          {displayedProject && (
+            <>
+                <div className='overlay' onClick={() => handleProjectClick(null)}></div>
+                <div className='ProjectDetails'>
+                <img src={displayedProject.badgeImg.image} alt={`image project`} className='projectImgDesc' />
+                
+                <h2 id='colorBlue'>{displayedProject.badgeTitle}</h2>
+                <hr className='titleBarProj'/>
+                <p>{displayedProject.dateDesc}</p>
+                <p>{displayedProject.timeDesc}</p>
+                <hr className='titleBarProj2'/>
+
+                <div>
+                    <h3>{displayedProject.details.title}</h3>
+                    <hr className='titleBarProj'/>
+
+                    
+                    <p className='DescProject'>{displayedProject.details.description}</p>
+                    <ul id='removeStyleList'>
+                        {displayedProject.details.rewards.map((reward, index) => (
+                            <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
+                                - {reward.name} ({reward.rarity})
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                {displayedProject.links && displayedProject.links.length > 0 && (
+                    <div>
+                        {displayedProject.links.map((link, index) => (
+                            <div key={index} className='link'>
+                                <a href={link.url} target='_blank' rel='noreferrer'>{link.name}</a>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
+            </>
+            )}
+
+
           <div className='divProjects'>
         <ProjectMedal 
             badgeTitle={PortfolioProject.badgeTitle}
@@ -213,6 +327,8 @@ function Achievements() {
             techno={PortfolioProject.techno}
             dateDesc={PortfolioProject.dateDesc}
             timeDesc={PortfolioProject.timeDesc}
+
+            onClick={() => handleProjectClick(PortfolioProject)}
           />
 
           <ProjectMedal 
@@ -221,6 +337,8 @@ function Achievements() {
             techno={PathfindingSimulationProject.techno}
             dateDesc={PathfindingSimulationProject.dateDesc}
             timeDesc={PathfindingSimulationProject.timeDesc}
+
+            onClick={() => handleProjectClick(PathfindingSimulationProject)}
           />
 
           <ProjectMedal 
@@ -229,6 +347,8 @@ function Achievements() {
             techno={BranCastleProject.techno}
             dateDesc={BranCastleProject.dateDesc}
             timeDesc={BranCastleProject.timeDesc}
+
+            onClick={() => handleProjectClick(BranCastleProject)}
           />
 
 
@@ -238,6 +358,8 @@ function Achievements() {
             techno={BuildToScaleProject.techno}
             dateDesc={BuildToScaleProject.dateDesc}
             timeDesc={BuildToScaleProject.timeDesc}
+
+            onClick={() => handleProjectClick(BuildToScaleProject)}
           />
 
           <ProjectMedal 
@@ -246,6 +368,8 @@ function Achievements() {
             techno={FoxLeagueProject.techno}
             dateDesc={FoxLeagueProject.dateDesc}
             timeDesc={FoxLeagueProject.timeDesc}
+
+            onClick={() => handleProjectClick(FoxLeagueProject)}
           />
           <ProjectMedal 
             badgeTitle={PokemonRedBlueCSharpProject.badgeTitle}
@@ -253,6 +377,8 @@ function Achievements() {
             techno={PokemonRedBlueCSharpProject.techno}
             dateDesc={PokemonRedBlueCSharpProject.dateDesc}
             timeDesc={PokemonRedBlueCSharpProject.timeDesc}
+
+            onClick={() => handleProjectClick(PokemonRedBlueCSharpProject)}
           />
           <ProjectMedal 
             badgeTitle={ZoryaSistersProject.badgeTitle}
@@ -260,6 +386,8 @@ function Achievements() {
             techno={ZoryaSistersProject.techno}
             dateDesc={ZoryaSistersProject.dateDesc}
             timeDesc={ZoryaSistersProject.timeDesc}
+
+            onClick={() => handleProjectClick(ZoryaSistersProject)}
           />
           <ProjectMedal 
             badgeTitle={GameOfLifeCProject.badgeTitle}
@@ -267,6 +395,8 @@ function Achievements() {
             techno={GameOfLifeCProject.techno}
             dateDesc={GameOfLifeCProject.dateDesc}
             timeDesc={GameOfLifeCProject.timeDesc}
+
+            onClick={() => handleProjectClick(GameOfLifeCProject)}
           />
         </div>
       </div>

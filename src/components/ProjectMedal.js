@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../componentCSS/ProjectMedal.css';
 
 import woodenMedal from '../assets/images/woodMedal.png';
@@ -16,20 +16,7 @@ const RarityEnum = {
     LEGENDARY: 'Legendary'
 };
 
-// Hook personnalisé pour gérer l'état projectOpen
-export const useProjectOpen = () => {
-    const [projectOpen, setProjectOpen] = useState(false);
-    const toggleProjectOpen = () => {
-        setProjectOpen(!projectOpen);
-    };
-    return [projectOpen, toggleProjectOpen];
-};
-
-
-
-function ProjectMedal({ badgeTitle, badgeImg, techno, dateDesc, timeDesc }) {
-    const [projectOpen, toggleProjectOpen] = useProjectOpen();
-
+function ProjectMedal({ badgeTitle, badgeImg, techno, dateDesc, timeDesc, onClick }) {
 
     const getMedalImage = (rarity) => {
         switch (rarity) {
@@ -48,28 +35,13 @@ function ProjectMedal({ badgeTitle, badgeImg, techno, dateDesc, timeDesc }) {
         }
     };
 
-    const getRarityColor = (rarity) => {
-        switch (rarity) {
-            case RarityEnum.COMMON:
-                return '#737373';
-            case RarityEnum.UNCOMMON:
-                return '#5ea041';
-            case RarityEnum.RARE:
-                return '#004aad';
-            case RarityEnum.EPIC:
-                return '#8c52ff';
-            case RarityEnum.LEGENDARY:
-                return '#b8860b';
-            default:
-                return 'black';
-        }
-    };
+    
 
     
 
     return (
-        <div className='ProjectPart'>
-                <div className='ProjectTitlePart' onClick={toggleProjectOpen}>
+        <div className='ProjectPart'onClick={onClick}>
+                <div className='ProjectTitlePart' >
                     <div className='MedalImage'>
                         <img src={getMedalImage(badgeImg.rarity)} alt={`${badgeImg.rarity} medal`} className='Medal' />
                         <img src={badgeImg.image} alt={`image project`} className='projectImg' />
