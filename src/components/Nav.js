@@ -19,7 +19,7 @@ function Nav({ navState, changeNavState, hoveredButton, handleMouseEnter, handle
     <div className='Nav'>
 
         <div className='Menu'>
-            {navState !== NavState.skills ? (
+            {/*{navState !== NavState.skills ? (
                 <button className='button-as-text'
                         onClick={() => changeNavState(NavState.skills)}
                         onMouseEnter={() => handleMouseEnter(NavState.skills)}
@@ -37,7 +37,7 @@ function Nav({ navState, changeNavState, hoveredButton, handleMouseEnter, handle
                     {hoveredButton === NavState.main ? '>' : '\u00A0'}
                     &nbsp;Main Menu&nbsp;&nbsp;
                 </button>
-            )}
+            )}*/}
 
             {navState !== NavState.quest ? (
                 <button className='button-as-text'

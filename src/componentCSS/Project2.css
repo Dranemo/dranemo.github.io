@@ -9,7 +9,8 @@
 }
 
 .ProjectPart {
-    display: flex;align-items: center;
+    display: flex;
+    align-items: center;
     flex-direction: column;
 
 }
@@ -45,13 +46,18 @@
 }
 
 .ProjectDetails {
+    position: absolute;
+    z-index: 1000;
+
     margin-top: 2vw;
     margin-bottom: 5vw;
 
     background-color: #eeccc0;
     border-radius: 5vh;
 
-    width: 70%;
+    width: 40%;
+    left: 50%;
+    transform: translateX(-50%);
 
     padding-right: 10vw;
     padding-left: 10vw;

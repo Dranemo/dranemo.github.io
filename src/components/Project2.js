@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../componentCSS/Project.css';
+import '../componentCSS/Project2.css';
 
 import woodenMedal from '../assets/images/woodMedal.png';
 import ironMedal from '../assets/images/ironMedal.png';

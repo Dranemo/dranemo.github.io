@@ -1,0 +1,46 @@
+.ProjectTitlePart {
+    width: 20vw;
+    height: auto;
+
+    
+
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+}
+
+.ProjectPart {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.MedalImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Medal {
+    position: absolute;
+
+    width: 20vw;
+    height: auto;
+
+    z-index: 2;
+}
+
+.projectImg {
+    position: relative;
+
+    object-fit: cover;
+    width: 9vw;
+    height: 9vw;
+
+    z-index: 1;
+}
+
+.ProjectTitle {
+    margin-top: 5vw;
+}
