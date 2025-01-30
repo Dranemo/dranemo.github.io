@@ -152,12 +152,12 @@ function Quests() {
   return (
     <div className='Card' id='QuestCard'>
         <div>
-            <h2 id='colorBlue'>Quest Log</h2>
+            <h2>Quest Log</h2>
             <hr className='titleBar'/>
         </div>
         <p></p>
         <div className='QuestBigPart'>
-          <h3 id='colorBlue' className='questSecondTitle'>Main Quests</h3>
+          <h3 className='questSecondTitle'>Main Quests</h3>
           <QuetsPart
                 title={GamingCampusStudent.title}
                 status={GamingCampusStudent.status}
@@ -180,7 +180,7 @@ function Quests() {
 
           
           <p></p>
-          <h3 id='colorBlue' className='questSecondTitle'>Side Quests</h3>
+          <h3 className='questSecondTitle'>Side Quests</h3>
           <QuetsPart
                 title={PGWVolunteeringVolume3.title}
                 status={PGWVolunteeringVolume3.status}

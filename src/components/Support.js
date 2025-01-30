@@ -11,7 +11,7 @@ function Support() {
   return (
     <div className='Card' id='CardSupport'>
         <div>
-            <h2 id='colorBlue'>Support</h2>
+            <h2>Support</h2>
             <hr className='titleBar'/>
         </div>
         <p></p>

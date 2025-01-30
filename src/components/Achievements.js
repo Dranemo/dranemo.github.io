@@ -275,7 +275,7 @@ function Achievements() {
     return (
       <div className='Card' id='CardAch'>
           <div>
-              <h2 id='colorBlue'>Achievements</h2>
+              <h2>Achievements</h2>
               <hr className='titleBar'/>
           </div>
 
@@ -292,7 +292,7 @@ function Achievements() {
                 <hr className='titleBarProj2'/>
 
                 <div>
-                    <h3>{displayedProject.details.title}</h3>
+                    <h3 id='colorBlue'>{displayedProject.details.title}</h3>
                     <hr className='titleBarProj'/>
 
                     

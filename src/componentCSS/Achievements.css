@@ -37,7 +37,8 @@
     margin-top: 2vw;
     margin-bottom: 5vw;
 
-    background-color: #eeccc0;
+    background-color: #aa8284;
+    color : black;
     border-radius: 5vh;
 
     max-height: 80vh;
@@ -78,7 +79,7 @@
     border: none;
     height: 2px;
     width: 40%;
-    background-color: #001c73;
+    background-color: #4f1c1b;
 }
 
 .titleBarProj2 {
@@ -86,5 +87,5 @@
     border: none;
     height: 2px;
     width: 90%;
-    background-color: #001c73;
+    background-color: #4f1c1b;
 }

@@ -25,7 +25,7 @@
     border: none;
     height: 2px;
     width: 40%;
-    background-color: #001c73;
+    background-color: #c89ac1;
 }
 
 .titleSec {
@@ -34,7 +34,11 @@
 }
 
 #colorBlue {
-    color: #001c73;
+    color: #4f1c1b;
+}
+
+#colorClair2 {
+    color:#b99fb5;
 }
 
 
