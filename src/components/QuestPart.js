@@ -34,9 +34,9 @@ function QuetsPart( {title, status, location, dateDesc, timeDesc, rewards, descr
     const getStatusColor = (status) => {
         switch (status) {
             case StatusEnum.IN_PROGRESS:
-                return '#ff3131';
+                return '#B22222  ';
             case StatusEnum.COMPLETED:
-                return '#5ea041';
+                return '#4A7F32 ';
             case StatusEnum.NOT_STARTED:
                 return '#ff914d';
             default:
@@ -50,7 +50,7 @@ function QuetsPart( {title, status, location, dateDesc, timeDesc, rewards, descr
             case RarityEnum.COMMON:
                 return '#737373';
             case RarityEnum.UNCOMMON:
-                return '#5ea041';
+                return '#4A7F32 ';
             case RarityEnum.RARE:
                 return '#004aad';
             case RarityEnum.EPIC:

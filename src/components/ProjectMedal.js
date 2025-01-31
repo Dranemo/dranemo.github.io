@@ -16,7 +16,7 @@ const RarityEnum = {
     LEGENDARY: 'Legendary'
 };
 
-function ProjectMedal({ badgeTitle, badgeImg, techno, dateDesc, timeDesc, onClick }) {
+function ProjectMedal({ ProjectStruct, showTechno = true, onClick }) {
 
     const getMedalImage = (rarity) => {
         switch (rarity) {
@@ -40,19 +40,20 @@ function ProjectMedal({ badgeTitle, badgeImg, techno, dateDesc, timeDesc, onClic
     
 
     return (
-        <div className='ProjectPart'onClick={onClick}>
-                <div className='ProjectTitlePart' >
-                    <div className='MedalImage'>
-                        <img src={getMedalImage(badgeImg.rarity)} alt={`${badgeImg.rarity} medal`} className='Medal' />
-                        <img src={badgeImg.image} alt={`image project`} className='projectImg' />
-                    </div>
-                    <div className='ProjectTitle'>
-                        <h3>{badgeTitle}</h3>
-                        <h4 style={{ textDecoration: 'underline' }}>{techno}</h4>
-                        <p>{dateDesc}</p>
-                        <p>{timeDesc}</p>
-                    </div>
+        <div className='ProjectPart' onClick={onClick}>
+            <div className='ProjectTitlePart'>
+                <div className='MedalImage'>
+                    <img src={getMedalImage(ProjectStruct.badgeImg.rarity)} alt={`${ProjectStruct.badgeImg.rarity} medal`} className='Medal' />
+                    <img src={ProjectStruct.badgeImg.image} alt={`image project`} className='projectImg' />
                 </div>
+                <div className='ProjectTitle'>
+                    <h3>{ProjectStruct.badgeTitle}</h3>
+                    {showTechno && <h4 style={{ textDecoration: 'underline' }}>{ProjectStruct.techno}</h4>}
+                    <h4 style={{ textDecoration: 'underline' }}>{ProjectStruct.type}</h4>
+                    <p>{ProjectStruct.dateDesc}</p>
+                    <p>{ProjectStruct.timeDesc}</p>
+                </div>
+            </div>
         </div>
     );
 }

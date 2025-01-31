@@ -3,16 +3,7 @@ import React, {useState, useEffect} from 'react';
 import '../componentCSS/Achievements.css';
 import ProjectMedal from './ProjectMedal';
 
-
-
-import Amagara from '../assets/images/1024px-0698Amaura.png'
-import Pathfinding from '../assets/images/pathfinding.png';
-import BranCastle from '../assets/images/BranCastle.jpg';
-import BuildToScale from '../assets/images/BuildToScale.png';
-import FoxLeague from '../assets/images/FoxLeague.png';
-import PokemonASCII from '../assets/images/PokemonASCII.png';
-import ZoryaSisters from '../assets/images/ZoryaSisters.png';
-import GameOfLife from '../assets/images/GameOfLife.png';
+import { BigImageGetter, SmallImageGetter } from './ImageGetter';
 
 
 const RarityEnum = {
@@ -31,7 +22,7 @@ const RarityEnum = {
 
 const PortfolioProject = {
     badgeTitle: "Portfolio",
-    badgeImg: { image: Amagara, rarity: RarityEnum.EPIC },
+    badgeImg: { image: BigImageGetter.projectPortfolio, rarity: RarityEnum.EPIC },
     techno: "React",
   
     dateDesc: "October 2024 - Present",
@@ -45,7 +36,8 @@ const PortfolioProject = {
         { name: "[Skill] React Development", rarity: RarityEnum.RARE },
         { name: "[Skill] UI/UX Design", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Aspiring Web Developer", rarity: RarityEnum.UNCOMMON }
-      ]
+      ],
+      carousel: SmallImageGetter.projectPortfolio
     },
 
     links: []
@@ -53,7 +45,7 @@ const PortfolioProject = {
   
   const PathfindingSimulationProject = {
     badgeTitle: "Pathfinding Simulation",
-    badgeImg: { image: Pathfinding, rarity: RarityEnum.RARE },
+    badgeImg: { image: BigImageGetter.projectPathfinding, rarity: RarityEnum.RARE },
     techno: "C++ with SFML",
   
     dateDesc: "September - October 2024",
@@ -68,7 +60,8 @@ const PortfolioProject = {
         { name: "[Skill] Pathfinding Algorithms (DFS, BFS, A*, Greedy, Dijkstra)", rarity: RarityEnum.EPIC },
         { name: "[Skill] Algorithm Visualization", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Pathfinding Explorer", rarity: RarityEnum.RARE }
-      ]
+      ],
+      carousel: SmallImageGetter.projectPathfinding
     },
 
     links: [
@@ -79,7 +72,7 @@ const PortfolioProject = {
   
   const BranCastleProject = {
     badgeTitle: "Bran Castle",
-    badgeImg: { image: BranCastle, rarity: RarityEnum.EPIC },
+    badgeImg: { image: BigImageGetter.projectBranCastle, rarity: RarityEnum.EPIC },
     techno: "Unity",
   
     dateDesc: "July - August 2024",
@@ -94,7 +87,8 @@ const PortfolioProject = {
         { name: "[Skill] Resource Management", rarity: RarityEnum.UNCOMMON },
         { name: "[Skill] Strategic Planning", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Autonomous Game Developer", rarity: RarityEnum.EPIC }
-      ]
+      ],
+      carousel: SmallImageGetter.projectBranCastle
     },
 
     links: [
@@ -104,7 +98,7 @@ const PortfolioProject = {
   
   const BuildToScaleProject = {
     badgeTitle: "Build to Scale",
-    badgeImg: { image: BuildToScale, rarity: RarityEnum.RARE },
+    badgeImg: { image: BigImageGetter.ProjectBuildToScale, rarity: RarityEnum.RARE },
     techno: "Unity",
   
     dateDesc: "August 2024",
@@ -119,7 +113,8 @@ const PortfolioProject = {
         { name: "[Skill] Game Prototyping", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Solo Game Jam Developer", rarity: RarityEnum.EPIC },
         { name: "[Skill] Rapid Problem Solving", rarity: RarityEnum.UNCOMMON }
-      ]
+      ],
+      carousel: SmallImageGetter.ProjectBuildToScale
     },
 
     links: [
@@ -129,7 +124,7 @@ const PortfolioProject = {
   
   const FoxLeagueProject = {
     badgeTitle: "Fox League",
-    badgeImg: { image: FoxLeague, rarity: RarityEnum.UNCOMMON },
+    badgeImg: { image: BigImageGetter.projectFoxLeague, rarity: RarityEnum.UNCOMMON },
     techno: "Unity",
   
     dateDesc: "February - March 2024",
@@ -143,7 +138,8 @@ const PortfolioProject = {
         { name: "[Skill] Unity Development", rarity: RarityEnum.RARE },
         { name: "[Skill] Game Design", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Aspiring Game Developer", rarity: RarityEnum.UNCOMMON }
-      ]
+      ],
+      carousel: SmallImageGetter.projectFoxLeague
     },
 
     links: [
@@ -153,7 +149,7 @@ const PortfolioProject = {
   
   const PokemonRedBlueCSharpProject = {
     badgeTitle: "Pokemon Red & Blue Recreation",
-    badgeImg: { image: PokemonASCII, rarity: RarityEnum.UNCOMMON },
+    badgeImg: { image: BigImageGetter.projectPokemonASCII, rarity: RarityEnum.UNCOMMON },
     techno: "C# Console",
   
     dateDesc: "February 2024",
@@ -167,7 +163,8 @@ const PortfolioProject = {
         { name: "[Skill] C# Development", rarity: RarityEnum.UNCOMMON },
         { name: "[Skill] Turn-based Combat System", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Novice C# Developer", rarity: RarityEnum.RARE }
-      ]
+      ],
+      carousel: SmallImageGetter.projectPokemonASCII
     },
 
     links: [
@@ -178,7 +175,7 @@ const PortfolioProject = {
   
   const ZoryaSistersProject = {
     badgeTitle: "Zorya Sisters",
-    badgeImg: { image: ZoryaSisters, rarity: RarityEnum.RARE },
+    badgeImg: { image: BigImageGetter.projectZoryaSisters, rarity: RarityEnum.RARE },
     techno: "C++ with SFML",
   
     dateDesc: "November - December 2023",
@@ -193,7 +190,8 @@ const PortfolioProject = {
         { name: "[Skill] Game Mechanics Design", rarity: RarityEnum.UNCOMMON },
         { name: "[Skill] Team Collaboration", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Platformer Creator", rarity: RarityEnum.RARE }
-      ]
+      ],
+      carousel: SmallImageGetter.projectZoryaSisters
     },
 
     links: [
@@ -204,7 +202,7 @@ const PortfolioProject = {
   
   const GameOfLifeCProject = {
     badgeTitle: "Game of Life",
-    badgeImg: { image: GameOfLife, rarity: RarityEnum.UNCOMMON },
+    badgeImg: { image: BigImageGetter.projectGameOfLifeC, rarity: RarityEnum.UNCOMMON },
     techno: "C with SDL",
   
     dateDesc: "April 2023",
@@ -218,7 +216,8 @@ const PortfolioProject = {
         { name: "[Skill] C Programming", rarity: RarityEnum.RARE },
         { name: "[Skill] Memory Management", rarity: RarityEnum.UNCOMMON },
         { name: "[Title] Novice C Programmer", rarity: RarityEnum.RARE }
-      ]
+      ],
+      carousel: SmallImageGetter.projectGameOfLifeC
     },
 
     links: [
@@ -279,6 +278,8 @@ function Achievements() {
               <hr className='titleBar'/>
           </div>
 
+
+          {/*********************** Project details **********************/}
           {displayedProject && (
             <>
                 <div className='overlay' onClick={() => handleProjectClick(null)}></div>
@@ -307,10 +308,10 @@ function Achievements() {
                 </div>
 
                 {displayedProject.links && displayedProject.links.length > 0 && (
-                    <div>
+                    <div className='linksDiv'>
                         {displayedProject.links.map((link, index) => (
                             <div key={index} className='link'>
-                                <a href={link.url} target='_blank' rel='noreferrer'>{link.name}</a>
+                                <a href={link.url} target='_blank' rel='noreferrer' className='linkColor'>{link.name}</a>
                             </div>
                         ))}
                     </div>
@@ -320,7 +321,7 @@ function Achievements() {
             )}
 
 
-          <div className='divProjects'>
+        <div className='divProjects'>
         <ProjectMedal 
             badgeTitle={PortfolioProject.badgeTitle}
             badgeImg={PortfolioProject.badgeImg}

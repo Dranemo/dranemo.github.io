@@ -1,13 +1,13 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import amagara from './assets/images/1024px-0698Amaura.png'
+import amagara from './assets/images/bigImages/1024px-0698Amaura.png';
 
 import './App.css';
 
 import Nav from './components/Nav';
 
 import Skills from './components/Skills'; 
-import Achievements from './components/Achievements';
+import Achievements from './components/AchievementsTechno';
 import Support from './components/Support';
 import Main from './components/Main';
 import Quests from './components/Quest';

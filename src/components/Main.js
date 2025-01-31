@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-import ImageMoi from '../assets/images/1024px-0698Amaura.png';
+import ImageMoi from '../assets/images/bigImages/1024px-0698Amaura.png';
 import CVfr from '../assets/files/CV_French.pdf';
 import CVen from '../assets/files/CV_English.pdf';
 
@@ -69,10 +69,9 @@ function Main() {
             <div className='MainSections'>
                 <div className='MainSection'>
                     <h4 className='titleSec'>Stats:</h4>
-                    <p id='colorClair2'> - Level (Age): 19 <br/>
+                    <p id='colorClair2'> - Level (Age): 20 <br/>
                         - Guild (Job): Student <br/>
-                        - Server: France <br />
-                        - Titles: </p>
+                        - Server: France <br /></p>
                 </div>
 
                 <div className='MainSection'>
