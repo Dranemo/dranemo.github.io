@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.b0b4b71b.css",
-    "main.js": "/static/js/main.d66fdb05.js",
+    "main.js": "/static/js/main.d2a605c2.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/1024px-0698Amaura.png": "/static/media/1024px-0698Amaura.82138810ab25c81f0403.png",
     "static/media/VxV_Sample.png": "/static/media/VxV_Sample.9a16ee9dc3aa0c3d5fde.png",
-    "static/media/CV_English.pdf": "/static/media/CV_English.42c52838c82db6a42a48.pdf",
+    "static/media/CV_French.pdf": "/static/media/CV_French.d453979a0505b3ad5873.pdf",
+    "static/media/CV_English.pdf": "/static/media/CV_English.e72a8685eaa6022e0e3e.pdf",
     "static/media/goldMedal.png": "/static/media/goldMedal.79d0ebfa974321aec6e0.png",
     "static/media/ZoryaSisters.png": "/static/media/ZoryaSisters.c00b1272377095852e59.png",
     "static/media/FoxLeague.png": "/static/media/FoxLeague.43b10ce6c496e2f5d5cc.png",
     "static/media/bronzeMedal.png": "/static/media/bronzeMedal.2ec9687bd90665fdf67e.png",
     "static/media/BuildToScale.png": "/static/media/BuildToScale.f612e91e8113a9a7253e.png",
     "static/media/silverMedal.png": "/static/media/silverMedal.9edde8ac606ac1c85e30.png",
-    "static/media/CV_French.pdf": "/static/media/CV_French.c787a877ee016dbfe181.pdf",
     "static/media/ironMedal.png": "/static/media/ironMedal.1b0592a2f53038d2421a.png",
     "static/media/BranCastle.jpg": "/static/media/BranCastle.820e6fd55a135b245d55.jpg",
     "static/media/woodMedal.png": "/static/media/woodMedal.b3fc3ff669973456c6af.png",
@@ -28,11 +28,11 @@
     "static/media/ArrowRight.png": "/static/media/ArrowRight.816f26f25988887ce4f0.png",
     "index.html": "/index.html",
     "main.b0b4b71b.css.map": "/static/css/main.b0b4b71b.css.map",
-    "main.d66fdb05.js.map": "/static/js/main.d66fdb05.js.map",
+    "main.d2a605c2.js.map": "/static/js/main.d2a605c2.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b0b4b71b.css",
-    "static/js/main.d66fdb05.js"
+    "static/js/main.d2a605c2.js"
   ]
 }
