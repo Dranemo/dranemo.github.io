@@ -7,6 +7,14 @@ const RarityEnum = {
   };
 
 
+const YearEnum = {
+    FIRST : 'First Year',
+    SECOND : 'Second Year',
+    THIRD : 'Third Year',
+    FOURTH ! 'Fourth Year',
+    FIFTH : 'Fifth Year'
+}
+
   // Définir l'enum pour le status
   const StatusEnum = {
       IN_PROGRESS: 'In Progress',
