@@ -296,7 +296,9 @@ const ProjectsFile = [
             ],
             carousel: SmallImageGetter.projectPortfolio
         },
-        links: []
+        links: [
+            { name: "GitHub Repository", url: "https://github.com/Dranemo/dranemo.github.io"},
+        ]
     },
     
       
