@@ -26,8 +26,9 @@ function QuestPart( {quest} ) {
     return (
     <div className='PartQuest' onClick={changeQuestOpen}>
         <h4 id='colorBlue'> <FontAwesomeIcon icon={questOpen ? faCaretDown : faCaretRight} /> {quest.title} (<span style={{color: getStatusColor(quest.status)}}>{quest.status}</span>) - {quest.dateDesc}</h4>
+        <div className={`quest-details ${questOpen ? 'open' : ''}`}>
         {questOpen && (
-            <div>
+            <>
                 <hr className='titleBarQuest'/>
 
                 <p><span id='colorBlue' className='titleQuests'>LOCATION:</span> {quest.location}</p>
@@ -59,8 +60,8 @@ function QuestPart( {quest} ) {
                 <p><span id='colorBlue' className='titleQuests'>DESCRIPTION:</span><br/> {quest.description}</p>
                 </>)}
 
-            </div>
-        )}
+                </>) }
+        </div>
     </div>
   );
 }

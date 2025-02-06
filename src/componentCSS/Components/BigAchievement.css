@@ -109,9 +109,14 @@
     height: auto;
 }
 
-#imgCarousel {
+#buttonBrown {
     background-color: #4f1c1b;
     border-radius: 5vh;
+}
+
+#buttonBrown:hover {
+    background-color: #603231;
+    cursor: pointer;
 }
 
 .arrowDiv {
@@ -127,10 +132,11 @@
 
 
 .bigImage {
+    object-fit: contain;
     max-width: 80vw;
     max-height: 90vh;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     position: fixed;
 
     z-index: 2000;

@@ -11,7 +11,7 @@ const YearEnum = {
     FIRST : 'First Year',
     SECOND : 'Second Year',
     THIRD : 'Third Year',
-    FOURTH ! 'Fourth Year',
+    FOURTH : 'Fourth Year',
     FIFTH : 'Fifth Year'
 }
 

@@ -8,10 +8,6 @@ import { QuestTypeEnum} from './Variables/Enums';
 import QuestsFile from './Variables/QuestsFile';
 
 
-var MainQuests = [];
-var SideQuests = [];
-
-
 // --------------------------------------------------------------------------------------------------------------------
 // --------------------------------------------------- Composant -------------------------------------------------------
 // --------------------------------------------------------------------------------------------------------------------
@@ -31,6 +27,9 @@ function Quests() {
               break;
               case QuestTypeEnum.SIDE:
                 sideQuests.push(quest);
+              break;
+              default:
+                console.log('Quest type not found');
               break;
         }
       });

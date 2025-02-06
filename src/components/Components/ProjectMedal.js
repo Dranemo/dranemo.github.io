@@ -7,13 +7,6 @@ import { getMedalImage } from '../Variables/Getters';
 
 
 function ProjectMedal({ ProjectStruct, showTechno = true, onClick }) {
-
-    
-
-    
-
-    
-
     return (
         <div className='ProjectPart' onClick={onClick}>
             <div className='ProjectTitlePart'>

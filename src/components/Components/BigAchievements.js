@@ -29,7 +29,7 @@ function BigAchievement({displayedProject}) {
             <>
             {console.log('displayImage', displayImage)}
             <div className='overlay2' onClick={() => setDisplayImage(false)}></div>
-            <img src={displayedProject.details.carousel[carouselIndex].image} className='bigImage' alt={displayedProject.details.carousel[carouselIndex].alt} />
+            <img src={displayedProject.details.carousel[carouselIndex].image} className='bigImage' alt={displayedProject.details.carousel[carouselIndex].alt} onClick={() => setDisplayImage(false)}/>
             </>
         )}
         
@@ -76,15 +76,15 @@ function BigAchievement({displayedProject}) {
                 <div className='carouselDiv'>
                     <div className="arrowDiv" onClick={() => changeCarouselIndex('prev')}>
                     {carouselIndex > 0 && (
-                        <img src={Arrow.left} className='arrowImg' id="imgCarousel"/>
+                        <img src={Arrow.left} className='arrowImg' id="buttonBrown"/>
                     )}
                     </div>
 
-                    <img src={displayedProject.details.carousel[carouselIndex].image} className='divInCarousel' id="imgCarousel" alt={displayedProject.details.carousel[carouselIndex].alt} onClick={() => setDisplayImage(true)}/>
+                    <img src={displayedProject.details.carousel[carouselIndex].image} className='divInCarousel' id="buttonBrown" alt={displayedProject.details.carousel[carouselIndex].alt} onClick={() => setDisplayImage(true)}/>
                     
                     <div className="arrowDiv" onClick={() => changeCarouselIndex('next')}>
                     {displayedProject.details.carousel.length > carouselIndex + 1 && (
-                        <img src={Arrow.right} className='arrowImg' id="imgCarousel"/>
+                        <img src={Arrow.right} className='arrowImg' id="buttonBrown"/>
                     )}
                     </div>
                     
@@ -96,7 +96,7 @@ function BigAchievement({displayedProject}) {
                 <div className='linksDiv'>
                     <hr className='titleBarProj' id='BarFar'/>
                     {displayedProject.links.map((link, index) => (
-                        <a href={link.url} target='_blank' rel='noreferrer' key={index} className='link'>
+                        <a href={link.url} target='_blank' rel='noreferrer' key={index} className='link' id='buttonBrown'>
                             <p>{link.name}</p>
                         </a>
                     ))}

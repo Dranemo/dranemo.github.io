@@ -163,7 +163,7 @@ const ProjectsFile = [
         dateDesc: "February - March 2024",
         timeDesc: "2 weeks",
         details: {
-            title: "Fox League - 2v2 Fox Soccer Showdown",
+            title: "Fox League - 1v1 Fox Soccer Showdown",
             description: "Get ready for an epic <span style='font-weight: 900;'>1v1 showdown</span> in Fox League, a fast-paced soccer game where two foxes battle it out on a wild, obstacle-filled field. Inspired by classic car-soccer games, this project is all about quick reflexes, strategy, and avoiding chaos as you compete for victory across <span style='font-weight: 900;'>3 intense rounds</span>. Created as a first Unity project with a group, no power-ups, just pure skill!",
             rewards: [
                 { name: "[Item] Fox League Soccer Match", rarity: RarityEnum.UNCOMMON },
