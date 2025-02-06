@@ -85,6 +85,7 @@ const QuestsFile = [
 
   {
     title: "Volunteer Bug Tester for Appearance",
+    QuestType: QuestTypeEnum.SIDE,
     status: StatusEnum.COMPLETED,
     location: "Remote",
     dateDesc: "February 2024",
