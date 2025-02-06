@@ -1,13 +1,13 @@
 
 import { BigImageGetter, SmallImageGetter } from './ImageGetter';
-import { TechnoEnum, RarityEnum } from './Enums';
+import { TechnoEnum, RarityEnum, YearEnum } from './Enums';
 import "../../componentCSS/Achievements.css";
 
 const ProjectsFile = [
     // Unreal Projects
     {
         badgeTitle: "Carnival",
-        badgeImg: { image: BigImageGetter.projectCarnival, rarity: RarityEnum.UNCOMMON },
+        badgeImg: { image: BigImageGetter.projectCarnival, rarity: YearEnum.THIRD },
         type: "Solo - School Project",
         TechnoEnum: TechnoEnum.UNREALENGINE,
         techno: "Unreal Engine 5 - Blueprints",
@@ -32,7 +32,7 @@ const ProjectsFile = [
     // Unity Projects
     {
         badgeTitle: "Cooking Fry",
-        badgeImg: { image: BigImageGetter.projectCookingFry, rarity: RarityEnum.UNCOMMON },
+        badgeImg: { image: BigImageGetter.projectCookingFry, rarity: YearEnum.THIRD },
         type: "Solo - School Project",
         TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
@@ -56,7 +56,7 @@ const ProjectsFile = [
 
     {
         badgeTitle: "Unity Shaders",
-        badgeImg: { image: BigImageGetter.projectUnityShaders, rarity: RarityEnum.UNCOMMON },
+        badgeImg: { image: BigImageGetter.projectUnityShaders, rarity: YearEnum.THIRD },
         type: "Solo - School Project",
         TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity (Shader Graph)",
@@ -79,7 +79,7 @@ const ProjectsFile = [
 
     {
         badgeTitle: "The Final Exit",
-        badgeImg: { image: BigImageGetter.projectTheFinalExit, rarity: RarityEnum.EPIC },
+        badgeImg: { image: BigImageGetter.projectTheFinalExit, rarity: YearEnum.THIRD },
         type: "Solo - School Project",
         TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
@@ -105,7 +105,7 @@ const ProjectsFile = [
 
       {
         badgeTitle: "Bran Castle",
-        badgeImg: { image: BigImageGetter.projectBranCastle, rarity: RarityEnum.EPIC },
+        badgeImg: { image: BigImageGetter.projectBranCastle, rarity: YearEnum.SECOND },
         type: "Group - Professional Project",
         TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
@@ -131,7 +131,7 @@ const ProjectsFile = [
 
       {
         badgeTitle: "Build to Scale",
-        badgeImg: { image: BigImageGetter.projectBuildToScale, rarity: RarityEnum.RARE },
+        badgeImg: { image: BigImageGetter.projectBuildToScale, rarity: YearEnum.SECOND },
         type: "Solo - Personal Project",
         TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
@@ -156,7 +156,7 @@ const ProjectsFile = [
 
       {
         badgeTitle: "Fox League",
-        badgeImg: { image: BigImageGetter.projectFoxLeague, rarity: RarityEnum.UNCOMMON },
+        badgeImg: { image: BigImageGetter.projectFoxLeague, rarity: YearEnum.SECOND },
         type: "Group - School Project",
         TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
@@ -181,7 +181,7 @@ const ProjectsFile = [
     // C++ Projects
     {
         badgeTitle: "Pathfinding Simulation",
-        badgeImg: { image: BigImageGetter.projectPathfinding, rarity: RarityEnum.UNCOMMON },
+        badgeImg: { image: BigImageGetter.projectPathfinding, rarity: YearEnum.THIRD },
         type: "Group - School Project",
         TechnoEnum: TechnoEnum.CPP,
         techno: "C++ with SFML",
@@ -203,7 +203,7 @@ const ProjectsFile = [
 
     {
         badgeTitle: "VxV Engine",
-        badgeImg: { image: BigImageGetter.projectVxVEngine, rarity: RarityEnum.EPIC },
+        badgeImg: { image: BigImageGetter.projectVxVEngine, rarity: YearEnum.SECOND },
         type: "Group - School Project",
         TechnoEnum: TechnoEnum.CPP,
         techno: "C++ - OpenGL",
@@ -228,7 +228,7 @@ const ProjectsFile = [
       
     {
         badgeTitle: "Zorya Sisters",
-        badgeImg: { image: BigImageGetter.projectZoryaSisters, rarity: RarityEnum.RARE },
+        badgeImg: { image: BigImageGetter.projectZoryaSisters, rarity: YearEnum.SECOND },
         type: "Group - School Project",
         TechnoEnum: TechnoEnum.CPP,
         techno: "C++ with SFML (Custom Engine)",
@@ -252,7 +252,7 @@ const ProjectsFile = [
     // C# Projects
     {
         badgeTitle: "PokemonASCII",
-        badgeImg: { image: BigImageGetter.projectPokemonASCII, rarity: RarityEnum.RARE },
+        badgeImg: { image: BigImageGetter.projectPokemonASCII, rarity: YearEnum.SECOND },
         type: "Group - School Project",
         TechnoEnum: TechnoEnum.CSHARP,
         techno: "C# Console",
@@ -279,7 +279,7 @@ const ProjectsFile = [
       // Other Projects
       {
         badgeTitle: "Portfolio",
-        badgeImg: { image: BigImageGetter.projectPortfolio, rarity: RarityEnum.EPIC },
+        badgeImg: { image: BigImageGetter.projectPortfolio, rarity: YearEnum.THIRD },
         type: "Solo - Personal Project",
         TechnoEnum: TechnoEnum.REACT,
         techno: "React",
@@ -304,7 +304,7 @@ const ProjectsFile = [
       
       {
         badgeTitle: "Game of Life",
-        badgeImg: { image: BigImageGetter.projectGameOfLifeC, rarity: RarityEnum.UNCOMMON },
+        badgeImg: { image: BigImageGetter.projectGameOfLifeC, rarity: YearEnum.FIRST },
         type: "Group - School Project",
         TechnoEnum: TechnoEnum.C,
         techno: "C with SDL",
