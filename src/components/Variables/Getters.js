@@ -1,7 +1,7 @@
 import { Medal } from './ImageGetter';
 
 
-import { RarityEnum, StatusEnum } from './Enums';
+import { RarityEnum, StatusEnum, YearEnum } from './Enums';
 
 
 
@@ -26,15 +26,15 @@ const getRarityColor = (rarity) => {
 
   const getMedalImage = (rarity) => {
     switch (rarity) {
-        case RarityEnum.COMMON:
+        case YearEnum.FIRST:
             return Medal.common;
-        case RarityEnum.UNCOMMON:
+        case YearEnum.SECOND:
             return Medal.uncommon;
-        case RarityEnum.RARE:
+        case YearEnum.THIRD:
             return Medal.rare;
-        case RarityEnum.EPIC:
+        case YearEnum.FOURTH:
             return Medal.epic;
-        case RarityEnum.LEGENDARY:
+        case YearEnum.FIFTH:
             return Medal.legendary;
         default:
             return null;
