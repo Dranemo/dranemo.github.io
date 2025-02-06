@@ -1,18 +1,12 @@
 import React, {useState, useEffect} from 'react';
 
 import '../componentCSS/Achievements.css';
-import ProjectMedal from './ProjectMedal';
+import ProjectMedal from './Components/ProjectMedal';
 
-import { BigImageGetter, SmallImageGetter } from './ImageGetter';
+import { BigImageGetter, SmallImageGetter } from './Variables/ImageGetter';
 
 
-const RarityEnum = {
-    COMMON: 'Common',
-    UNCOMMON: 'Uncommon',
-    RARE: 'Rare',
-    EPIC: 'Epic',
-    LEGENDARY: 'Legendary'
-  };
+
 
 
 

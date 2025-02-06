@@ -11,6 +11,21 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import '../componentCSS/Main.css';
 import '../componentCSS/Card.css';
 
+import { getRarityColor } from './Variables/Getters';
+import { RarityEnum } from './Variables/Enums';
+
+
+
+
+
+
+
+const EquippedTitle = {
+  Title: 'Third-Year Major Student',
+  Rarity: RarityEnum.LEGENDARY
+};
+
+
 
 function Main() {
 
@@ -72,6 +87,7 @@ function Main() {
                     <p id='colorClair2'> - Level (Age): 20 <br/>
                         - Guild (Job): Student <br/>
                         - Server: France <br /></p>
+                    <p id='colorClair2'>Equipped Title : <span style={{ color: getRarityColor(EquippedTitle.Rarity) }}>{EquippedTitle.Title} ({EquippedTitle.Rarity})</span></p>
                 </div>
 
                 <div className='MainSection'>
@@ -86,6 +102,7 @@ function Main() {
                         - CV (French)   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href={CVfr} download= "CV_French_Yanael_Caillot.pdf" id='colorClair2'><FontAwesomeIcon icon={faDownload}></FontAwesomeIcon></a><br/>
                         - GameBoy <br/>
                         - Karate black belt <br/>
+                        - Electric Bass <br/>
                         See More...</p>
                 </div>
             </div>

@@ -1,28 +1,74 @@
 import React, {useState, useEffect} from 'react';
 
 import '../componentCSS/Achievements.css';
-import ProjectMedal from './ProjectMedal';
+import ProjectMedal from './Components/ProjectMedal';
+import BigAchievement from './Components/BigAchievements';
 
-import ProjectsFile from './getters/ProjectsFile';
-
-const RarityEnum = {
-  COMMON: 'Common',
-  UNCOMMON: 'Uncommon',
-  RARE: 'Rare',
-  EPIC: 'Epic',
-  LEGENDARY: 'Legendary'
-};
+import ProjectsFile from './Variables/ProjectsFile';
+import { RarityEnum, TechnoEnum } from './Variables/Enums';
 
 
 
-
-
-
-
+var UEAchievements = [];
+var GodotAchievements = [];
+var UnityAchievements = [];
+var CppAchievements = [];
+var CSharpAchievements = [];
+var OtherAchievements = [];
 
 
 function Achievements() {
+  {/*********************** Display Medals **********************/}
+    const [UEAchievements, setUEAchievements] = useState([]);
+    const [GodotAchievements, setGodotAchievements] = useState([]);
+    const [UnityAchievements, setUnityAchievements] = useState([]);
+    const [CppAchievements, setCPPAchievements] = useState([]);
+    const [CSharpAchievements, setCSharpAchievements] = useState([]);
+    const [OtherAchievements, setOtherAchievements] = useState([]);
 
+    useEffect(() => {
+      const ueAchievements = [];
+      const godotAchievements = [];
+      const unityAchievements = [];
+      const cppAchievements = [];
+      const csharpAchievements = [];
+      const otherAchievements = [];
+
+
+      ProjectsFile.forEach((project) => {
+          switch (project.TechnoEnum) {
+              case TechnoEnum.UNREALENGINE:
+                  ueAchievements.push(project);
+                  break;
+              case TechnoEnum.GODOT:
+                  godotAchievements.push(project);
+                  break;
+              case TechnoEnum.UNITY:
+                  unityAchievements.push(project);
+                  break;
+              case TechnoEnum.CPP:
+                  cppAchievements.push(project);
+                  break;
+              case TechnoEnum.CSHARP:
+                  csharpAchievements.push(project);
+                  break;
+              default:
+                  otherAchievements.push(project);
+                  break;
+          }
+      });
+
+        setUEAchievements(ueAchievements);
+        setGodotAchievements(godotAchievements);
+        setUnityAchievements(unityAchievements);
+        setCPPAchievements(cppAchievements);
+        setCSharpAchievements(csharpAchievements);
+        setOtherAchievements(otherAchievements);
+    }, []);
+
+
+
+  {/*********************** Big Display **********************/}
     const [displayedProject, setDisplayedProject] = useState(null);
 
     useEffect(() => {
@@ -73,143 +119,113 @@ function Achievements() {
           {displayedProject && (
             <>
                 <div className='overlay' onClick={() => handleProjectClick(null)}></div>
-                <div className='ProjectDetails'>
-                <img src={displayedProject.badgeImg.image} alt={`image project`} className='projectImgDesc' />
-                
-                <h2 id='colorBlue'>{displayedProject.badgeTitle}</h2>
-                <hr className='titleBarProj'/>
-                <p>{displayedProject.dateDesc}</p>
-                <p>{displayedProject.timeDesc}</p>
-                <hr className='titleBarProj2'/>
-
-                <div>
-                    <h3 id='colorBlue'>{displayedProject.details.title}</h3>
-                    <hr className='titleBarProj'/>
-
-                    
-                    <p className='DescProject' dangerouslySetInnerHTML={{ __html: displayedProject.details.description }}></p>
-                    <ul id='removeStyleList'>
-                        {displayedProject.details.rewards.map((reward, index) => (
-                            <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
-                                - {reward.name} ({reward.rarity})
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
-                {displayedProject.links && displayedProject.links.length > 0 && (
-                    <div className='linksDiv'>
-                        {displayedProject.links.map((link, index) => (
-                            <div key={index} className='link'>
-                                <a href={link.url} target='_blank' rel='noreferrer' className='linkColor'>{link.name}</a>
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </div>
+                <BigAchievement displayedProject={displayedProject} />
             </>
             )}
 
+
+          {/*********************** Display medals **********************/}
           <div className='bigDivAchievements'>
-            <h3>Unreal Engine:</h3>
+          {UEAchievements.length > 0 && (
+            <>
+              <h3>Unreal Engine:</h3>
+              <div className='divProjects'>
+
+              {UEAchievements.map((project) => (
+                <ProjectMedal 
+                    ProjectStruct={project}
+                    showTechno={true}
+                    onClick={() => handleProjectClick(project)}
+                  />
+              ))}
+
+              </div>
+            </>
+          )}
+
+
+
+          {GodotAchievements.length > 0 && (
+          <>
+            <h3>Godot:</h3>
             <div className='divProjects'>
-            <ProjectMedal 
-                ProjectStruct={ProjectsFile.CarnivalProject}
-                showTechno={true}
-
-                onClick={() => handleProjectClick(ProjectsFile.CarnivalProject)}
-              />
+              
+              {GodotAchievements.map((project) => (
+                <ProjectMedal 
+                    ProjectStruct={project}
+                    showTechno={true}
+                    onClick={() => handleProjectClick(project)}
+                  />
+              ))} 
             </div>
+          </>
+          )}
 
+
+
+          {UnityAchievements.length > 0 && (
+          <>
             <h3>Unity:</h3>
             <div className='divProjects'>
-
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.CookingFryProject}
-                showTechno={false}
-
-                onClick={() => handleProjectClick(ProjectsFile.CookingFryProject)}
-              />
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.UnityShadersProject}
-                showTechno={false}
-
-                onClick={() => handleProjectClick(ProjectsFile.UnityShadersProject)}
-              />
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.TheFinalExitProject}
-                showTechno={false}
-
-                onClick={() => handleProjectClick(ProjectsFile.TheFinalExitProject)}
-              />
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.BranCastleProject}
-                showTechno={false}
-
-                onClick={() => handleProjectClick(ProjectsFile.BranCastleProject)}
-              />
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.BuildToScaleProject}
-                showTechno={false}
-
-                onClick={() => handleProjectClick(ProjectsFile.BuildToScaleProject)}
-              />
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.FoxLeagueProject}
-                showTechno={false}
-
-                onClick={() => handleProjectClick(ProjectsFile.FoxLeagueProject)}
-              />
+              {UnityAchievements.map((project) => (
+                <ProjectMedal
+                    ProjectStruct={project}
+                    showTechno={true}
+                    onClick={() => handleProjectClick(project)}
+                  />
+              ))}
             </div>
+          </>
+          )}
 
-
+          {CppAchievements.length > 0 && (
+          <>
             <h3>C++:</h3>
             <div className='divProjects'>
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.PathfindingSimulationProject}
-                showTechno={true}
 
-                onClick={() => handleProjectClick(ProjectsFile.PathfindingSimulationProject)}
-              />
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.ZoryaSistersProject}
-                showTechno={true}
-
-                onClick={() => handleProjectClick(ProjectsFile.ZoryaSistersProject)}
-              />
+              {CppAchievements.map((project) => (
+                <ProjectMedal
+                    ProjectStruct={project}
+                    showTechno={true}
+                    onClick={() => handleProjectClick(project)}
+                  />
+              ))}
             </div>
+          </>
+          )}
 
-
+          {CSharpAchievements.length > 0 && (
+          <>
             <h3>C#:</h3>
             <div className='divProjects'>
-
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.PokemonASCIIProject}
-                showTechno={false}
-
-                onClick={() => handleProjectClick(ProjectsFile.PokemonASCIIProject)}
-              />
+              {CSharpAchievements.map((project) => (
+                <ProjectMedal
+                    ProjectStruct={project}
+                    showTechno={true}
+                    onClick={() => handleProjectClick(project)}
+                  />
+              ))}
             </div>
+          </>
+          )}
 
-
+          {OtherAchievements.length > 0 && (
+          <>
             <h3>Other:</h3>
             <div className='divProjects'>
+              {OtherAchievements.map((project) => (
+                <ProjectMedal
+                    ProjectStruct={project}
+                    showTechno={true}
+                    onClick={() => handleProjectClick(project)}
+                  />
+              ))} 
+            </div>
+          </>
+          )}
 
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.PortfolioProject}
-                showTechno={true}
 
-                onClick={() => handleProjectClick(ProjectsFile.PortfolioProject)}
-              />
-
-              <ProjectMedal 
-                ProjectStruct={ProjectsFile.GameOfLifeProject}
-                showTechno={true}
-
-                onClick={() => handleProjectClick(ProjectsFile.GameOfLifeProject)}
-              />
         </div>
-      </div>
       </div>
     );
   }

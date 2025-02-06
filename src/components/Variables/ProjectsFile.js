@@ -1,21 +1,15 @@
 
 import { BigImageGetter, SmallImageGetter } from './ImageGetter';
+import { TechnoEnum, RarityEnum } from './Enums';
 import "../../componentCSS/Achievements.css";
 
-const RarityEnum = {
-    COMMON: 'Common',
-    UNCOMMON: 'Uncommon',
-    RARE: 'Rare',
-    EPIC: 'Epic',
-    LEGENDARY: 'Legendary'
-  };
-
-const ProjectsFile = {
+const ProjectsFile = [
     // Unreal Projects
-    CarnivalProject: {
+    {
         badgeTitle: "Carnival",
         badgeImg: { image: BigImageGetter.projectCarnival, rarity: RarityEnum.UNCOMMON },
         type: "Solo - School Project",
+        TechnoEnum: TechnoEnum.UNREALENGINE,
         techno: "Unreal Engine 5 - Blueprints",
         dateDesc: "January 2025",
         timeDesc: "1 week",
@@ -36,10 +30,11 @@ const ProjectsFile = {
     
 
     // Unity Projects
-    CookingFryProject: {
+    {
         badgeTitle: "Cooking Fry",
         badgeImg: { image: BigImageGetter.projectCookingFry, rarity: RarityEnum.UNCOMMON },
-        type: "Solo - Personal Project",
+        type: "Solo - School Project",
+        TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
         dateDesc: "December 2024",
         timeDesc: "1 week",
@@ -59,10 +54,11 @@ const ProjectsFile = {
     
     
 
-    UnityShadersProject: {
+    {
         badgeTitle: "Unity Shaders",
         badgeImg: { image: BigImageGetter.projectUnityShaders, rarity: RarityEnum.UNCOMMON },
-        type: "Solo - Personal Project",
+        type: "Solo - School Project",
+        TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity (Shader Graph)",
         dateDesc: "November 2024",
         timeDesc: "1 week",
@@ -81,10 +77,11 @@ const ProjectsFile = {
     },
     
 
-      TheFinalExitProject: {
+    {
         badgeTitle: "The Final Exit",
-        badgeImg: { image: BigImageGetter.projectTheFinalExit, rarity: RarityEnum.LEGENDARY },
+        badgeImg: { image: BigImageGetter.projectTheFinalExit, rarity: RarityEnum.EPIC },
         type: "Solo - School Project",
+        TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
         dateDesc: "November 2024",
         timeDesc: "1 week",
@@ -106,10 +103,11 @@ const ProjectsFile = {
     },
     
 
-      BranCastleProject: {
+      {
         badgeTitle: "Bran Castle",
         badgeImg: { image: BigImageGetter.projectBranCastle, rarity: RarityEnum.EPIC },
-        type: "Group - School Project",
+        type: "Group - Professional Project",
+        TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
         dateDesc: "July - August 2024",
         timeDesc: "2 months",
@@ -131,10 +129,11 @@ const ProjectsFile = {
     },
     
 
-      BuildToScaleProject: {
+      {
         badgeTitle: "Build to Scale",
         badgeImg: { image: BigImageGetter.projectBuildToScale, rarity: RarityEnum.RARE },
         type: "Solo - Personal Project",
+        TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
         dateDesc: "August 2024",
         timeDesc: "5 days",
@@ -155,10 +154,11 @@ const ProjectsFile = {
         ]
     },
 
-      FoxLeagueProject: {
+      {
         badgeTitle: "Fox League",
         badgeImg: { image: BigImageGetter.projectFoxLeague, rarity: RarityEnum.UNCOMMON },
         type: "Group - School Project",
+        TechnoEnum: TechnoEnum.UNITY,
         techno: "Unity",
         dateDesc: "February - March 2024",
         timeDesc: "2 weeks",
@@ -179,10 +179,11 @@ const ProjectsFile = {
 
 
     // C++ Projects
-    PathfindingSimulationProject: {
+    {
         badgeTitle: "Pathfinding Simulation",
-        badgeImg: { image: BigImageGetter.projectPathfindingSimulation, rarity: RarityEnum.UNCOMMON },
+        badgeImg: { image: BigImageGetter.projectPathfinding, rarity: RarityEnum.UNCOMMON },
         type: "Group - School Project",
+        TechnoEnum: TechnoEnum.CPP,
         techno: "C++ with SFML",
         dateDesc: "September - October 2024",
         timeDesc: "1 week",
@@ -199,11 +200,37 @@ const ProjectsFile = {
         },
         links: []
     },
+
+    {
+        badgeTitle: "VxV Engine",
+        badgeImg: { image: BigImageGetter.projectVxVEngine, rarity: RarityEnum.EPIC },
+        type: "Group - School Project",
+        TechnoEnum: TechnoEnum.CPP,
+        techno: "C++ - OpenGL",
+        dateDesc: "March - April 2024",
+        timeDesc: "5 weeks",
+        details: {
+            title: "VxV Engine - Understanding Game Engines",
+            description: "Enter the depths of game engine development with <span style='font-weight: 900;'>VxV Engine</span>, a homemade engine built with OpenGL in C++. Created as an educational project, VxV was designed to help us truly grasp the inner workings of a game engine—from rendering pipelines to basic ECS systems. While not intended for commercial use (yet), it stands as a foundational learning experience, providing hands-on insight into what powers modern game engines.",
+            rewards: [
+                { name: "[Item] Custom OpenGL Engine", rarity: RarityEnum.RARE },
+                { name: "[Skill] OpenGL Rendering", rarity: RarityEnum.RARE },
+                { name: "[Skill] Engine Architecture", rarity: RarityEnum.EPIC },
+                { name: "[Title] Game Engine Apprentice", rarity: RarityEnum.RARE }
+            ],
+            carousel: SmallImageGetter.projectVxVEngine
+        },
+        links: [
+            { name: "GitHub Repository", url: "https://github.com/Dranemo/VxVEngine"},
+        ]
+    },
+    
       
-    ZoryaSistersProject: {
+    {
         badgeTitle: "Zorya Sisters",
         badgeImg: { image: BigImageGetter.projectZoryaSisters, rarity: RarityEnum.RARE },
         type: "Group - School Project",
+        TechnoEnum: TechnoEnum.CPP,
         techno: "C++ with SFML (Custom Engine)",
         dateDesc: "November - December 2023",
         timeDesc: "3 weeks",
@@ -219,14 +246,15 @@ const ProjectsFile = {
             carousel: SmallImageGetter.projectZoryaSisters
         },
         links: []
-    },   
+    },
       
       
     // C# Projects
-    PokemonASCIIProject: {
+    {
         badgeTitle: "PokemonASCII",
         badgeImg: { image: BigImageGetter.projectPokemonASCII, rarity: RarityEnum.RARE },
         type: "Group - School Project",
+        TechnoEnum: TechnoEnum.CSHARP,
         techno: "C# Console",
         dateDesc: "February 2024",
         timeDesc: "2 weeks",
@@ -249,10 +277,11 @@ const ProjectsFile = {
       
     
       // Other Projects
-      PortfolioProject: {
+      {
         badgeTitle: "Portfolio",
         badgeImg: { image: BigImageGetter.projectPortfolio, rarity: RarityEnum.EPIC },
         type: "Solo - Personal Project",
+        TechnoEnum: TechnoEnum.REACT,
         techno: "React",
         dateDesc: "October 2024 - Ongoing",
         timeDesc: "Ongoing",
@@ -271,10 +300,11 @@ const ProjectsFile = {
     },
     
       
-      GameOfLifeProject: {
+      {
         badgeTitle: "Game of Life",
         badgeImg: { image: BigImageGetter.projectGameOfLifeC, rarity: RarityEnum.UNCOMMON },
         type: "Group - School Project",
+        TechnoEnum: TechnoEnum.C,
         techno: "C with SDL",
         dateDesc: "February 2023",
         timeDesc: "1 week",
@@ -289,9 +319,11 @@ const ProjectsFile = {
             ],
             carousel: SmallImageGetter.projectGameOfLifeC
         },
-        links: []
-    }
-    
-};
+        links: [
+            { name: "GitHub Repository", url: "https://github.com/Dranemo/Conway-s-Game-of-Life"},
+            { name: "GitHub Release", url: "https://github.com/Dranemo/Releases/releases/tag/GameOfLifeC"}
+        ]
+    },
+];
 
 export default ProjectsFile;

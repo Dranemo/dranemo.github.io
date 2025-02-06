@@ -1,39 +1,14 @@
 import React from 'react';
-import '../componentCSS/ProjectMedal.css';
-
-import woodenMedal from '../assets/images/woodMedal.png';
-import ironMedal from '../assets/images/ironMedal.png';
-import bronzeMedal from '../assets/images/bronzeMedal.png';
-import silverMedal from '../assets/images/silverMedal.png';
-import goldMedal from '../assets/images/goldMedal.png';
+import '../../componentCSS/Components/ProjectMedal.css';
 
 
-const RarityEnum = {
-    COMMON: 'Common',
-    UNCOMMON: 'Uncommon',
-    RARE: 'Rare',
-    EPIC: 'Epic',
-    LEGENDARY: 'Legendary'
-};
+import { getMedalImage } from '../Variables/Getters';
+
+
 
 function ProjectMedal({ ProjectStruct, showTechno = true, onClick }) {
 
-    const getMedalImage = (rarity) => {
-        switch (rarity) {
-            case RarityEnum.COMMON:
-                return woodenMedal;
-            case RarityEnum.UNCOMMON:
-                return ironMedal;
-            case RarityEnum.RARE:
-                return bronzeMedal;
-            case RarityEnum.EPIC:
-                return silverMedal;
-            case RarityEnum.LEGENDARY:
-                return goldMedal;
-            default:
-                return null;
-        }
-    };
+    
 
     
 
