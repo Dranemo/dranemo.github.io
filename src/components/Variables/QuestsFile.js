@@ -82,6 +82,23 @@ const QuestsFile = [
     ],
     description: "As head of the Communication Department within the Student Council, you took on the responsibility of crafting social media posts and managing public engagement. This quest bolstered your creativity and strengthened your ability to connect with a wide audience."
   },
+
+  {
+    title: "Volunteer Bug Tester for Appearance",
+    status: StatusEnum.COMPLETED,
+    location: "Remote",
+    dateDesc: "February 2024",
+    timeDesc: "1 month",
+    rewards: [
+      {name: "[Skill] Bug Detection", rarity: RarityEnum.UNCOMMON},
+      {name: "[Skill] Analytical Thinking", rarity: RarityEnum.UNCOMMON},
+      {name: "[Skill] Game Testing", rarity: RarityEnum.COMMON},
+      {name: "[Title] Volunteer QA Tester", rarity: RarityEnum.COMMON}
+    ],
+    description: "You took part in the development of Appearance as a volunteer bug tester, hunting down glitches and ensuring a smooth player experience. Through meticulous testing and detailed reports, you contributed to improving the game’s stability, sharpening your analytical skills in the process."
+  },
+
+
   
   {
     title: "Student Volunteering PGW - Volume 2",
