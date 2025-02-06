@@ -5,17 +5,7 @@ import ProjectMedal from './Components/ProjectMedal';
 import BigAchievement from './Components/BigAchievements';
 
 import ProjectsFile from './Variables/ProjectsFile';
-import { RarityEnum, TechnoEnum } from './Variables/Enums';
-
-
-
-var UEAchievements = [];
-var GodotAchievements = [];
-var UnityAchievements = [];
-var CppAchievements = [];
-var CSharpAchievements = [];
-var OtherAchievements = [];
-
+import { TechnoEnum } from './Variables/Enums';
 
 function Achievements() {
   {/*********************** Display Medals **********************/}
@@ -83,25 +73,6 @@ function Achievements() {
     const handleProjectClick = (project) => {
         console.log('ProjectMedal clicked', project);
         setDisplayedProject(project);
-    };
-
-
-
-    const getRarityColor = (rarity) => {
-        switch (rarity) {
-            case RarityEnum.COMMON:
-                return '#737373';
-            case RarityEnum.UNCOMMON:
-                return '#4A7F32 ';
-            case RarityEnum.RARE:
-                return '#004aad';
-            case RarityEnum.EPIC:
-                return '#8c52ff';
-            case RarityEnum.LEGENDARY:
-                return '#b8860b';
-            default:
-                return 'black';
-        }
     };
 
 
