@@ -38,4 +38,4 @@ const YearEnum = {
         SIDE: 'Side Quest',
     };
 
-    export { RarityEnum, StatusEnum, TechnoEnum, QuestTypeEnum };
+    export { RarityEnum, YearEnum, StatusEnum, TechnoEnum, QuestTypeEnum };
