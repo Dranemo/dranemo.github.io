@@ -75,12 +75,17 @@ function Main() {
 
     return (
       <div className='Card' id='MainCard'>
-        <img src={ImageMoi} alt="Moi" className='imageMoi'/>
-        <div className='divText'>
-            <div className='MainTitle'>
+
+<div className='MainTitle'>
                 <h3>Yanaël Caillot</h3>
                 <hr className='titleBar'/>
             </div>
+
+        <div className='MainFlex'>
+        <img src={ImageMoi} alt="Moi" className='imageMoi'/>
+        <div className='divText'>
+
+
             <div className='MainSections'>
                 <div className='MainSection'>
                     <h4 className='titleSec'>Stats:</h4>
@@ -109,6 +114,7 @@ function Main() {
 
 
         </div>
+      </div>
       </div>
     );
   }
