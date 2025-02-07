@@ -98,25 +98,31 @@
     display: flex;
     justify-content: space-evenly;
 
-    height: auto;
+    height: 50vh;
  }
 
-.divInCarousel {
-    max-width: 50%;
+ .divInCarousel {
     max-height: 50vh;
-
+    max-width: 70%;
     width: auto;
     height: auto;
 }
 
 #buttonBrown {
+
     background-color: #4f1c1b;
     border-radius: 5vh;
+
+    box-shadow: 0 0.3vh 0.5vw black;
+    transition: .2s ease-in-out;
 }
 
 #buttonBrown:hover {
     background-color: #603231;
     cursor: pointer;
+
+    box-shadow: 0 0.5vh 1vw black;
+    transition: .2s ease-in-out;
 }
 
 .arrowDiv {

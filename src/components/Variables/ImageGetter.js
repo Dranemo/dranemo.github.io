@@ -4,6 +4,12 @@ const Medal = {
     rare: require('../../assets/images/medals/bronzeMedal.png'),
     epic: require('../../assets/images/medals/silverMedal.png'),
     legendary: require('../../assets/images/medals/goldMedal.png'),
+
+    commonWhole: require('../../assets/images/oldMedals/woodMedal.png'),
+    uncommonWhole: require('../../assets/images/oldMedals/ironMedal.png'),
+    rareWhole: require('../../assets/images/oldMedals/bronzeMedal.png'),
+    epicWhole: require('../../assets/images/oldMedals/silverMedal.png'),
+    legendaryWhole: require('../../assets/images/oldMedals/goldMedal.png'),
 }
 
 const Arrow = {

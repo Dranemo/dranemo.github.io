@@ -13,6 +13,22 @@
     align-items: center;
     flex-direction: column;
 
+    background-color: #aa8284 ;
+    margin-bottom: 1vh;
+    border-radius: 1vh;
+    color: #4f1c1b;
+    
+    box-shadow: 0 0.3vh 0.5vw black;
+    transition: .2s ease-in-out;
+}
+
+.ProjectPart:hover {
+    background-color: #b28e90;
+    cursor: pointer;
+
+    
+    box-shadow: 0 0.5vh 1vw black;
+    transition: .2s ease-in-out;
 }
 
 

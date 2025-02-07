@@ -5,7 +5,8 @@ import ProjectMedal from './Components/ProjectMedal';
 import BigAchievement from './Components/BigAchievements';
 
 import ProjectsFile from './Variables/ProjectsFile';
-import { TechnoEnum } from './Variables/Enums';
+import { TechnoEnum  } from './Variables/Enums';
+import {Medal} from './Variables/ImageGetter';
 
 function Achievements() {
   {/*********************** Display Medals **********************/}
@@ -196,6 +197,30 @@ function Achievements() {
           )}
 
 
+        </div>
+
+
+        <div className='MedalLegend'>
+          <div className='MedalPart'>
+            <img src={Medal.commonWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>First Year</p>
+          </div>
+          <div className='MedalPart'>
+            <img src={Medal.uncommonWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>Second Year</p>
+          </div>
+          <div className='MedalPart'>
+            <img src={Medal.rareWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>Third Year</p>
+          </div>
+          <div className='MedalPart'>
+            <img src={Medal.epicWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>Fourth Year</p>
+          </div>
+          <div className='MedalPart'>
+            <img src={Medal.legendaryWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>Fifth Year</p>
+          </div>
         </div>
       </div>
     );
