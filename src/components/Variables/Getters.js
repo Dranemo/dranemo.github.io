@@ -50,7 +50,7 @@ const getStatusColor = (status) => {
         case StatusEnum.COMPLETED:
             return '#4A7F32 ';
         case StatusEnum.NOT_STARTED:
-            return '#ff914d';
+            return '#9e582c';
         default:
             return 'black';
     }

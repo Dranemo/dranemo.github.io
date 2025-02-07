@@ -2,8 +2,30 @@ import { QuestTypeEnum, StatusEnum, RarityEnum } from "./Enums"
 
 const QuestsFile = [
 // ------------------------------------------------ Main Quests ------------------------------------------------
+
 {
-    title: "Develop Game Developer Skills",
+  title: "Master the Art of Game Development",
+  QuestType: QuestTypeEnum.MAIN,
+  status: StatusEnum.NOT_STARTED,
+  location: "Gaming Campus - Grande Arche de la Défense, Paris",
+  dateDesc: "Sept. 2025",
+  timeDesc: "2 years",
+  rewards: [
+    {name: "[Item] MSc in Game Development (RNCP 7)", rarity: RarityEnum.LEGENDARY},
+    {name: "[Title] Game Engine Architect", rarity: RarityEnum.EPIC},
+    {name: "[Skill] Advanced C++ & C# Programming", rarity: RarityEnum.EPIC},
+    {name: "[Skill] Unreal Engine 5 & Unity Mastery", rarity: RarityEnum.EPIC},
+    {name: "[Skill] Procedural Generation & Complex Algorithms", rarity: RarityEnum.RARE},
+    {name: "[Skill] AI & Networking for Games", rarity: RarityEnum.RARE},
+    {name: "[Skill] Leadership & Soft Skills", rarity: RarityEnum.UNCOMMON}
+  ],
+  description: "Embarking on this challenging quest, you seek to master the intricacies of game development. Your training covers high-level programming, engine mastery, and cutting-edge technologies. Through real-world projects and two years of in-studio apprenticeship, you refine your expertise and build a portfolio worthy of the industry’s top studios. The final challenge? Leading a team to craft a full-fledged video game, proving your worth as a future industry leader."
+},
+
+
+
+{  
+  title: "Develop Game Developer Skills",
     QuestType: QuestTypeEnum.MAIN,
     status: StatusEnum.IN_PROGRESS,
     location: "Gaming Campus - Grande Arche de la Défense, Paris",
