@@ -87,6 +87,31 @@ function Achievements() {
           </div>
 
 
+
+          <div className='MedalLegend'>
+          <div className='MedalPart'>
+            <img src={Medal.commonWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>First Year</p>
+          </div>
+          <div className='MedalPart'>
+            <img src={Medal.uncommonWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>Second Year</p>
+          </div>
+          <div className='MedalPart'>
+            <img src={Medal.rareWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>Third Year</p>
+          </div>
+          <div className='MedalPart'>
+            <img src={Medal.epicWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>Fourth Year</p>
+          </div>
+          <div className='MedalPart'>
+            <img src={Medal.legendaryWhole} alt='Medal' className='MedalLegendMedal' />
+            <p>Fifth Year</p>
+          </div>
+        </div>
+
+
           {/*********************** Project details **********************/}
           {displayedProject && (
             <>
@@ -200,28 +225,7 @@ function Achievements() {
         </div>
 
 
-        <div className='MedalLegend'>
-          <div className='MedalPart'>
-            <img src={Medal.commonWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>First Year</p>
-          </div>
-          <div className='MedalPart'>
-            <img src={Medal.uncommonWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>Second Year</p>
-          </div>
-          <div className='MedalPart'>
-            <img src={Medal.rareWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>Third Year</p>
-          </div>
-          <div className='MedalPart'>
-            <img src={Medal.epicWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>Fourth Year</p>
-          </div>
-          <div className='MedalPart'>
-            <img src={Medal.legendaryWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>Fifth Year</p>
-          </div>
-        </div>
+        
       </div>
     );
   }
