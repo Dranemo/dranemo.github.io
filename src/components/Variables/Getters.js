@@ -1,7 +1,7 @@
 import { Medal } from './ImageGetter';
 
 
-import { RarityEnum, StatusEnum, YearEnum } from './Enums';
+import { RarityEnum, StatusEnum, YearEnum, LanguageEnum } from './Enums';
 
 
 
@@ -56,5 +56,12 @@ const getStatusColor = (status) => {
     }
 };
 
+var defaultLanguage = LanguageEnum.FR;
+const setDefaultLanguage = (language) => {
+    defaultLanguage = language;
+    document.documentElement.lang = language.html;
+}
 
-  export { getRarityColor, getMedalImage, getStatusColor };
+
+
+  export { getRarityColor, getMedalImage, getStatusColor, defaultLanguage, setDefaultLanguage };

@@ -2,8 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 import ImageMoi from '../assets/images/bigImages/1024px-0698Amaura.png';
-import CVfr from '../assets/files/CV_French.pdf';
-import CVen from '../assets/files/CV_English.pdf';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
@@ -11,8 +9,9 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import '../componentCSS/Main.css';
 import '../componentCSS/Card.css';
 
-import { getRarityColor } from './Variables/Getters';
-import { RarityEnum } from './Variables/Enums';
+import { getRarityColor, defaultLanguage } from './Variables/Getters';
+
+import PagesFile from './Variables/Texts/PagesFile';
 
 
 
@@ -20,51 +19,22 @@ import { RarityEnum } from './Variables/Enums';
 
 
 
-const EquippedTitle = {
-  Title: 'Third-Year Major Student',
-  Rarity: RarityEnum.LEGENDARY
-};
-
-
+// ----------------------------------------------------------------------------------- //
+// ------------------------ Le Texte se trouve dans PagesFiles ----------------------- //
+// ----------------------------------------------------------------------------------- //
 
 function Main() {
 
 
 
-    // Détecter si la page est affichée sur un téléphone
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-      const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
-      };
-  
-      // Vérifier la taille de la fenêtre au chargement
-      handleResize();
-  
-      // Ajouter un écouteur d'événement pour les changements de taille de la fenêtre
-      window.addEventListener('resize', handleResize);
-  
-      // Nettoyer l'écouteur d'événement lors du démontage du composant
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-  
-    // Afficher un message si la page est affichée sur un téléphone
-    if (isMobile) {
-      return (
-        <div className='Card' id='CardMobile'>
-          <h3>Sorry, the mobile version is currently under development.</h3>
-          <p>Please check back later, or use the desktop version!</p>
-          <img src={ImageMoi} alt="Moi"/>
-        </div>
-      );
-    }
-
-
-
-
+// Fonction pour générer les éléments supplémentaires
+const generateAdditionalContent = (nbspNumber) => {
+  let content = [];
+  for (let i = 0; i < nbspNumber; i++) {
+      content.push(<span key={i}>&nbsp;</span>);
+  }
+  return content;
+};
 
 
 
@@ -76,8 +46,8 @@ function Main() {
     return (
       <div className='Card' id='MainCard'>
 
-<div className='MainTitle'>
-                <h3>Yanaël Caillot</h3>
+      <div className='MainTitle'>
+                <h3>{PagesFile.Main.BigTitle[defaultLanguage.Langue]}</h3>
                 <hr className='titleBar'/>
             </div>
 
@@ -88,27 +58,34 @@ function Main() {
 
             <div className='MainSections'>
                 <div className='MainSection'>
-                    <h4 className='titleSec'>Stats:</h4>
-                    <p id='colorClair2'> - Level (Age): 20 <br/>
-                        - Guild (Job): Student <br/>
-                        - Server: France <br /></p>
-                    <p id='colorClair2'>Equipped Title : <span style={{ color: getRarityColor(EquippedTitle.Rarity) }}>{EquippedTitle.Title} ({EquippedTitle.Rarity})</span></p>
+                    <h4 className='titleSec'>{PagesFile.Main.Stats[defaultLanguage.Langue]}</h4>
+                    <p id='colorClair2'>{PagesFile.Main.Level[defaultLanguage.Langue]}20 <br/>
+                        - {PagesFile.Main.Guild[defaultLanguage.Langue]}<br/>
+                        - {PagesFile.Main.Server[defaultLanguage.Langue]}<br /></p>
+                    <p id='colorClair2'>{PagesFile.Main.EquippedTitle[defaultLanguage.Langue]}<span style={{ color: getRarityColor(PagesFile.Main.EquippedTitleTitle.Rarity) }}>{PagesFile.Main.EquippedTitleTitle.Title[defaultLanguage.Langue]} ({PagesFile.Main.EquippedTitleTitle.Rarity[defaultLanguage.Langue]})</span></p>
                 </div>
 
                 <div className='MainSection'>
-                    <h4 className='titleSec'>Character Preview:</h4>
-                    <p id='colorClair2'> I am a naturally curious person and I am always eager to learn new skills and expand my knowledge in many fields. <br/>
-                        Furthermore, I am a great team player, always willing to participate in projects to develop my creative skills and experience.</p>
+                    <h4 className='titleSec'>{PagesFile.Main.CharacterPreview[defaultLanguage.Langue]}</h4>
+                    <p id='colorClair2'>{PagesFile.Main.CharacterDescription[defaultLanguage.Langue]}<br/>
+                        {PagesFile.Main.CharacterDescription2[defaultLanguage.Langue]}</p>
                 </div>
 
                 <div className='MainSection'>
-                    <h4 className='titleSec' >Inventory:</h4>
-                    <p id='colorClair2'> - CV (English)  &nbsp;&nbsp;&nbsp;&nbsp;        <a href={CVen} download="CV_English_Yanael_Caillot.pdf" id='colorClair2'><FontAwesomeIcon icon={faDownload}></FontAwesomeIcon></a><br/>
-                        - CV (French)   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href={CVfr} download= "CV_French_Yanael_Caillot.pdf" id='colorClair2'><FontAwesomeIcon icon={faDownload}></FontAwesomeIcon></a><br/>
-                        - GameBoy <br/>
-                        - Karate black belt <br/>
-                        - Electric Bass <br/>
-                        See More...</p>
+                    <h4 className='titleSec' >{PagesFile.Main.Inventory[defaultLanguage.Langue]}</h4>
+                    <ul id='removeStyleList'>
+                      {PagesFile.Main.InventoryItems.map((item, index) => (
+                        <li key={index}>
+                          - {item[defaultLanguage.Langue]} {item.download === true ? (
+                            <>
+                              {generateAdditionalContent(item.nbspNumber[defaultLanguage.Langue])}
+                              <a href={item.href} download={item.downloadLink} id='colorClair2'><FontAwesomeIcon icon={faDownload}></FontAwesomeIcon></a>
+                            </>
+                          ) : null}
+                        </li>
+                      ))}
+                      {PagesFile.Main.SeeMore[defaultLanguage.Langue]}
+                    </ul>
                 </div>
             </div>
 

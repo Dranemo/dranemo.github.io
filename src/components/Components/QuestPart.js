@@ -8,7 +8,7 @@ import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import '../../componentCSS/Components/QuestPart.css';
 import { StatusEnum } from '../Variables/Enums';
 
-import { getStatusColor, getRarityColor } from '../Variables/Getters';
+import { getStatusColor, getRarityColor, defaultLanguage } from '../Variables/Getters';
 
 
 
@@ -25,25 +25,25 @@ function QuestPart( {quest} ) {
   
     return (
     <div className='PartQuest' onClick={changeQuestOpen}>
-        <h4 id='colorBlue'> <FontAwesomeIcon icon={questOpen ? faCaretDown : faCaretRight} /> {quest.title} (<span style={{color: getStatusColor(quest.status)}}>{quest.status}</span>) - {quest.dateDesc}</h4>
+        <h4 id='colorBlue'> <FontAwesomeIcon icon={questOpen ? faCaretDown : faCaretRight} /> {quest.title[defaultLanguage.Langue]} (<span style={{color: getStatusColor(quest.status)}}>{quest.status[defaultLanguage.Langue]}</span>) - {quest.dateDesc[defaultLanguage.Langue]}</h4>
         <div className={`quest-details ${questOpen ? 'open' : ''}`}>
         {questOpen && (
             <>
                 <hr className='titleBarQuest'/>
 
-                <p><span id='colorBlue' className='titleQuests'>LOCATION:</span> {quest.location}</p>
+                <p><span id='colorBlue' className='titleQuests'>LOCATION:</span> {quest.location[defaultLanguage.Langue]}</p>
 
                 {quest.status === StatusEnum.IN_PROGRESS ? (
-                    <p><span id='colorBlue' className='titleQuests'>QUEST STARTED:</span> {quest.dateDesc} <br/>
-                        <span id='colorBlue' className='titleQuests'>TIME UNTIL COMPLETION:</span> {quest.timeDesc}
+                    <p><span id='colorBlue' className='titleQuests'>QUEST STARTED:</span> {quest.dateDesc[defaultLanguage.Langue]} <br/>
+                        <span id='colorBlue' className='titleQuests'>TIME UNTIL COMPLETION:</span> {quest.timeDesc[defaultLanguage.Langue]}
                     </p>
                 ) : quest.status === StatusEnum.COMPLETED ? (
-                    <p><span id='colorBlue' className='titleQuests'>QUEST COMPLETED:</span> {quest.dateDesc} <br/>
-                        <span id='colorBlue' className='titleQuests'>TIME TAKEN:</span> {quest.timeDesc}
+                    <p><span id='colorBlue' className='titleQuests'>QUEST COMPLETED:</span> {quest.dateDesc[defaultLanguage.Langue]} <br/>
+                        <span id='colorBlue' className='titleQuests'>TIME TAKEN:</span> {quest.timeDesc[defaultLanguage.Langue]}
                     </p>
                 ) : quest.status === StatusEnum.NOT_STARTED ? (
-                    <p><span id='colorBlue' className='titleQuests'>QUEST STARTING:</span> {quest.dateDesc} <br/>
-                        <span id='colorBlue' className='titleQuests'>TIME EXPECTED:</span> {quest.timeDesc}
+                    <p><span id='colorBlue' className='titleQuests'>QUEST STARTING:</span> {quest.dateDesc[defaultLanguage.Langue]} <br/>
+                        <span id='colorBlue' className='titleQuests'>TIME EXPECTED:</span> {quest.timeDesc[defaultLanguage.Langue]}
                     </p>
                 ): null}
                 
@@ -53,11 +53,11 @@ function QuestPart( {quest} ) {
                 <ul id='removeStyleList'>
                     {quest.rewards.map((reward, index) => (
                         <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
-                            - {reward.name} ({reward.rarity})
+                            - {reward.name[defaultLanguage.Langue]} ({reward.rarity[defaultLanguage.Langue]})
                         </li>
                     ))}
                 </ul>
-                <p><span id='colorBlue' className='titleQuests'>DESCRIPTION:</span><br/> {quest.description}</p>
+                <p><span id='colorBlue' className='titleQuests'>DESCRIPTION:</span><br/> {quest.description[defaultLanguage.Langue]}</p>
                 </>)}
 
                 </>) }

@@ -6,12 +6,15 @@ import LinkedIn from '../assets/images/linkedin.png';
 
 import '../componentCSS/Support.css';
 
+import PagesFile from './Variables/Texts/PagesFile';
+import { defaultLanguage } from './Variables/Getters';
+
 function Support() {
 
   return (
     <div className='Card' id='CardSupport'>
         <div>
-            <h2>Support</h2>
+            <h2>{PagesFile.Support.Title[defaultLanguage.Langue]}</h2>
             <hr className='titleBar'/>
         </div>
         <p></p>

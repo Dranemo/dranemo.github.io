@@ -5,7 +5,9 @@ import '../componentCSS/Card.css';
 import '../componentCSS/Quests.css';
 
 import { QuestTypeEnum} from './Variables/Enums';
-import QuestsFile from './Variables/QuestsFile';
+import QuestsFile from './Variables/Texts/QuestsFile';
+import PagesFile from './Variables/Texts/PagesFile';
+import { defaultLanguage } from './Variables/Getters';
 
 
 // --------------------------------------------------------------------------------------------------------------------
@@ -49,7 +51,7 @@ function Quests() {
             
     <div className='Card' id='QuestCard'>
         <div>
-            <h2>Quest Log</h2>
+            <h2>{PagesFile.Quests.Title[defaultLanguage.Langue]}</h2>
             <hr className='titleBar'/>
         </div>
         <p></p>
@@ -57,7 +59,7 @@ function Quests() {
         <div className='QuestBigPart'>
           {MainQuests.length > 0 && (
             <>
-            <h3 className='questSecondTitle'>Main Quests</h3>
+            <h3 className='questSecondTitle'>{QuestTypeEnum.MAIN[defaultLanguage.Langue]}</h3>
             
             {MainQuests.map((quest) => (
               <QuestPart quest={quest} />
@@ -67,7 +69,7 @@ function Quests() {
 
           {SideQuests.length > 0 && (
             <>
-            <h3 className='questSecondTitle'>Side Quests</h3>
+            <h3 className='questSecondTitle'>{QuestTypeEnum.SIDE[defaultLanguage.Langue]}</h3>
 
             {SideQuests.map((quest) => (
               <QuestPart quest={quest} />

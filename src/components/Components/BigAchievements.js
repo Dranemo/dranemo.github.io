@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import { getRarityColor } from "../Variables/Getters";
+import { getRarityColor, defaultLanguage } from "../Variables/Getters";
 import { Arrow } from '../Variables/ImageGetter';
 
 import '../../componentCSS/Components/BigAchievement.css';
@@ -48,22 +48,22 @@ function BigAchievement({displayedProject}) {
         <div className='ProjectDetails'>
             <img src={displayedProject.badgeImg.image} alt={`image project`} className='projectImgDesc' />
                 
-            <h2 id='colorBlue'>{displayedProject.badgeTitle}</h2>
+            <h2 id='colorBlue'>{displayedProject.badgeTitle[defaultLanguage.Langue]}</h2>
             <hr className='titleBarProj'/>
-            <p>{displayedProject.dateDesc}</p>
-            <p>{displayedProject.timeDesc}</p>
+            <p>{displayedProject.dateDesc[defaultLanguage.Langue]}</p>
+            <p>{displayedProject.timeDesc[defaultLanguage.Langue]}</p>
             <hr className='titleBarProj2'/>
 
             <div>
-                <h3 id='colorBlue'>{displayedProject.details.title}</h3>
+                <h3 id='colorBlue'>{displayedProject.details.title[defaultLanguage.Langue]}</h3>
                 <hr className='titleBarProj'/>
 
                     
-                <p className='DescProject' dangerouslySetInnerHTML={{ __html: displayedProject.details.description }}></p>
+                <p className='DescProject' dangerouslySetInnerHTML={{ __html: displayedProject.details.description[defaultLanguage.Langue] }}></p>
                 <ul id='removeStyleList'>
                     {displayedProject.details.rewards.map((reward, index) => (
                         <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
-                            - {reward.name} ({reward.rarity})
+                            - {reward.name[defaultLanguage.Langue]} ({reward.rarity[defaultLanguage.Langue]})
                         </li>
                     ))}
                 </ul>

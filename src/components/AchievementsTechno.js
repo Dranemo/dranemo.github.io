@@ -4,9 +4,12 @@ import '../componentCSS/Achievements.css';
 import ProjectMedal from './Components/ProjectMedal';
 import BigAchievement from './Components/BigAchievements';
 
-import ProjectsFile from './Variables/ProjectsFile';
-import { TechnoEnum  } from './Variables/Enums';
+import ProjectsFile from './Variables/Texts/ProjectsFile';
+import { TechnoEnum, YearEnum  } from './Variables/Enums';
 import {Medal} from './Variables/ImageGetter';
+
+import { defaultLanguage } from './Variables/Getters';
+import PagesFile from './Variables/Texts/PagesFile';
 
 function Achievements() {
   {/*********************** Display Medals **********************/}
@@ -82,7 +85,7 @@ function Achievements() {
     return (
       <div className='Card' id='CardAch'>
           <div>
-              <h2>Achievements</h2>
+              <h2>{PagesFile.Achievements.Title[defaultLanguage.Langue]}</h2>
               <hr className='titleBar'/>
           </div>
 
@@ -91,23 +94,23 @@ function Achievements() {
           <div className='MedalLegend'>
           <div className='MedalPart'>
             <img src={Medal.commonWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>First Year</p>
+            <p>{YearEnum.FIRST[defaultLanguage.Langue]}</p>
           </div>
           <div className='MedalPart'>
             <img src={Medal.uncommonWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>Second Year</p>
+            <p>{YearEnum.SECOND[defaultLanguage.Langue]}</p>
           </div>
           <div className='MedalPart'>
             <img src={Medal.rareWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>Third Year</p>
+            <p>{YearEnum.THIRD[defaultLanguage.Langue]}</p>
           </div>
           <div className='MedalPart'>
             <img src={Medal.epicWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>Fourth Year</p>
+            <p>{YearEnum.FOURTH[defaultLanguage.Langue]}</p>
           </div>
           <div className='MedalPart'>
             <img src={Medal.legendaryWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>Fifth Year</p>
+            <p>{YearEnum.FIFTH[defaultLanguage.Langue]}</p>
           </div>
         </div>
 
@@ -125,7 +128,7 @@ function Achievements() {
           <div className='bigDivAchievements'>
           {UEAchievements.length > 0 && (
             <>
-              <h3>Unreal Engine:</h3>
+              <h3>{TechnoEnum.UNREALENGINE}:</h3>
               <div className='divProjects'>
 
               {UEAchievements.map((project) => (
@@ -144,7 +147,7 @@ function Achievements() {
 
           {GodotAchievements.length > 0 && (
           <>
-            <h3>Godot:</h3>
+            <h3>{TechnoEnum.GODOT}:</h3>
             <div className='divProjects'>
               
               {GodotAchievements.map((project) => (
@@ -162,7 +165,7 @@ function Achievements() {
 
           {UnityAchievements.length > 0 && (
           <>
-            <h3>Unity:</h3>
+            <h3>{TechnoEnum.UNITY}:</h3>
             <div className='divProjects'>
               {UnityAchievements.map((project) => (
                 <ProjectMedal
@@ -177,7 +180,7 @@ function Achievements() {
 
           {CppAchievements.length > 0 && (
           <>
-            <h3>C++:</h3>
+            <h3>{TechnoEnum.CPP}:</h3>
             <div className='divProjects'>
 
               {CppAchievements.map((project) => (
@@ -193,7 +196,7 @@ function Achievements() {
 
           {CSharpAchievements.length > 0 && (
           <>
-            <h3>C#:</h3>
+            <h3>{TechnoEnum.CSHARP}:</h3>
             <div className='divProjects'>
               {CSharpAchievements.map((project) => (
                 <ProjectMedal
@@ -208,7 +211,7 @@ function Achievements() {
 
           {OtherAchievements.length > 0 && (
           <>
-            <h3>Other:</h3>
+            <h3>{PagesFile.Achievements.Other[defaultLanguage.Langue]}:</h3>
             <div className='divProjects'>
               {OtherAchievements.map((project) => (
                 <ProjectMedal

@@ -2,6 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import amagara from './assets/images/bigImages/1024px-0698Amaura.png';
 
+import { NavState, LanguageEnum } from './components/Variables/Enums';
+import { defaultLanguage, setDefaultLanguage } from './components/Variables/Getters';
+import PagesFile from './components/Variables/Texts/PagesFile';
+
 import './App.css';
 
 import Nav from './components/Nav';
@@ -13,14 +17,7 @@ import Main from './components/Main';
 import Quests from './components/Quest';
 
 
-
-const NavState = {
-  main: 'Main Menu',
-  skills: 'Skills',
-  quest: 'Quest Log',
-  achievements: 'Achievements',
-  support: 'Support'
-}
+const languagesPossible = Object.values(LanguageEnum);
 
 
 
@@ -42,7 +39,12 @@ function App() {
     setHoveredButton(null);
   };
 
-
+  const [currentIndex, setCurrentIndex] = useState(languagesPossible.indexOf(defaultLanguage));
+    const goToNextLanguage = () => {
+        const nextIndex = (currentIndex + 1) % languagesPossible.length;
+        setCurrentIndex(nextIndex);
+        setDefaultLanguage(languagesPossible[nextIndex]);
+    };
 
 
 
@@ -74,8 +76,8 @@ function App() {
     if (isMobile) {
       return (
         <div className='Card' id='CardMobile'>
-          <h3>Sorry, the mobile version is currently under development.</h3>
-          <p>Please check back later, or use the desktop version!</p>
+          <h3>{PagesFile.App.Sorry[defaultLanguage.Langue]}</h3>
+          <p>{PagesFile.App.CheckBack[defaultLanguage.Langue]}</p>
           <img src={amagara} alt="Amagara"/>
         </div>
       );
@@ -98,6 +100,7 @@ function App() {
         <Nav 
           navState={navState} 
           changeNavState={changeNavState}
+          changeLanguage={goToNextLanguage}
           hoveredButton={hoveredButton}
           handleMouseEnter={handleMouseEnter}
           handleMouseLeave={handleMouseLeave}

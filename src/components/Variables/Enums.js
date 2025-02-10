@@ -1,25 +1,74 @@
 const RarityEnum = {
-    COMMON: 'Common',
-    UNCOMMON: 'Uncommon',
-    RARE: 'Rare',
-    EPIC: 'Epic',
-    LEGENDARY: 'Legendary'
+    COMMON: {
+      "English": 'Common',
+      "Français": 'Commun'
+    },
+    UNCOMMON: {
+      "English": 'Uncommon',
+      "Français": 'Peu Commun'
+    },
+    RARE: {
+      "English": 'Rare',
+      "Français": 'Rare'
+    },
+    EPIC: {
+      "English": 'Epic',
+      "Français": 'Épique'
+    },
+    LEGENDARY: {
+      "English": 'Legendary',
+      "Français": 'Légendaire'
+    }
+  };
+
+
+
+  const NavState = {
+    main: 'Main Menu',
+    skills: 'Skills',
+    quest: 'Quest Log',
+    achievements: 'Achievements',
+    support: 'Support'
   };
 
 
 const YearEnum = {
-    FIRST : 'First Year',
-    SECOND : 'Second Year',
-    THIRD : 'Third Year',
-    FOURTH : 'Fourth Year',
-    FIFTH : 'Fifth Year'
+    FIRST : {
+      "English": 'First Year',
+      "Français": 'Première Année'
+    },
+    SECOND : {
+      "English": 'Second Year',
+      "Français": 'Deuxième Année'
+    },
+    THIRD : {
+      "English": 'Third Year',
+      "Français": 'Troisième Année'
+    },
+    FOURTH : {
+      "English": 'Fourth Year',
+      "Français": 'Quatrième Année'
+    },
+    FIFTH : {
+      "English": 'Fifth Year',
+      "Français": 'Cinquième Année'
+    }
 }
 
   // Définir l'enum pour le status
   const StatusEnum = {
-      IN_PROGRESS: 'In Progress',
-      COMPLETED: 'Completed',
-      NOT_STARTED: 'Not Started'
+      IN_PROGRESS: {
+        "English" : 'In Progress',
+        "Français" : 'En Cours'
+      },
+      COMPLETED: {
+        "English": 'Completed',
+        "Français": 'Terminé'
+      },
+      NOT_STARTED: {
+        "English": 'Not Started',
+        "Français": 'Non Commencé'
+      }
     };
 
 
@@ -34,8 +83,26 @@ const YearEnum = {
     };
 
     const QuestTypeEnum = {
-        MAIN: 'Main Quest',
-        SIDE: 'Side Quest',
+        MAIN: {
+          "English": 'Main Quests',
+          "Français": 'Quêtes Principales'
+        },
+        SIDE: {
+          "English": 'Side Quests',
+          "Français": 'Quêtes Secondaires'
+        },
     };
 
-    export { RarityEnum, YearEnum, StatusEnum, TechnoEnum, QuestTypeEnum };
+
+    const LanguageEnum = {
+      FR: {
+        Langue: 'Français',
+        html: 'fr'
+      },
+      EN: {
+        Langue: 'English',
+        html: 'en'
+      }
+    }
+
+    export { RarityEnum, NavState, YearEnum, StatusEnum, TechnoEnum, QuestTypeEnum, LanguageEnum };
