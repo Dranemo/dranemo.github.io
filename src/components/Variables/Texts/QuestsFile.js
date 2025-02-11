@@ -347,8 +347,8 @@ const QuestsFile = [
 
 {
   title: {
-      "English": "Volunteer Bug Tester for Appearance",
-      "Français": "Testeur Bénévole pour Appearance"
+      "English": "Volunteer QA/Tester for Appearance",
+      "Français": "QA/Testeur Bénévole pour Appearance"
   },
   QuestType: QuestTypeEnum.SIDE,
   status: StatusEnum.COMPLETED,
@@ -395,8 +395,8 @@ const QuestsFile = [
       }
   ],
   description: {
-      "English": "You contributed to the development of *Appearance* as a volunteer bug tester, assisting the team by identifying glitches and helping improve the player experience. Through meticulous testing and detailed feedback, you played a role in refining the game’s stability while sharpening your analytical skills.",
-      "Français": "Tu as contribué au développement de *Appearance* en tant que testeur bénévole, en aidant l'équipe à repérer les bugs et à améliorer l'expérience des joueurs. Grâce à des tests rigoureux et des retours détaillés, tu as participé à l'amélioration de la stabilité du jeu tout en affinant tes compétences analytiques."
+      "English": "You contributed to the development of *Appearance* as a volunteer QA and bug tester, assisting the team by identifying glitches and helping improve the player experience. Through meticulous testing and detailed feedback, you played a role in refining the game’s stability while sharpening your analytical skills.",
+      "Français": "Tu as contribué au développement de *Appearance* en tant que QA et testeur bénévole, en aidant l'équipe à repérer les bugs et à améliorer l'expérience des joueurs. Grâce à des tests rigoureux et des retours détaillés, tu as participé à l'amélioration de la stabilité du jeu tout en affinant tes compétences analytiques."
   }
 },
 
