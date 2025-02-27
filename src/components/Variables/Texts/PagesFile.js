@@ -52,7 +52,7 @@ const PagesFile = {
         },
         CharacterDescription: {
             "English": "I am a naturally curious person and I am always eager to learn new skills and expand my knowledge in many fields. Furthermore, I am a great team player, always willing to participate in projects to develop my creative skills and experience.",
-            "Français": "Je suis une personne naturellement curieuse et je suis toujours désireux d'apprendre de nouvelles compétences et d'élargir mes connaissances dans de nombreux domaines. De plus, je suis un excellent joueur d'équipe, toujours prêt à participer à des projets pour développer mes compétences créatives et mon expérience."
+            "Français": "Je suis une personne naturellement curieuse et je suis toujours désireux d'apprendre de nouvelles compétences et d'élargir mes connaissances dans de nombreux domaines."
         },
         CharacterDescription2: {
             "English": "Furthermore, I am a great team player, always willing to participate in projects to develop my creative skills and experience.",
