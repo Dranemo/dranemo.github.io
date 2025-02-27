@@ -17,7 +17,7 @@ const getRarityColor = (rarity) => {
         case RarityEnum.EPIC:
             return '#8c52ff';
         case RarityEnum.LEGENDARY:
-            return '#805D09 '; 
+            return '#FFB800 '; 
         default:
             return 'black';
     }
