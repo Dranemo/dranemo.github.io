@@ -66,12 +66,6 @@ const generateAdditionalContent = (nbspNumber) => {
                 </div>
 
                 <div className='MainSection'>
-                    <h4 className='titleSec'>{PagesFile.Main.CharacterPreview[defaultLanguage.Langue]}</h4>
-                    <p id='colorClair2'>{PagesFile.Main.CharacterDescription[defaultLanguage.Langue]}<br/>
-                        {PagesFile.Main.CharacterDescription2[defaultLanguage.Langue]}</p>
-                </div>
-
-                <div className='MainSection'>
                     <h4 className='titleSec' >{PagesFile.Main.Inventory[defaultLanguage.Langue]}</h4>
                     <ul id='removeStyleList'>
                       {PagesFile.Main.InventoryItems.map((item, index) => (
@@ -86,6 +80,12 @@ const generateAdditionalContent = (nbspNumber) => {
                       ))}
                       {PagesFile.Main.SeeMore[defaultLanguage.Langue]}
                     </ul>
+                </div>
+
+                <div className='MainSection'>
+                    <h4 className='titleSec'>{PagesFile.Main.CharacterPreview[defaultLanguage.Langue]}</h4>
+                    <p id='colorClair2'>{PagesFile.Main.CharacterDescription[defaultLanguage.Langue]}<br/>
+                        {PagesFile.Main.CharacterDescription2[defaultLanguage.Langue]}</p>
                 </div>
             </div>
 

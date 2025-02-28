@@ -46,11 +46,11 @@ const getRarityColor = (rarity) => {
 const getStatusColor = (status) => {
     switch (status) {
         case StatusEnum.IN_PROGRESS:
-            return '#B22222  ';
+            return '#9e582c';
         case StatusEnum.COMPLETED:
             return '#4A7F32 ';
         case StatusEnum.NOT_STARTED:
-            return '#9e582c';
+            return '#B22222  ';
         default:
             return 'black';
     }

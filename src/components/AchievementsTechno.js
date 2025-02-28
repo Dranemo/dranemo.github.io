@@ -1,5 +1,12 @@
 import React, {useState, useEffect} from 'react';
 
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+
+
 import '../componentCSS/Achievements.css';
 import ProjectMedal from './Components/ProjectMedal';
 import BigAchievement from './Components/BigAchievements';
@@ -94,23 +101,23 @@ function Achievements() {
           <div className='MedalLegend'>
           <div className='MedalPart'>
             <img src={Medal.commonWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>{YearEnum.FIRST[defaultLanguage.Langue]}</p>
+            <p>{YearEnum.FIRST}</p>
           </div>
           <div className='MedalPart'>
             <img src={Medal.uncommonWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>{YearEnum.SECOND[defaultLanguage.Langue]}</p>
+            <p>{YearEnum.SECOND}</p>
           </div>
           <div className='MedalPart'>
             <img src={Medal.rareWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>{YearEnum.THIRD[defaultLanguage.Langue]}</p>
+            <p>{YearEnum.THIRD}</p>
           </div>
           <div className='MedalPart'>
             <img src={Medal.epicWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>{YearEnum.FOURTH[defaultLanguage.Langue]}</p>
+            <p>{YearEnum.FOURTH}</p>
           </div>
           <div className='MedalPart'>
             <img src={Medal.legendaryWhole} alt='Medal' className='MedalLegendMedal' />
-            <p>{YearEnum.FIFTH[defaultLanguage.Langue]}</p>
+            <p>{YearEnum.FIFTH}</p>
           </div>
         </div>
 

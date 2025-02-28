@@ -114,8 +114,8 @@ const PagesFile = {
 
         EquippedTitleTitle: {
             Title: {
-                "English": "Third-Year Major Student",
-                "Français": "Major de troisième année"
+                "English": "Third-Year Valedictorian",
+                "Français": "Major de promotion de troisième année"
             },
             Rarity: RarityEnum.LEGENDARY
         },
@@ -123,15 +123,56 @@ const PagesFile = {
 
     Quests: {
         Title: {
-            "English": "Quests Log",
-            "Français": "Quêtes"
+            "English": "Experiences",
+            "Français": "Experiences"
+        },
+        Loc: {
+            "English": "Location:",
+            "Français": "Lieu :"
+        },
+
+        Completed: {
+            "English": "Completed:",
+            "Français": "Terminé :"
+        },
+        Started: {
+            "English": "Started:",
+            "Français": "Commencé :"
+        },
+        Starting: {
+            "English": "Starting:",
+            "Français": "Commence :"
+        },
+
+
+        TimeTaken: {
+            "English": "Time taken:",
+            "Français": "Temps pris :"
+        },
+        TimeExpected: {
+            "English": "Time expected:",
+            "Français": "Temps attendu :"
+        },
+        TimeUntilCompletion: {
+            "English": "Time until completion:",
+            "Français": "Temps restant :"
+        },
+
+
+        Rewards: {
+            "English": "Rewards:",
+            "Français": "Récompenses :"
+        },
+        Desc: {
+            "English": "Description:",
+            "Français": "Description :"
         }
     },
 
     Achievements: {
         Title: {
-            "English": "Achievements",
-            "Français": "Succès"
+            "English": "Projects",
+            "Français": "Projets"
         },
         Other: {
             "English": "Other",

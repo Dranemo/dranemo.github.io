@@ -33,26 +33,11 @@ const RarityEnum = {
 
 
 const YearEnum = {
-    FIRST : {
-      "English": 'First Year',
-      "Français": 'Première Année'
-    },
-    SECOND : {
-      "English": 'Second Year',
-      "Français": 'Deuxième Année'
-    },
-    THIRD : {
-      "English": 'Third Year',
-      "Français": 'Troisième Année'
-    },
-    FOURTH : {
-      "English": 'Fourth Year',
-      "Français": 'Quatrième Année'
-    },
-    FIFTH : {
-      "English": 'Fifth Year',
-      "Français": 'Cinquième Année'
-    }
+    FIRST : '2021 - 2022',
+    SECOND : '2023 - 2024',
+    THIRD : '2024 - 2025',
+    FOURTH : '2025 - 2026',
+    FIFTH : '2026+',
 }
 
   // Définir l'enum pour le status

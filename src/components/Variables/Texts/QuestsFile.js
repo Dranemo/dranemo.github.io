@@ -5,8 +5,8 @@ const QuestsFile = [
 
 {
   title: {
-    "English": "Master the Art of Game Development",
-    "Français": "Maîtriser l'Art du Développement de Jeux"
+    "English": "MSc Video Game Developer",
+    "Français": "MSc Développeur Jeu Vidéo"
   },
   QuestType: QuestTypeEnum.MAIN,
   status: StatusEnum.NOT_STARTED,
@@ -84,8 +84,8 @@ const QuestsFile = [
 
 {
   title: {
-    "English": "Develop Game Developer Skills",
-    "Français": "Développer des Compétences de Développeur de Jeux"
+    "English": "Bachelor in Computer Science, Specialization in Video Game Development",
+    "Français": "Bachelor en Developpement informatique spécialité jeux vidéo"
   },
   QuestType: QuestTypeEnum.MAIN,
   status: StatusEnum.IN_PROGRESS,
@@ -157,8 +157,8 @@ const QuestsFile = [
     "Français": "GStudio - Gaming Campus, Paris"
   },
   dateDesc: {
-    "English": "July - August 2024",
-    "Français": "Juillet - Août 2024"
+    "English": "August 2024",
+    "Français": "Août 2024"
   },
   timeDesc: {
     "English": "2 months",
@@ -204,8 +204,8 @@ const QuestsFile = [
   
 {
   title: {
-    "English": "Develop Basic Skills",
-    "Français": "Développer des Compétences de Base"
+    "English": "High School Diploma - Specialization in Physics, Chemistry, and Biology",
+    "Français": "Baccalauréat - Spécialisation en Physique, Chimie et SVT"
   },
   QuestType: QuestTypeEnum.MAIN,
   status: StatusEnum.COMPLETED,
