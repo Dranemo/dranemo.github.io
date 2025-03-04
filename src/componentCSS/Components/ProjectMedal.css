@@ -1,5 +1,5 @@
 .ProjectTitlePart {
-    width: 20vw;
+    width: 100%;
     height: auto;
 
     
@@ -14,12 +14,16 @@
     flex-direction: column;
 
     background-color: #aa8284 ;
-    margin-bottom: 1vh;
     border-radius: 1vh;
     color: #4f1c1b;
     
     box-shadow: 0 0.3vh 0.5vw black;
     transition: .2s ease-in-out;
+    
+    
+    padding: 1rem;
+    margin: 1%;
+    width: 20%;
 }
 
 .ProjectPart:hover {
@@ -36,12 +40,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
 }
 
 .Medal {
     position: absolute;
 
-    width: 20vw;
+    width: 70%;
     height: auto;
 
     z-index: 2;
@@ -51,12 +57,12 @@
     position: relative;
 
     object-fit: cover;
-    width: 9vw;
-    height: 9vw;
+    width: 70%;
+    height: auto;
 
     z-index: 1;
 }
 
 .ProjectTitle {
-    margin-top: 5vw;
+    margin-top: 50%;
 }

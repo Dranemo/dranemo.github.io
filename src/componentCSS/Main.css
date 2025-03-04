@@ -1,5 +1,5 @@
 .imageMoi {
-    height: 88vh;
+    height: 80vh;
     position:sticky;    
     width: 35%;
     top : 6vh;
@@ -74,7 +74,6 @@
 
 
 #MainCard {
-    font-size: 15px;
     line-height: 1.5;
 
         display: block;

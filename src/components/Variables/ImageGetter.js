@@ -1,9 +1,9 @@
 const Medal = {
-    common: require('../../assets/images/medals/woodMedal.png'),
-    uncommon: require('../../assets/images/medals/ironMedal.png'),
-    rare: require('../../assets/images/medals/bronzeMedal.png'),
-    epic: require('../../assets/images/medals/silverMedal.png'),
-    legendary: require('../../assets/images/medals/goldMedal.png'),
+    common: require('../../assets/images/medalBigHole/woodMedal.png'),
+    uncommon: require('../../assets/images/medalBigHole/ironMedal.png'),
+    rare: require('../../assets/images/medalBigHole/bronzeMedal.png'),
+    epic: require('../../assets/images/medalBigHole/silverMedal.png'),
+    legendary: require('../../assets/images/medalBigHole/goldMedal.png'),
 
     commonWhole: require('../../assets/images/oldMedals/woodMedal.png'),
     uncommonWhole: require('../../assets/images/oldMedals/ironMedal.png'),

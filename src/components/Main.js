@@ -47,7 +47,7 @@ const generateAdditionalContent = (nbspNumber) => {
       <div className='Card' id='MainCard'>
 
       <div className='MainTitle'>
-                <h3>{PagesFile.Main.BigTitle[defaultLanguage.Langue]}</h3>
+                <h2>{PagesFile.Main.BigTitle[defaultLanguage.Langue]}</h2>
                 <hr className='titleBar'/>
             </div>
 
