@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.71a94770.css",
-    "main.js": "/static/js/main.9dbd9a65.js",
+    "main.js": "/static/js/main.b6dac99f.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/MainMenu.png": "/static/media/MainMenu.52703065e5437cc57955.png",
     "static/media/Lvl1.png": "/static/media/Lvl1.e06ea9745c496fd9ed96.png",
@@ -9,10 +9,10 @@
     "static/media/Power.png": "/static/media/Power.eab544bb19f05098199b.png",
     "static/media/Lvl3.png": "/static/media/Lvl3.12e1e24d68fcb8f95f6e.png",
     "static/media/1024px-0698Amaura.png": "/static/media/1024px-0698Amaura.82138810ab25c81f0403.png",
+    "static/media/CV_French.pdf": "/static/media/CV_French.a79832a6cdb55db5c9a2.pdf",
+    "static/media/CV_English.pdf": "/static/media/CV_English.4665269b8a45b1b82ac6.pdf",
     "static/media/VxV_Sample.png": "/static/media/VxV_Sample.9a16ee9dc3aa0c3d5fde.png",
     "static/media/goldMedal.png": "/static/media/goldMedal.7a01262297effe6fb4c5.png",
-    "static/media/CV_French.pdf": "/static/media/CV_French.d453979a0505b3ad5873.pdf",
-    "static/media/CV_English.pdf": "/static/media/CV_English.e72a8685eaa6022e0e3e.pdf",
     "static/media/bronzeMedal.png": "/static/media/bronzeMedal.146c7b422ab45f4e442b.png",
     "static/media/GalacticPolice.png": "/static/media/GalacticPolice.07947c2d2fa48794b170.png",
     "static/media/ZoryaSisters.png": "/static/media/ZoryaSisters.c00b1272377095852e59.png",
@@ -39,11 +39,11 @@
     "static/media/2.png": "/static/media/2.e83c17c305c5587be9fe.png",
     "index.html": "/index.html",
     "main.71a94770.css.map": "/static/css/main.71a94770.css.map",
-    "main.9dbd9a65.js.map": "/static/js/main.9dbd9a65.js.map",
+    "main.b6dac99f.js.map": "/static/js/main.b6dac99f.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.71a94770.css",
-    "static/js/main.9dbd9a65.js"
+    "static/js/main.b6dac99f.js"
   ]
 }
