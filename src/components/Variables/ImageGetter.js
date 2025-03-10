@@ -17,6 +17,11 @@ const Arrow = {
     left: require('../../assets/images/ArrowLeft.png'),
 }
 
+const Flag = {
+    fr: require('../../assets/images/flags/fr.png'),
+    en: require('../../assets/images/flags/en.png'),
+}
+
 
 const BigImageGetter = {
     projectPortfolio: require('../../assets/images/bigImages/1024px-0698Amaura.png'),
@@ -29,6 +34,7 @@ const BigImageGetter = {
     projectZoryaSisters: require('../../assets/images/bigImages/ZoryaSisters.png'),
     projectGameOfLifeC: require('../../assets/images/bigImages/GameOfLife.png'),
     projectVxVEngine: require('../../assets/images/bigImages/VxVEngine.png'),
+    projectGalacticPolice: require('../../assets/images/bigImages/GalacticPolice.png'),
 }
 
 const SmallImageGetter = {
@@ -41,8 +47,28 @@ const SmallImageGetter = {
         {image: require('../../assets/images/smallImages/PokemonASCII/Stats.png'), alt: 'Stats'},
         {image: require('../../assets/images/smallImages/PokemonASCII/Fight.png'), alt: 'Fight'},
     ],
+    projectGalacticPolice: [
+        {image: require('../../assets/images/smallImages/GalacticPolice/Lvl1.png'), alt: 'Lvl1'},
+        {image: require('../../assets/images/smallImages/GalacticPolice/Lvl2.png'), alt: 'Lvl2'},
+        {image: require('../../assets/images/smallImages/GalacticPolice/Lvl3.png'), alt: 'Lvl3'},
+
+    ],
+    projectZoryaSisters: [
+        {image: require('../../assets/images/smallImages/ZoryaSisters/MainMenu.png'), alt: 'Main Menu Zorya Sisters'},
+        {image: require('../../assets/images/smallImages/ZoryaSisters/Power.png'), alt: 'Power Select Zorya Sisters'},
+        {image: require('../../assets/images/smallImages/ZoryaSisters/Lvl1.png'), alt: 'Level Zorya Sisters'},
+        {image: require('../../assets/images/smallImages/ZoryaSisters/Lvl2.png'), alt: 'Level Zorya Sisters'},
+    ],
+    projectPathfinding: [
+        {image: require('../../assets/images/smallImages/PathfindingSim/Dijkstra.png'), alt: 'Dijkstra'},
+        {image: require('../../assets/images/smallImages/PathfindingSim/Greedy.png'), alt: 'Greedy'},
+    ],
+    projectGameOfLifeC: [
+        {image: require('../../assets/images/smallImages/GameOfLife/1.png'), alt: 'GameOfLife'},
+        {image: require('../../assets/images/smallImages/GameOfLife/2.png'), alt: 'GameOfLife'},
+    ],
 }
 
 
 
-export { Medal, Arrow, BigImageGetter, SmallImageGetter };
+export { Medal, Arrow, Flag, BigImageGetter, SmallImageGetter };

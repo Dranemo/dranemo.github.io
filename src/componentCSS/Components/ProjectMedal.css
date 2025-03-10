@@ -49,20 +49,33 @@
 
     width: 70%;
     height: auto;
+}
+
+#MedalForward {
 
     z-index: 2;
 }
 
 .projectImg {
-    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 
-    object-fit: cover;
-    width: 70%;
-    height: auto;
-
-    z-index: 1;
+    background-color: #222222 ;
 }
 
 .ProjectTitle {
     margin-top: 50%;
+}
+
+.MedalImageCenter {
+    height: auto;
+    width: 40%;
+    aspect-ratio: 1/1;
+    border-radius: 75px;
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 1;
 }

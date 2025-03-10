@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import '../componentCSS/Nav.css';
 
 import { NavState } from './Variables/Enums';
-import { defaultLanguage } from './Variables/Getters';
+import { defaultLanguage, getFlagLanguage } from './Variables/Getters';
 import PagesFile from './Variables/Texts/PagesFile';
 
 
@@ -11,7 +11,6 @@ import PagesFile from './Variables/Texts/PagesFile';
 
 function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMouseEnter, handleMouseLeave }) {
 
-    
     
   return (
     <div className='Nav'>
@@ -103,7 +102,8 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
                     onMouseLeave={handleMouseLeave}
             >
                 {hoveredButton === 'Language' ? '>' : '\u00A0'}
-                &nbsp;{PagesFile.Nav.Language[defaultLanguage.Langue]}: {defaultLanguage.Langue}&nbsp;&nbsp;
+                &nbsp;{PagesFile.Nav.Language[defaultLanguage.Langue]}: {defaultLanguage.Langue}
+                &nbsp;&nbsp;
             </button>
 
 

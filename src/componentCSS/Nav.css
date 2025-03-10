@@ -1,16 +1,17 @@
 .Nav {
-    position: absolute;
+    position: fixed;
 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap-reverse;
 
-    top: 6vh;
+    top: 3vh;
     left: 3vw;
 
     width: auto;
 
-    z-index: 1;
+    z-index: 4;
+    transition: ease-out .2s; /* Ajoutez une transition pour un effet de glissement */
 }
 
 .Menu {
@@ -18,14 +19,17 @@
     width: auto;
     height: auto;
 
-    background-color: #aa8284;
+    background-color: #906e70;
     color: #4f1c1b;
 
     padding: 1vh 1vw;
     border-radius: 1vw;
 
-    z-index: 2;
+    z-index: 5;
     flex-direction: column;
+
+    
+    box-shadow: 0 0.3vh 0.5vw black;
 }
 
 
@@ -43,4 +47,11 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+  }
+
+  .flag {
+    max-width: 1%;
+    max-height: 3%;
+    height: auto;
+    width: auto;
   }

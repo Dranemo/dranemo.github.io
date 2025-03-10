@@ -3,7 +3,159 @@ import { BigImageGetter, SmallImageGetter } from '../ImageGetter';
 import { TechnoEnum, RarityEnum, YearEnum } from '../Enums';
 
 const ProjectsFile = [
-    // Unreal Projects
+
+    // Portfolio 
+    {
+        badgeTitle: {
+            "English": "Portfolio",
+            "Français": "Portfolio"
+        },
+        badgeImg: { image: BigImageGetter.projectPortfolio, rarity: YearEnum.THIRD },
+        type: {
+            "English": "Solo - Personal Project",
+            "Français": "Solo - Projet Personnel"
+        },
+        TechnoEnum: TechnoEnum.REACT,
+        techno: {
+            "English": "React",
+            "Français": "React"
+        },
+        dateDesc: {
+            "English": "October 2024 - Ongoing",
+            "Français": "Octobre 2024 - En cours"
+        },
+        timeDesc: {
+            "English": "Ongoing",
+            "Français": "En cours"
+        },
+        details: {
+            title: {
+                "English": "Portfolio - Personal Game Status",
+                "Français": "Portfolio - Statut de Jeu Personnel"
+            },
+            description: {
+                "Français": "Dans ce <span style='font-weight: 900;'>Portfolio</span>, parcourez mes projets de développement et mes experiences dans un univers de jeu intéractif ! Découvrez des détails sur chaque projet, les récompenses uniques débloquées, et des liens vers les dépôts GitHub et les téléchargements.",
+                "English": "In this <span style='font-weight: 900;'>Portfolio</span>, explore my development projects and experiences in an interactive game-like universe! Discover details on each project, the unique rewards unlocked, and links to GitHub repositories and downloads."
+            },
+            rewards: [
+                { 
+                    name: {
+                        "English": "[Item] Interactive Portfolio",
+                        "Français": "[Objet] Portfolio Interactif"
+                    },
+                    rarity: RarityEnum.EPIC 
+                },
+                { 
+                    name: {
+                        "English": "[Skill] React Development",
+                        "Français": "[Compétence] Développement React"
+                    },
+                    rarity: RarityEnum.RARE 
+                },
+                { 
+                    name: {
+                        "English": "[Skill] UI/UX Design",
+                        "Français": "[Compétence] Conception UI/UX"
+                    },
+                    rarity: RarityEnum.UNCOMMON 
+                },
+                { 
+                    name: {
+                        "English": "[Title] Aspiring Web Developer",
+                        "Français": "[Titre] Développeur Web Aspitant"
+                    },
+                    rarity: RarityEnum.UNCOMMON 
+                }
+            ],
+            carousel: SmallImageGetter.projectPortfolio
+        },
+        links: [
+            { 
+                name: "GitHub Repository",
+                url: "https://github.com/Dranemo/dranemo.github.io"
+            }
+        ]
+    },
+
+    
+// ----------------------------------------------------------------------- 3rd Year ----------------------------------------------------------------------- //
+    // HoverRacing Mars 2025
+    {
+        badgeTitle: {
+            "English": "Hover Racing",
+            "Français": "Hover Racing"
+        },
+        badgeImg: { image: BigImageGetter.projectHoverRacing, rarity: YearEnum.THIRD },
+        type: {
+            "English": "Group - School Project",
+            "Français": "Groupe - Projet Scolaire"
+        },
+        TechnoEnum: TechnoEnum.UNREALENGINE,
+        techno: {
+            "English": "Unreal Engine 5",
+            "Français": "Unreal Engine 5"
+        },
+        dateDesc: {
+            "English": "March 2025",
+            "Français": "Mars 2025"
+        },
+        timeDesc: {
+            "English": "2 weeks",
+            "Français": "2 semaines"
+        },
+        details: {
+            title: {
+                "English": "Hover Racing - Physics-Based Racing Game Prototype",
+                "Français": "Hover Racing - Prototype de Jeu de Course Basé sur la Physique"
+            },
+            description: {
+            },
+            rewards: [
+            ],
+            carousel: SmallImageGetter.projectShadowStrike
+        },
+        links: []
+    },
+
+    // Shadow Strike Fevrier 2025
+    {
+        badgeTitle: {
+            "English": "Shadow Strike",
+            "Français": "Shadow Strike"
+        },
+        badgeImg: { image: BigImageGetter.projectShadowStrike, rarity: YearEnum.THIRD },
+        type: {
+            "English": "Group - School Project",
+            "Français": "Groupe - Projet Scolaire"
+        },
+        TechnoEnum: TechnoEnum.UNREALENGINE,
+        techno: {
+            "English": "Unreal Engine 5",
+            "Français": "Unreal Engine 5"
+        },
+        dateDesc: {
+            "English": "February 2025",
+            "Français": "Février 2025"
+        },
+        timeDesc: {
+            "English": "2 weeks",
+            "Français": "2 semaines"
+        },
+        details: {
+            title: {
+                "English": "Shadow Strike - Infiltration Game Prototype",
+                "Français": "Shadow Strike - Prototype de Jeu d'Infiltration"
+            },
+            description: {
+            },
+            rewards: [
+            ],
+            carousel: SmallImageGetter.projectShadowStrike
+        },
+        links: []
+    },
+
+    // Carnival Janvier 2025
     {
         badgeTitle: {
             "English": "Carnival",
@@ -71,10 +223,7 @@ const ProjectsFile = [
         links: []
     },
 
-    
-    
-
-    // Unity Projects
+    // Cooking Fry Décembre 2024
     {
         badgeTitle: {
             "English": "Cooking Fry",
@@ -142,9 +291,7 @@ const ProjectsFile = [
         links: []
     },
 
-    
-    
-
+    // Unity Shaders Novembre 2024
     {
         badgeTitle: {
             "English": "Unity Shaders",
@@ -212,8 +359,7 @@ const ProjectsFile = [
         links: []
     },
 
-    
-
+    // The Final Exit Novembre 2024
     {
         badgeTitle: {
             "English": "The Final Exit",
@@ -293,8 +439,79 @@ const ProjectsFile = [
         ]
     },
 
-    
+    // Pathfinding Simulation Octobre 2024
+    {
+        badgeTitle: {
+            "English": "Pathfinding Simulation",
+            "Français": "Simulation de Pathfinding"
+        },
+        badgeImg: { image: BigImageGetter.projectPathfinding, rarity: YearEnum.THIRD },
+        type: {
+            "English": "Group - School Project",
+            "Français": "Groupe - Projet Scolaire"
+        },
+        TechnoEnum: TechnoEnum.CPP,
+        techno: {
+            "English": "C++ with SFML",
+            "Français": "C++ avec SFML"
+        },
+        dateDesc: {
+            "English": "September - October 2024",
+            "Français": "Septembre - Octobre 2024"
+        },
+        timeDesc: {
+            "English": "1 week",
+            "Français": "1 semaine"
+        },
+        details: {
+            title: {
+                "English": "Pathfinding Simulation - Grid Navigation Algorithms",
+                "Français": "Simulation de Pathfinding - Algorithmes de Navigation sur Grille"
+            },
+            description: {
+                "English": "In <span style='font-weight: 900;'>Pathfinding Simulation</span>, test various pathfinding algorithms implemented in C++ with SFML. Explore methods like DFS, BFS, A*, Greedy, and Dijkstra on a non-weighted grid. This school group project focuses on visualizing how each algorithm navigates and finds the optimal or first-found path. It’s a great introduction to understanding algorithm efficiency and implementation, with hands-on experience in coding these techniques.",
+                "Français": "Dans <span style='font-weight: 900;'>Simulation de Pathfinding</span>, testez divers algorithmes de recherche de chemin implémentés en C++ avec SFML. Explorez des méthodes comme DFS, BFS, A*, Greedy et Dijkstra sur une grille non pondérée. Ce projet scolaire en groupe se concentre sur la visualisation de la manière dont chaque algorithme navigue et trouve le chemin optimal ou le premier trouvé. C’est une excellente introduction pour comprendre l'efficacité des algorithmes et leur implémentation, avec une expérience pratique dans le codage de ces techniques."
+            },
+            rewards: [
+                { 
+                    name: {
+                        "English": "[Item] Pathfinding Grid Simulation",
+                        "Français": "[Objet] Simulation de Grille de Recherche de Chemin"
+                    },
+                    rarity: RarityEnum.UNCOMMON 
+                },
+                { 
+                    name: {
+                        "English": "[Skill] C++ Development",
+                        "Français": "[Compétence] Développement C++"
+                    },
+                    rarity: RarityEnum.RARE 
+                },
+                { 
+                    name: {
+                        "English": "[Skill] Algorithm Design",
+                        "Français": "[Compétence] Conception d'Algorithmes"
+                    },
+                    rarity: RarityEnum.RARE 
+                },
+                { 
+                    name: {
+                        "English": "[Title] Pathfinding Explorer",
+                        "Français": "[Titre] Explorateur de Recherche de Chemin"
+                    },
+                    rarity: RarityEnum.UNCOMMON 
+                }
+            ],
+            carousel: SmallImageGetter.projectPathfinding
+        },
+        links: [
+            { name: "GitHub Repository", url: "https://github.com/Dranemo/PathfindingSimulation" },
+            { name: "GitHub Release (Windows)", url: "https://github.com/Dranemo/Releases/releases/tag/PathfindingSimulation" }
+        ]
+    },
 
+// ----------------------------------------------------------------------- 2nd Year ----------------------------------------------------------------------- //
+    // Bran Castle Août 2024
     {
         badgeTitle: {
             "English": "Bran Castle",
@@ -374,7 +591,7 @@ const ProjectsFile = [
         ]
     },
 
-    
+    // Build to Scale Août 2024
     {
         badgeTitle: {
             "English": "Build to Scale",
@@ -454,7 +671,78 @@ const ProjectsFile = [
         ]
     },
 
+    // VxV Engine Avril 2024
+    {
+        badgeTitle: {
+            "English": "VxV Engine",
+            "Français": "VxV Engine"
+        },
+        badgeImg: { image: BigImageGetter.projectVxVEngine, rarity: YearEnum.SECOND },
+        type: {
+            "English": "Group - School Project",
+            "Français": "Groupe - Projet Scolaire"
+        },
+        TechnoEnum: TechnoEnum.CPP,
+        techno: {
+            "English": "C++ - OpenGL",
+            "Français": "C++ - OpenGL"
+        },
+        dateDesc: {
+            "English": "March - April 2024",
+            "Français": "Mars - Avril 2024"
+        },
+        timeDesc: {
+            "English": "5 weeks",
+            "Français": "5 semaines"
+        },
+        details: {
+            title: {
+                "English": "VxV Engine - Understanding Game Engines",
+                "Français": "VxV Engine - Comprendre les Moteurs de Jeu"
+            },
+            description: {
+                "Français": "Entrez dans les profondeurs du développement de moteurs de jeu avec <span style='font-weight: 900;'>VxV Engine</span>, un moteur maison construit avec OpenGL en C++. Créé comme un projet éducatif, VxV a été conçu pour aider à comprendre réellement le fonctionnement interne d'un moteur de jeu. Bien qu'il ne soit pas destiné à un usage commercial, il représente une expérience d'apprentissage fondamentale, offrant un aperçu pratique de ce qui alimente les moteurs de jeu modernes.",
+                "English": "Enter the depths of game engine development with <span style='font-weight: 900;'>VxV Engine</span>, a custom engine built with OpenGL in C++. Created as an educational project, VxV was designed to help truly understand the internal workings of a game engine. While not intended for commercial use, it represents a fundamental learning experience, providing a hands-on insight into what powers modern game engines."
+            },
+            rewards: [
+                { 
+                    name: {
+                        "English": "[Item] Custom OpenGL Engine",
+                        "Français": "[Objet] Moteur OpenGL Personnalisé"
+                    },
+                    rarity: RarityEnum.RARE 
+                },
+                { 
+                    name: {
+                        "English": "[Skill] OpenGL Rendering",
+                        "Français": "[Compétence] Rendu OpenGL"
+                    },
+                    rarity: RarityEnum.RARE 
+                },
+                { 
+                    name: {
+                        "English": "[Skill] Engine Architecture",
+                        "Français": "[Compétence] Architecture de Moteur"
+                    },
+                    rarity: RarityEnum.EPIC 
+                },
+                { 
+                    name: {
+                        "English": "[Title] Game Engine Apprentice",
+                        "Français": "[Titre] Apprenti Moteur de Jeu"
+                    },
+                    rarity: RarityEnum.RARE 
+                }
+            ],
+            carousel: SmallImageGetter.projectVxVEngine
+        },
+        links: [
+            { name: "GitHub Repository", url: "https://github.com/Dranemo/VxVEngine" },
+            { name: "GitHub Release (Windows)", url: "https://github.com/Dranemo/Releases/releases/tag/VxVEngine" }
+        ]
+    },
 
+    // Fox League Mars 2024
     {
         badgeTitle: {
             "English": "Fox League",
@@ -521,220 +809,8 @@ const ProjectsFile = [
         },
         links: []
     },
-
-    
-
-
-    // C++ Projects
-    {
-        badgeTitle: {
-            "English": "Pathfinding Simulation",
-            "Français": "Simulation de Pathfinding"
-        },
-        badgeImg: { image: BigImageGetter.projectPathfinding, rarity: YearEnum.THIRD },
-        type: {
-            "English": "Group - School Project",
-            "Français": "Groupe - Projet Scolaire"
-        },
-        TechnoEnum: TechnoEnum.CPP,
-        techno: {
-            "English": "C++ with SFML",
-            "Français": "C++ avec SFML"
-        },
-        dateDesc: {
-            "English": "September - October 2024",
-            "Français": "Septembre - Octobre 2024"
-        },
-        timeDesc: {
-            "English": "1 week",
-            "Français": "1 semaine"
-        },
-        details: {
-            title: {
-                "English": "Pathfinding Simulation - Grid Navigation Algorithms",
-                "Français": "Simulation de Pathfinding - Algorithmes de Navigation sur Grille"
-            },
-            description: {
-                "English": "In <span style='font-weight: 900;'>Pathfinding Simulation</span>, test various pathfinding algorithms implemented in C++ with SFML. Explore methods like DFS, BFS, A*, Greedy, and Dijkstra on a non-weighted grid. This school group project focuses on visualizing how each algorithm navigates and finds the optimal or first-found path. It’s a great introduction to understanding algorithm efficiency and implementation, with hands-on experience in coding these techniques.",
-                "Français": "Dans <span style='font-weight: 900;'>Simulation de Pathfinding</span>, testez divers algorithmes de recherche de chemin implémentés en C++ avec SFML. Explorez des méthodes comme DFS, BFS, A*, Greedy et Dijkstra sur une grille non pondérée. Ce projet scolaire en groupe se concentre sur la visualisation de la manière dont chaque algorithme navigue et trouve le chemin optimal ou le premier trouvé. C’est une excellente introduction pour comprendre l'efficacité des algorithmes et leur implémentation, avec une expérience pratique dans le codage de ces techniques."
-            },
-            rewards: [
-                { 
-                    name: {
-                        "English": "[Item] Pathfinding Grid Simulation",
-                        "Français": "[Objet] Simulation de Grille de Recherche de Chemin"
-                    },
-                    rarity: RarityEnum.UNCOMMON 
-                },
-                { 
-                    name: {
-                        "English": "[Skill] C++ Development",
-                        "Français": "[Compétence] Développement C++"
-                    },
-                    rarity: RarityEnum.RARE 
-                },
-                { 
-                    name: {
-                        "English": "[Skill] Algorithm Design",
-                        "Français": "[Compétence] Conception d'Algorithmes"
-                    },
-                    rarity: RarityEnum.RARE 
-                },
-                { 
-                    name: {
-                        "English": "[Title] Pathfinding Explorer",
-                        "Français": "[Titre] Explorateur de Recherche de Chemin"
-                    },
-                    rarity: RarityEnum.UNCOMMON 
-                }
-            ],
-            carousel: SmallImageGetter.projectPathfindingSimulation
-        },
-        links: []
-    },
-
-
-    {
-        badgeTitle: {
-            "English": "VxV Engine",
-            "Français": "VxV Engine"
-        },
-        badgeImg: { image: BigImageGetter.projectVxVEngine, rarity: YearEnum.SECOND },
-        type: {
-            "English": "Group - School Project",
-            "Français": "Groupe - Projet Scolaire"
-        },
-        TechnoEnum: TechnoEnum.CPP,
-        techno: {
-            "English": "C++ - OpenGL",
-            "Français": "C++ - OpenGL"
-        },
-        dateDesc: {
-            "English": "March - April 2024",
-            "Français": "Mars - Avril 2024"
-        },
-        timeDesc: {
-            "English": "5 weeks",
-            "Français": "5 semaines"
-        },
-        details: {
-            title: {
-                "English": "VxV Engine - Understanding Game Engines",
-                "Français": "VxV Engine - Comprendre les Moteurs de Jeu"
-            },
-            description: {
-                "English": "Enter the depths of game engine development with <span style='font-weight: 900;'>VxV Engine</span>, a homemade engine built with OpenGL in C++. Created as an educational project, VxV was designed to help us truly grasp the inner workings of a game engine—from rendering pipelines to basic ECS systems. While not intended for commercial use (yet), it stands as a foundational learning experience, providing hands-on insight into what powers modern game engines.",
-                "Français": "Entrez dans les profondeurs du développement de moteurs de jeu avec <span style='font-weight: 900;'>VxV Engine</span>, un moteur maison construit avec OpenGL en C++. Créé comme un projet éducatif, VxV a été conçu pour nous aider à comprendre réellement le fonctionnement interne d'un moteur de jeu, des pipelines de rendu aux systèmes ECS de base. Bien qu'il ne soit pas destiné à un usage commercial (pour l'instant), il représente une expérience d'apprentissage fondamentale, offrant un aperçu pratique de ce qui alimente les moteurs de jeu modernes."
-            },
-            rewards: [
-                { 
-                    name: {
-                        "English": "[Item] Custom OpenGL Engine",
-                        "Français": "[Objet] Moteur OpenGL Personnalisé"
-                    },
-                    rarity: RarityEnum.RARE 
-                },
-                { 
-                    name: {
-                        "English": "[Skill] OpenGL Rendering",
-                        "Français": "[Compétence] Rendu OpenGL"
-                    },
-                    rarity: RarityEnum.RARE 
-                },
-                { 
-                    name: {
-                        "English": "[Skill] Engine Architecture",
-                        "Français": "[Compétence] Architecture de Moteur"
-                    },
-                    rarity: RarityEnum.EPIC 
-                },
-                { 
-                    name: {
-                        "English": "[Title] Game Engine Apprentice",
-                        "Français": "[Titre] Apprenti Moteur de Jeu"
-                    },
-                    rarity: RarityEnum.RARE 
-                }
-            ],
-            carousel: SmallImageGetter.projectVxVEngine
-        },
-        links: [
-            { name: "GitHub Repository", url: "https://github.com/Dranemo/VxVEngine" }
-        ]
-    },
-
-    
       
-    {
-        badgeTitle: {
-            "English": "Zorya Sisters",
-            "Français": "Zorya Sisters"
-        },
-        badgeImg: { image: BigImageGetter.projectZoryaSisters, rarity: YearEnum.SECOND },
-        type: {
-            "English": "Group - School Project",
-            "Français": "Groupe - Projet Scolaire"
-        },
-        TechnoEnum: TechnoEnum.CPP,
-        techno: {
-            "English": "C++ with SFML (Custom Engine)",
-            "Français": "C++ avec SFML (Moteur Personnalisé)"
-        },
-        dateDesc: {
-            "English": "November - December 2023",
-            "Français": "Novembre - Décembre 2023"
-        },
-        timeDesc: {
-            "English": "3 weeks",
-            "Français": "3 semaines"
-        },
-        details: {
-            title: {
-                "English": "Zorya Sisters - 2D Platformer Puzzle",
-                "Français": "Zorya Sisters - Puzzle Plateforme 2D"
-            },
-            description: {
-                "English": "Unleash the power of <span style='font-weight: 900;'>Zorya Sisters</span>, a trio of Russian dolls who will stop at nothing to escape their owner’s house. Solve challenging puzzles and use unique abilities to overcome tricky obstacles. Developed over 3 weeks as part of a school project, the game showcases the mechanics of a traditional platformer-puzzle hybrid. Originally planned to include multiple worlds, time constraints led to a single level introducing core gameplay. A true test of puzzle design and custom game engine development!",
-                "Français": "Libérez la puissance des <span style='font-weight: 900;'>Zorya Sisters</span>, un trio de poupées russes prêtes à tout pour s'échapper de la maison de leur propriétaire. Résolvez des puzzles difficiles et utilisez des capacités uniques pour surmonter des obstacles complexes. Développé en 3 semaines dans le cadre d'un projet scolaire, le jeu présente les mécaniques d'un hybride entre plateforme et puzzle. Initialement prévu pour inclure plusieurs mondes, les contraintes de temps ont abouti à un niveau unique introduisant les mécaniques de jeu principales. Un véritable test de la conception de puzzles et du développement de moteur de jeu personnalisé !"
-            },
-            rewards: [
-                { 
-                    name: {
-                        "English": "[Item] Zorya Sisters Prototype",
-                        "Français": "[Objet] Prototype des Sœurs Zorya"
-                    },
-                    rarity: RarityEnum.UNCOMMON 
-                },
-                { 
-                    name: {
-                        "English": "[Skill] Custom Game Engine Development",
-                        "Français": "[Compétence] Développement de Moteur de Jeu Personnalisé"
-                    },
-                    rarity: RarityEnum.RARE 
-                },
-                { 
-                    name: {
-                        "English": "[Skill] Puzzle Design",
-                        "Français": "[Compétence] Conception de Puzzles"
-                    },
-                    rarity: RarityEnum.UNCOMMON 
-                },
-                { 
-                    name: {
-                        "English": "[Title] Platformer Creator",
-                        "Français": "[Titre] Créateur de Plateforme"
-                    },
-                    rarity: RarityEnum.UNCOMMON 
-                }
-            ],
-            carousel: SmallImageGetter.projectZoryaSisters
-        },
-        links: []
-    },
-
-      
-      
-    // C# Projects
+    // PokemonASCII Fevrier 2024
     {
         badgeTitle: {
             "English": "PokemonASCII",
@@ -764,14 +840,14 @@ const ProjectsFile = [
                 "Français": "PokemonASCII - Aventure Rétro Console"
             },
             description: {
-                "English": "Relive the classic <span style='font-weight: 900;'>Pokemon Red & Blue</span> experience in a retro ASCII format with <span style='font-weight: 900;'>PokemonASCII</span>. Recreate the iconic Bourg Palette and Route 1, using only ASCII characters for the environment and Pokemon. Developed in C# console, the game faithfully replicates all essential mechanics: stats, attacks, evolutions, level-ups, battles, captures, and wild encounters. With music adding to the nostalgic atmosphere, this 2-week school project brings the world of Pokemon to life in a uniquely minimalist way.",
-                "Français": "Revivez l'expérience classique de <span style='font-weight: 900;'>Pokemon Rouge & Bleu</span> dans un format rétro ASCII avec <span style='font-weight: 900;'>PokemonASCII</span>. Recréez le Bourg Palette emblématique et la Route 1, en utilisant uniquement des caractères ASCII pour l'environnement et les Pokémon. Développé en console C#, le jeu réplique fidèlement toutes les mécaniques essentielles : statistiques, attaques, évolutions, montées en niveau, batailles, captures et rencontres sauvages. Avec de la musique ajoutant à l'atmosphère nostalgique, ce projet scolaire de 2 semaines fait revivre l'univers de Pokémon d'une manière minimaliste unique."
+                "Français": "Revivez l'expérience classique de <span style='font-weight: 900;'>Pokemon Rouge & Bleu</span> dans un format rétro ASCII avec <span style='font-weight: 900;'>PokemonASCII</span>. Recréé en utilisant uniquement des caractères ASCII pour l'environnement et les Pokémon, retrouvez le Bourg Palette emblématique et la Route 1. Développé en console C#, le jeu réplique fidèlement toutes les mécaniques essentielles : statistiques, attaques, évolutions, montées en niveau, batailles, captures et rencontres sauvages. Avec de la musique ajoutant à l'atmosphère nostalgique, ce projet scolaire de 2 semaines fait revivre l'univers de Pokémon d'une manière minimaliste unique.",
+                "English": "Relive the classic <span style='font-weight: 900;'>Pokemon Red & Blue</span> experience in a retro ASCII format with <span style='font-weight: 900;'>PokemonASCII</span>. Recreated using only ASCII characters for the environment and Pokémon, revisit the iconic Pallet Town and Route 1. Developed in C# console, the game faithfully replicates all essential mechanics: stats, moves, evolutions, level-ups, battles, captures, and wild encounters. With music adding to the nostalgic atmosphere, this 2-week school project brings the world of Pokémon back to life in a unique minimalist way."
             },
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Pokemon Red & Blue (C# Console)",
-                        "Français": "[Objet] Pokemon Rouge & Bleu (Console C#)"
+                        "English": "[Item] Pokéball",
+                        "Français": "[Objet] Pokéball"
                     },
                     rarity: RarityEnum.UNCOMMON 
                 },
@@ -780,14 +856,14 @@ const ProjectsFile = [
                         "English": "[Skill] C# Development",
                         "Français": "[Compétence] Développement C#"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.RARE 
                 },
                 { 
                     name: {
                         "English": "[Skill] Console Game Design",
                         "Français": "[Compétence] Conception de Jeux Console"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.UNCOMMON 
                 },
                 { 
                     name: {
@@ -805,89 +881,163 @@ const ProjectsFile = [
                 url: "https://github.com/Dranemo/PokemonASCII"
             },
             { 
-                name: "Github Release",
+                name: "Github Release (Windows)",
                 url: "https://github.com/Dranemo/PokemonASCII/releases/tag/ReleasePortfolio"
             }
         ]
     },
 
-      
-    
-      // Other Projects
-      {
+    // Zorya Sisters Décembre 2023
+    {
+            badgeTitle: {
+                "English": "Zorya Sisters",
+                "Français": "Zorya Sisters"
+            },
+            badgeImg: { image: BigImageGetter.projectZoryaSisters, rarity: YearEnum.SECOND },
+            type: {
+                "English": "Group - School Project",
+                "Français": "Groupe - Projet Scolaire"
+            },
+            TechnoEnum: TechnoEnum.CPP,
+            techno: {
+                "English": "C++ with SFML (Custom Engine)",
+                "Français": "C++ avec SFML (Moteur Personnalisé)"
+            },
+            dateDesc: {
+                "English": "November - December 2023",
+                "Français": "Novembre - Décembre 2023"
+            },
+            timeDesc: {
+                "English": "3 weeks",
+                "Français": "3 semaines"
+            },
+            details: {
+                title: {
+                    "English": "Zorya Sisters - 2D Platformer Puzzle",
+                    "Français": "Zorya Sisters - Puzzle Plateforme 2D"
+                },
+                description: {
+                    "English": "Unleash the power of <span style='font-weight: 900;'>Zorya Sisters</span>, a trio of Russian dolls who will stop at nothing to escape their owner’s house. Solve challenging puzzles and use unique abilities to overcome tricky obstacles. Developed over 3 weeks as part of a school project, the game showcases the mechanics of a traditional platformer-puzzle hybrid. Originally planned to include multiple worlds, time constraints led to a single level introducing core gameplay. A true test of puzzle design and custom game engine development!",
+                    "Français": "Libérez la puissance des <span style='font-weight: 900;'>Zorya Sisters</span>, un trio de poupées russes prêtes à tout pour s'échapper de la maison de leur propriétaire. Résolvez des puzzles difficiles et utilisez des capacités uniques pour surmonter des obstacles complexes. Développé en 3 semaines dans le cadre d'un projet scolaire, le jeu présente les mécaniques d'un hybride entre plateforme et puzzle. Initialement prévu pour inclure plusieurs mondes, les contraintes de temps ont abouti à un niveau unique introduisant les mécaniques de jeu principales. Un véritable test de la conception de puzzles et du développement de moteur de jeu personnalisé !"
+                },
+                rewards: [
+                    { 
+                        name: {
+                            "English": "[Item] Zorya Sisters Dolls",
+                            "Français": "[Objet] Poupées des Sœurs Zorya"
+                        },
+                        rarity: RarityEnum.UNCOMMON 
+                    },
+                    { 
+                        name: {
+                            "English": "[Skill] Custom Game Engine Development",
+                            "Français": "[Compétence] Développement de Moteur de Jeu Personnalisé"
+                        },
+                        rarity: RarityEnum.RARE 
+                    },
+                    { 
+                        name: {
+                            "English": "[Skill] Puzzle Design",
+                            "Français": "[Compétence] Conception de Puzzles"
+                        },
+                        rarity: RarityEnum.UNCOMMON 
+                    },
+                    { 
+                        name: {
+                            "English": "[Title] Platformer Creator",
+                            "Français": "[Titre] Créateur de Plateforme"
+                        },
+                        rarity: RarityEnum.UNCOMMON 
+                    }
+                ],
+                carousel: SmallImageGetter.projectZoryaSisters
+            },
+            links: [
+                { name: "GitHub Repository", url: "https://github.com/Dranemo/ZoryaSisters" },
+                { name: "Github Release (Windows)", url: "https://github.com/Dranemo/Releases/releases/tag/ZoryaSisters" }
+            ]
+    },
+
+// ----------------------------------------------------------------------- 1st Year ----------------------------------------------------------------------- //
+    // Galactic Police Avril 2023
+    {
         badgeTitle: {
-            "English": "Portfolio",
-            "Français": "Portfolio"
+            "English": "Galactic Police",
+            "Français": "Galactic Police"
         },
-        badgeImg: { image: BigImageGetter.projectPortfolio, rarity: YearEnum.THIRD },
+        badgeImg: { image: BigImageGetter.projectGalacticPolice, rarity: YearEnum.FIRST },
         type: {
-            "English": "Solo - Personal Project",
-            "Français": "Solo - Projet Personnel"
+            "English": "Group - School Project",
+            "Français": "Groupe - Projet Scolaire"
         },
-        TechnoEnum: TechnoEnum.REACT,
+        TechnoEnum: TechnoEnum.Python,
         techno: {
-            "English": "React",
-            "Français": "React"
+            "English": "Python with Pygame",
+            "Français": "Python avec Pygame"
         },
         dateDesc: {
-            "English": "October 2024 - Ongoing",
-            "Français": "Octobre 2024 - En cours"
+            "English": "April 2023",
+            "Français": "Avril 2023"
         },
         timeDesc: {
-            "English": "Ongoing",
-            "Français": "En cours"
+            "English": "2 weeks",
+            "Français": "2 semaines"
         },
         details: {
             title: {
-                "English": "Portfolio - Personal Game Status",
-                "Français": "Portfolio - Statut de Jeu Personnel"
+                "English": "Galactic Police - Shoot'em Up Game",
+                "Français": "Galactic Police - Jeu de Tir"
             },
             description: {
-                "English": "In <span style='font-weight: 900;'>Portfolio</span>, transform your personal achievements into a retro video game status screen. Built with React, this project is designed to showcase a dynamic, interactive profile that mirrors a video game system. As a personal project, the goal is to present your skills and projects with a playful twist, capturing the essence of your journey through a game-like interface. Still ongoing, this portfolio evolves as new projects are completed and new 'achievements' and 'Quests' are unlocked.",
-                "Français": "Dans <span style='font-weight: 900;'>Portfolio</span>, transformez vos réalisations personnelles en un écran de statut rétro de jeu vidéo. Développé avec React, ce projet est conçu pour présenter un profil dynamique et interactif qui reflète un système de jeu vidéo. En tant que projet personnel, l'objectif est de présenter vos compétences et vos projets de manière ludique, capturant l'essence de votre parcours à travers une interface de type jeu. En cours de développement, ce portfolio évolue à mesure que de nouveaux projets sont réalisés et que de nouvelles 'réalisations' et 'missions' sont débloquées."
+                "English": "Join the <span style='font-weight: 900;'>Galactic Police</span> and defend the galaxy from alien invaders and meteors in this retro shoot'em up game. Developed in Python with Pygame, this school project challenges you to survive waves of enemies and collect power-ups. With a focus on classic arcade gameplay, the game offers a fun, fast-paced experience that tests your reflexes and shooting skills. A great introduction to game development and Python programming!",
+                "Français": "Rejoignez la <span style='font-weight: 900;'>Police Galactique</span> et défendez la galaxie contre les envahisseurs aliens et les météores dans ce jeu de tir rétro. Développé en Python avec Pygame, ce projet scolaire vous met au défi de survivre aux vagues d'ennemis et de collecter des power-ups. Axé sur un gameplay d'arcade classique, le jeu offre une expérience amusante et rapide qui teste vos réflexes et vos compétences de tir. Une excellente introduction au développement de jeux et à la programmation Python !"
             },
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Interactive Portfolio",
-                        "Français": "[Objet] Portfolio Interactif"
+                        "English": "[Item] Member of the Galactic Police Badge",
+                        "Français": "[Objet] Badge de Membre de la Police Galactique"
                     },
-                    rarity: RarityEnum.EPIC 
+                    rarity: RarityEnum.UNCOMMON 
                 },
                 { 
                     name: {
-                        "English": "[Skill] React Development",
-                        "Français": "[Compétence] Développement React"
+                        "English": "[Skill] Python Programming",
+                        "Français": "[Compétence] Programmation Python"
                     },
                     rarity: RarityEnum.RARE 
                 },
                 { 
                     name: {
-                        "English": "[Skill] UI/UX Design",
-                        "Français": "[Compétence] Conception UI/UX"
+                        "English": "[Skill] Pygame Development",
+                        "Français": "[Compétence] Développement Pygame"
                     },
                     rarity: RarityEnum.UNCOMMON 
                 },
                 { 
                     name: {
-                        "English": "[Title] Aspiring Web Developer",
-                        "Français": "[Titre] Développeur Web Aspitant"
+                        "English": "[Title] Galactic Defender",
+                        "Français": "[Titre] Défenseur Galactique"
                     },
                     rarity: RarityEnum.UNCOMMON 
                 }
+
             ],
-            carousel: SmallImageGetter.projectPortfolio
+            carousel: SmallImageGetter.projectGalacticPolice
         },
         links: [
             { 
                 name: "GitHub Repository",
-                url: "https://github.com/Dranemo/dranemo.github.io"
+                url: "https://github.com/Dranemo/Galactic-Police"
+            },
+            { 
+                name: "GitHub Release (Windows)",
+                url: "https://github.com/Dranemo/Releases/releases/tag/GalacticPolice"
             }
         ]
     },
 
-    
-      
+    // Game of Life Fevrier 2023
     {
         badgeTitle: {
             "English": "Game of Life",
@@ -917,14 +1067,14 @@ const ProjectsFile = [
                 "Français": "Jeu de la Vie - Simulation d'Automate Cellulaire"
             },
             description: {
-                "English": "In <span style='font-weight: 900;'>Game of Life</span>, experience the evolution of cells in this classic cellular automaton simulation, implemented in C with SDL. This group school project brings Conway’s famous 'Game of Life' to life by simulating cell births, deaths, and interactions based on simple rules. While it’s a straightforward concept, it provided a solid understanding of how systems can evolve from basic principles, with the added challenge of visualizing it using SDL in C.",
-                "Français": "Dans <span style='font-weight: 900;'>Jeu de la Vie</span>, vivez l'évolution des cellules dans cette simulation classique d'automate cellulaire, implémentée en C avec SDL. Ce projet scolaire de groupe met en œuvre le célèbre 'Jeu de la Vie' de Conway, en simulant les naissances, morts et interactions des cellules basées sur des règles simples. Bien qu'il s'agisse d'un concept simple, il a permis de mieux comprendre comment les systèmes peuvent évoluer à partir de principes de base, avec le défi supplémentaire de visualiser cela en utilisant SDL en C."
+                "English": "In the <span style='font-weight: 900;'>Game of Life</span>, experience the evolution of cells in this classic cellular automaton simulation, implemented in C with SDL. This group school project brings Conway’s famous 'Game of Life' to life by simulating cell births, deaths, and interactions based on simple rules.",
+                "Français": "Dans le <span style='font-weight: 900;'>Jeu de la Vie</span>, vivez l'évolution des cellules dans cette simulation classique d'automate cellulaire, implémentée en C avec SDL. Ce projet scolaire de groupe met en œuvre le célèbre 'Jeu de la Vie' de Conway, en simulant les naissances, morts et interactions des cellules basées sur des règles simples."
             },
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Game of Life in C",
-                        "Français": "[Objet] Jeu de la Vie en C"
+                        "English": "[Item] Game of Life Grid",
+                        "Français": "[Objet] Grille du Jeu de la Vie"
                     },
                     rarity: RarityEnum.UNCOMMON 
                 },
@@ -958,7 +1108,7 @@ const ProjectsFile = [
                 url: "https://github.com/Dranemo/Conway-s-Game-of-Life"
             },
             { 
-                name:  "GitHub Release",
+                name:  "GitHub Release (Windows)",
                 url: "https://github.com/Dranemo/Releases/releases/tag/GameOfLifeC"
             }
         ]

@@ -33,7 +33,7 @@ const RarityEnum = {
 
 
 const YearEnum = {
-    FIRST : '2021 - 2022',
+    FIRST : '2022 - 2023',
     SECOND : '2023 - 2024',
     THIRD : '2024 - 2025',
     FOURTH : '2025 - 2026',
@@ -64,6 +64,7 @@ const YearEnum = {
         CPP: 'C++',
         CSHARP: 'C#',
         C : 'C',
+        Python : 'Python',
         REACT: 'React',
     };
 

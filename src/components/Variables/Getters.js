@@ -1,4 +1,4 @@
-import { Medal } from './ImageGetter';
+import { Medal, Flag } from './ImageGetter';
 
 
 import { RarityEnum, StatusEnum, YearEnum, LanguageEnum } from './Enums';
@@ -41,6 +41,23 @@ const getRarityColor = (rarity) => {
     }
 };
 
+const getMedalImageWhole = (rarity) => {
+    switch (rarity) {
+        case YearEnum.FIRST:
+            return Medal.commonWhole;
+        case YearEnum.SECOND:
+            return Medal.uncommonWhole;
+        case YearEnum.THIRD:
+            return Medal.rareWhole;
+        case YearEnum.FOURTH:
+            return Medal.epicWhole;
+        case YearEnum.FIFTH:
+            return Medal.legendaryWhole;
+        default:
+            return null;
+    }
+};
+
 
 // Définir la couleur en fonction du status
 const getStatusColor = (status) => {
@@ -62,6 +79,17 @@ const setDefaultLanguage = (language) => {
     document.documentElement.lang = language.html;
 }
 
+const getFlagLanguage = (language) => {
+    switch (language) {
+        case LanguageEnum.FR:
+            return Flag.fr;
+        case LanguageEnum.EN:
+            return Flag.en;
+        default:
+            return null;
+    }
+}
 
 
-  export { getRarityColor, getMedalImage, getStatusColor, defaultLanguage, setDefaultLanguage };
+
+  export { getRarityColor, getMedalImage, getMedalImageWhole, getStatusColor, defaultLanguage, setDefaultLanguage, getFlagLanguage };

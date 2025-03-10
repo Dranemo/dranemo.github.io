@@ -76,7 +76,7 @@ function BigAchievement({displayedProject}) {
                 <div className='carouselDiv'>
                     <div className="arrowDiv" onClick={() => changeCarouselIndex('prev')}>
                     {carouselIndex > 0 && (
-                        <img src={Arrow.left} className='arrowImg' id="buttonBrown"/>
+                        <img src={Arrow.left} className='arrowImg'/>
                     )}
                     </div>
 
@@ -84,7 +84,7 @@ function BigAchievement({displayedProject}) {
                     
                     <div className="arrowDiv" onClick={() => changeCarouselIndex('next')}>
                     {displayedProject.details.carousel.length > carouselIndex + 1 && (
-                        <img src={Arrow.right} className='arrowImg' id="buttonBrown"/>
+                        <img src={Arrow.right} className='arrowImg'/>
                     )}
                     </div>
                     

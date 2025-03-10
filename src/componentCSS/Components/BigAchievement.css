@@ -109,8 +109,7 @@
 }
 
 #buttonBrown {
-
-    background-color: #4f1c1b;
+    
     border-radius: 5vh;
 
     box-shadow: 0 0.3vh 0.5vw black;
@@ -118,7 +117,6 @@
 }
 
 #buttonBrown:hover {
-    background-color: #603231;
     cursor: pointer;
 
     box-shadow: 0 0.5vh 1vw black;
@@ -127,6 +125,11 @@
 
 .arrowDiv {
     width: 10%;
+    border-radius: 5vh;
+}
+
+.arrowDiv:hover {
+    cursor: pointer;
 }
 
 
