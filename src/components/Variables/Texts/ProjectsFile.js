@@ -506,7 +506,7 @@ const ProjectsFile = [
         },
         links: [
             { name: "GitHub Repository", url: "https://github.com/Dranemo/PathfindingSimulation" },
-            { name: "GitHub Release (Windows)", url: "https://github.com/Dranemo/Releases/releases/tag/PathfindingSimulation" }
+            { name: "GitHub Release (Windows)", url: "https://github.com/Dranemo/Releases/releases/tag/PathfindingSim" }
         ]
     },
 
@@ -594,8 +594,8 @@ const ProjectsFile = [
     // Build to Scale Août 2024
     {
         badgeTitle: {
-            "English": "Build to Scale",
-            "Français": "Build to Scale"
+            "English": "Build to Scale (Game Jam GMTK 2024)",
+            "Français": "Build to Scale (Game Jam GMTK 2024)"
         },
         badgeImg: { image: BigImageGetter.projectBuildToScale, rarity: YearEnum.SECOND },
         type: {

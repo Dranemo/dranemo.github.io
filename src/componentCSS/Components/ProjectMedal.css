@@ -61,7 +61,7 @@
     width: 100%;
     object-fit: contain;
 
-    background-color: #222222 ;
+    background-color: #222222, 0 ;
 }
 
 .ProjectTitle {

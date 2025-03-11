@@ -67,6 +67,15 @@ const SmallImageGetter = {
         {image: require('../../assets/images/smallImages/GameOfLife/1.png'), alt: 'GameOfLife'},
         {image: require('../../assets/images/smallImages/GameOfLife/2.png'), alt: 'GameOfLife'},
     ],
+    projectBuildToScale: [
+        {image: require('../../assets/images/smallImages/BuildToScale/exemple.png'), alt: 'BuildExemple'},
+        {image: require('../../assets/images/smallImages/BuildToScale/scaling.png'), alt: 'BuildScale'},
+    ],
+    projectFoxLeague: [
+        {image: require('../../assets/images/smallImages/FoxLeague/game1.png'), alt: 'FoxLeagueGame'},
+        {image: require('../../assets/images/smallImages/FoxLeague/goal.png'), alt: 'FoxLeagueGoal'},
+        {image: require('../../assets/images/smallImages/FoxLeague/win.png'), alt: 'FoxLeagueWin'},
+    ],
 }
 
 
