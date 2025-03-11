@@ -24,7 +24,7 @@ const Flag = {
 
 
 const BigImageGetter = {
-    projectPortfolio: require('../../assets/images/bigImages/1024px-0698Amaura.png'),
+    projectPortfolio: require('../../assets/images/bigImages/IOP.png'),
     projectTheFinalExit: require('../../assets/images/bigImages/TheFinalExit.png'),
     projectPathfinding: require('../../assets/images/bigImages/pathfinding.png'),
     projectBranCastle: require('../../assets/images/bigImages/BranCastle.jpg'),

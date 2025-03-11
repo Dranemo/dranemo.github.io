@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-import ImageMoi from '../assets/images/bigImages/1024px-0698Amaura.png';
+import { BigImageGetter } from './Variables/ImageGetter';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
@@ -52,7 +52,7 @@ const generateAdditionalContent = (nbspNumber) => {
             </div>
 
         <div className='MainFlex'>
-        <img src={ImageMoi} alt="Moi" className='imageMoi'/>
+        <img src={BigImageGetter.projectPortfolio} alt="Moi" className='imageMoi'/>
         <div className='divText'>
 
 
