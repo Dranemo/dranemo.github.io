@@ -35,6 +35,11 @@ const BigImageGetter = {
     projectGameOfLifeC: require('../../assets/images/bigImages/GameOfLife.png'),
     projectVxVEngine: require('../../assets/images/bigImages/VxVEngine.png'),
     projectGalacticPolice: require('../../assets/images/bigImages/GalacticPolice.png'),
+    projectHoverRacing: require('../../assets/images/bigImages/HoverRacing.png'),
+    projectCookingFry: require('../../assets/images/bigImages/beef_Steak_Cooked.png'),
+    projectUnityShaders: require('../../assets/images/bigImages/Shaders.png'),
+    projectShadowStrike: require('../../assets/images/bigImages/WIP.png'),
+    projectCarnival: require('../../assets/images/bigImages/WIP.png'),
 }
 
 const SmallImageGetter = {
@@ -75,6 +80,22 @@ const SmallImageGetter = {
         {image: require('../../assets/images/smallImages/FoxLeague/game1.png'), alt: 'FoxLeagueGame'},
         {image: require('../../assets/images/smallImages/FoxLeague/goal.png'), alt: 'FoxLeagueGoal'},
         {image: require('../../assets/images/smallImages/FoxLeague/win.png'), alt: 'FoxLeagueWin'},
+    ],
+    projectHoverRacing: [
+        {image: require('../../assets/images/smallImages/HoverRacing/start.png'), alt: 'HoverRacing'},
+        {image: require('../../assets/images/smallImages/HoverRacing/boost.png'), alt: 'HoverRacing'},
+    ],
+    projectCookingFry: [
+        {image: require('../../assets/images/smallImages/CookingFry/Cook.png'), alt: 'CookingFry'},
+        {image: require('../../assets/images/smallImages/CookingFry/Fridge.png'), alt: 'CookingFry'},
+        {image: require('../../assets/images/smallImages/CookingFry/Recipe.png'), alt: 'CookingFry'},
+        {image: require('../../assets/images/smallImages/CookingFry/RecipeNew.png'), alt: 'CookingFry'},
+        {image: require('../../assets/images/smallImages/CookingFry/takeItem.png'), alt: 'CookingFry'},
+    ],
+    projectUnityShaders: [
+        {image: require('../../assets/images/smallImages/Shaders/Mountain.png'), alt: 'Shaders'},
+        {image: require('../../assets/images/smallImages/Shaders/Landscape.png'), alt: 'Shaders'},
+        {image: require('../../assets/images/smallImages/Shaders/Valley.png'), alt: 'Shaders'},
     ],
 }
 

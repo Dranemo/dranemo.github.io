@@ -109,12 +109,23 @@ const ProjectsFile = [
                 "Français": "Hover Racing - Prototype de Jeu de Course Basé sur la Physique"
             },
             description: {
+                "English": "Hover Racing is a high-speed, gravity-defying racing game set on a dazzling rainbow road stretching through the vastness of space. Compete against rivals as you shift gravity at will, racing along the top, sides, and even underneath the track to find the fastest path. Dodge cosmic hazards, destroy asteroids to collect boost energy, and pull off insane aerial maneuvers to leave your opponents in the dust. With stunning neon visuals, dynamic physics, and adrenaline-pumping speed, Hover Racing delivers a heart-pounding space-racing experience like no other!",
+                "Français": "Hover Racing est un jeu de course ultra-rapide et défiant la gravité, se déroulant sur une route arc-en-ciel éblouissante à travers l'immensité de l’espace. Affrontez vos rivaux en changeant la gravité à volonté, en roulant sur le dessus, les côtés et même en dessous de la piste pour trouver le chemin le plus rapide. Évitez les dangers cosmiques, détruisez des astéroïdes pour récupérer de l’énergie de boost et réalisez des manœuvres aériennes spectaculaires pour laisser vos adversaires loin derrière. Avec ses visuels néon époustouflants, sa physique dynamique et sa vitesse vertigineuse, Hover Racing offre une expérience de course spatiale palpitante comme aucune autre !"
             },
             rewards: [
             ],
-            carousel: SmallImageGetter.projectShadowStrike
+            carousel: SmallImageGetter.projectHoverRacing
         },
-        links: []
+        links: [
+            {
+                name: "Itch.io",
+                url: "https://dranemo.Itch.io/hover-racing"
+            },
+            { 
+                name: "GitHub Repository",
+                url: "https://github.com/Dranemo/HoverRacing"
+                }
+        ]
     },
 
     // Shadow Strike Fevrier 2025
@@ -288,7 +299,16 @@ const ProjectsFile = [
             ],
             carousel: SmallImageGetter.projectCookingFry
         },
-        links: []
+        links: [
+            {
+                name: "Itch.io",
+                url: "https://dranemo.Itch.io/cooking-fry"
+            },
+            {
+                name: "GitHub Repository",
+                url: "https://github.com/Dranemo/CookingFry"
+            }
+        ]
     },
 
     // Unity Shaders Novembre 2024
@@ -356,7 +376,16 @@ const ProjectsFile = [
             ],
             carousel: SmallImageGetter.projectUnityShaders
         },
-        links: []
+        links: [
+            {
+                name: "Itch.io",
+                url: "https://dranemo.Itch.io/shaders"
+            },
+            {
+                name: "GitHub Repository",
+                url: "https://github.com/Dranemo/Shaders"
+            },
+        ]
     },
 
     // The Final Exit Novembre 2024
@@ -434,7 +463,11 @@ const ProjectsFile = [
         links: [
             { 
                 name: "Itch.io",
-                url: "https://dranemo.itch.io/the-final-exit" 
+                url: "https://dranemo.Itch.io/the-final-exit" 
+            },
+            { 
+                name: "GitHub Repository",
+                url: "https://github.com/Dranemo/TheFinalExit"
             }
         ]
     },
@@ -586,7 +619,11 @@ const ProjectsFile = [
         links: [
             { 
                 name: "Itch.io",
-                url: "https://dranemo.itch.io/bran-castle" 
+                url: "https://dranemo.Itch.io/bran-castle" 
+            },
+            { 
+                name: "GitHub Repository",
+                url: "https://github.com/Dranemo/BranCastle"
             }
         ]
     },
@@ -666,7 +703,11 @@ const ProjectsFile = [
         links: [
             { 
                 name: "Itch.io",
-                url: "https://dranemo.itch.io/build-to-scale"
+                url: "https://dranemo.Itch.io/build-to-scale"
+            },
+            { 
+                name: "GitHub Repository",
+                url: "https://github.com/Dranemo/BuildToScale"
             }
         ]
     },
@@ -807,7 +848,16 @@ const ProjectsFile = [
             ],
             carousel: SmallImageGetter.projectFoxLeague
         },
-        links: []
+        links: [
+            {
+                name: "Itch.io",
+                url: ""
+            },
+            {
+                name: "GitHub Repository",
+                url: "https://github.com/Dranemo/FoxLeague"
+            }
+        ]
     },
       
     // PokemonASCII Fevrier 2024
