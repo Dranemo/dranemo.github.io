@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Gmail from '../assets/images/gmail.png';
-import LinkedIn from '../assets/images/linkedin.png';
-import Github from '../assets/images/github.png';
+import Gmail from '../assets/images/logos/gmail.png';
+import LinkedIn from '../assets/images/logos/linkedin.png';
+import Github from '../assets/images/logos/github.png';
 
 import '../componentCSS/Support.css';
 

@@ -31,6 +31,8 @@ function Achievements() {
 
 
       ProjectsFile.forEach((project) => {
+        if(project.show === false) return;
+
           switch (project.TechnoEnum) {
               case TechnoEnum.UNREALENGINE:
                   ueAchievements.push(project);

@@ -6,6 +6,8 @@ const ProjectsFile = [
 
     // Portfolio 
     {
+        show: true,
+
         badgeTitle: {
             "English": "Portfolio",
             "Français": "Portfolio"
@@ -81,6 +83,8 @@ const ProjectsFile = [
 // ----------------------------------------------------------------------- 3rd Year ----------------------------------------------------------------------- //
     // HoverRacing Mars 2025
     {
+        show: true,
+
         badgeTitle: {
             "English": "Hover Racing",
             "Français": "Hover Racing"
@@ -92,8 +96,8 @@ const ProjectsFile = [
         },
         TechnoEnum: TechnoEnum.UNREALENGINE,
         techno: {
-            "English": "Unreal Engine 5",
-            "Français": "Unreal Engine 5"
+            "English": "Unreal Engine 5 - Blueprints",
+            "Français": "Unreal Engine 5 - Blueprints"
         },
         dateDesc: {
             "English": "March 2025",
@@ -130,6 +134,8 @@ const ProjectsFile = [
 
     // Shadow Strike Fevrier 2025
     {
+        show: false,
+
         badgeTitle: {
             "English": "Shadow Strike",
             "Français": "Shadow Strike"
@@ -168,6 +174,8 @@ const ProjectsFile = [
 
     // Carnival Janvier 2025
     {
+        show: false,
+
         badgeTitle: {
             "English": "Carnival",
             "Français": "Carnaval"
@@ -236,6 +244,8 @@ const ProjectsFile = [
 
     // Cooking Fry Décembre 2024
     {
+        show: false,
+
         badgeTitle: {
             "English": "Cooking Fry",
             "Français": "Cooking Fry"
@@ -313,6 +323,8 @@ const ProjectsFile = [
 
     // Unity Shaders Novembre 2024
     {
+        show: true,
+
         badgeTitle: {
             "English": "Unity Shaders",
             "Français": "Unity Shaders"
@@ -390,6 +402,8 @@ const ProjectsFile = [
 
     // The Final Exit Novembre 2024
     {
+        show:true,
+
         badgeTitle: {
             "English": "The Final Exit",
             "Français": "The Final Exit"
@@ -474,6 +488,8 @@ const ProjectsFile = [
 
     // Pathfinding Simulation Octobre 2024
     {
+        show: true,
+
         badgeTitle: {
             "English": "Pathfinding Simulation",
             "Français": "Simulation de Pathfinding"
@@ -546,6 +562,8 @@ const ProjectsFile = [
 // ----------------------------------------------------------------------- 2nd Year ----------------------------------------------------------------------- //
     // Bran Castle Août 2024
     {
+        show: true,
+
         badgeTitle: {
             "English": "Bran Castle",
             "Français": "Bran Castle"
@@ -630,6 +648,8 @@ const ProjectsFile = [
 
     // Build to Scale Août 2024
     {
+        show: true,
+
         badgeTitle: {
             "English": "Build to Scale (Game Jam GMTK 2024)",
             "Français": "Build to Scale (Game Jam GMTK 2024)"
@@ -714,6 +734,8 @@ const ProjectsFile = [
 
     // VxV Engine Avril 2024
     {
+        show: true,
+
         badgeTitle: {
             "English": "VxV Engine",
             "Français": "VxV Engine"
@@ -785,6 +807,8 @@ const ProjectsFile = [
 
     // Fox League Mars 2024
     {
+        show: true,
+
         badgeTitle: {
             "English": "Fox League",
             "Français": "Fox League"
@@ -862,6 +886,8 @@ const ProjectsFile = [
       
     // PokemonASCII Fevrier 2024
     {
+        show: true,
+
         badgeTitle: {
             "English": "PokemonASCII",
             "Français": "PokemonASCII"
@@ -939,6 +965,8 @@ const ProjectsFile = [
 
     // Zorya Sisters Décembre 2023
     {
+        show: true,
+
             badgeTitle: {
                 "English": "Zorya Sisters",
                 "Français": "Zorya Sisters"
@@ -1011,6 +1039,8 @@ const ProjectsFile = [
 // ----------------------------------------------------------------------- 1st Year ----------------------------------------------------------------------- //
     // Galactic Police Avril 2023
     {
+        show: true,
+
         badgeTitle: {
             "English": "Galactic Police",
             "Français": "Galactic Police"
@@ -1089,6 +1119,8 @@ const ProjectsFile = [
 
     // Game of Life Fevrier 2023
     {
+        show: true,
+
         badgeTitle: {
             "English": "Game of Life",
             "Français": "Jeu de la Vie"
