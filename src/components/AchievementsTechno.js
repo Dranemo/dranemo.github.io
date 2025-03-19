@@ -7,7 +7,7 @@ import BigAchievement from './Components/BigAchievements';
 
 import ProjectsFile from './Variables/Texts/ProjectsFile';
 import { TechnoEnum, YearEnum, ModeEnum  } from './Variables/Enums';
-import {Medal} from './Variables/ImageGetter';
+import {Medal, technoImages} from './Variables/ImageGetter';
 
 import { defaultLanguage, defaultMode } from './Variables/Getters';
 import PagesFile from './Variables/Texts/PagesFile';
@@ -131,7 +131,10 @@ function Achievements() {
           <div className='bigDivAchievements'>
           {UEAchievements.length > 0 && (
             <>
+            <div className='DivLogo text-align-center '>
+              <img src={technoImages.unreal} alt='Unreal Engine' className='TechnoImage' />
               <h3>{TechnoEnum.UNREALENGINE}:</h3>
+            </div>
               <div className='divProjects text-align-center flex-space-evenly'>
 
               {UEAchievements.map((project) => (
@@ -150,7 +153,10 @@ function Achievements() {
 
           {GodotAchievements.length > 0 && (
           <>
-            <h3>{TechnoEnum.GODOT}:</h3>
+            <div className='DivLogo text-align-center '>
+              <img src={technoImages.godot} alt='Godot' className='TechnoImage' />
+              <h3>{TechnoEnum.GODOT}:</h3>
+            </div>
             <div className='divProjects text-align-center flex-space-evenly'>
               
               {GodotAchievements.map((project) => (
@@ -168,7 +174,10 @@ function Achievements() {
 
           {UnityAchievements.length > 0 && (
           <>
-            <h3>{TechnoEnum.UNITY}:</h3>
+            <div className='DivLogo text-align-center '>
+              <img src={technoImages.unity} alt='Unity' className='TechnoImage' />
+              <h3>{TechnoEnum.UNITY}:</h3>
+            </div>
             <div className='divProjects text-align-center flex-space-evenly'>
               {UnityAchievements.map((project) => (
                 <ProjectMedal
@@ -183,7 +192,10 @@ function Achievements() {
 
           {CppAchievements.length > 0 && (
           <>
-            <h3>{TechnoEnum.CPP}:</h3>
+            <div className='DivLogo text-align-center '>
+              <img src={technoImages.cpp} alt='CPP' className='TechnoImage' />
+              <h3>{TechnoEnum.CPP}:</h3>
+            </div>
             <div className='divProjects text-align-center flex-space-evenly'>
 
               {CppAchievements.map((project) => (
@@ -199,7 +211,10 @@ function Achievements() {
 
           {CSharpAchievements.length > 0 && (
           <>
-            <h3>{TechnoEnum.CSHARP}:</h3>
+            <div className='DivLogo text-align-center '>
+              <img src={technoImages.csharp} alt='CSharp' className='TechnoImage' />
+              <h3>{TechnoEnum.CSHARP}:</h3>
+            </div>
             <div className='divProjects text-align-center flex-space-evenly'>
               {CSharpAchievements.map((project) => (
                 <ProjectMedal
@@ -214,7 +229,9 @@ function Achievements() {
 
           {OtherAchievements.length > 0 && (
           <>
-            <h3>{PagesFile.Achievements.Other[defaultLanguage.Langue]}:</h3>
+            <div className='DivLogo text-align-center '>
+              <h3>{PagesFile.Achievements.Other[defaultLanguage.Langue]}:</h3>
+            </div>
             <div className='divProjects text-align-center flex-space-evenly'>
               {OtherAchievements.map((project) => (
                 <ProjectMedal

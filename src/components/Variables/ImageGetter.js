@@ -22,6 +22,14 @@ const Flag = {
     en: require('../../assets/images/flags/en.png'),
 }
 
+const WIP = require('../../assets/images/bigImages/WIP.png');
+
+const technoImages = {
+    unreal: require('../../assets/images/logos/unreal.png'),
+    csharp: require('../../assets/images/logos/cs.png'),
+    cpp: require('../../assets/images/logos/cpp.png'),
+}
+
 
 const BigImageGetter = {
     projectPortfolio: require('../../assets/images/bigImages/IOP.png'),
@@ -38,8 +46,6 @@ const BigImageGetter = {
     projectHoverRacing: require('../../assets/images/bigImages/HoverRacing.png'),
     projectCookingFry: require('../../assets/images/bigImages/beef_Steak_Cooked.png'),
     projectUnityShaders: require('../../assets/images/bigImages/Shaders.png'),
-    projectShadowStrike: require('../../assets/images/bigImages/WIP.png'),
-    projectCarnival: require('../../assets/images/bigImages/WIP.png'),
 }
 
 const SmallImageGetter = {
@@ -101,4 +107,4 @@ const SmallImageGetter = {
 
 
 
-export { Medal, Arrow, Flag, BigImageGetter, SmallImageGetter };
+export { Medal, Arrow, Flag, BigImageGetter, SmallImageGetter, technoImages, WIP };
