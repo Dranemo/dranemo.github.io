@@ -26,6 +26,7 @@ const WIP = require('../../assets/images/bigImages/WIP.png');
 
 const technoImages = {
     unreal: require('../../assets/images/logos/unreal.png'),
+    unity: require('../../assets/images/logos/unity.png'),
     csharp: require('../../assets/images/logos/cs.png'),
     cpp: require('../../assets/images/logos/cpp.png'),
 }
