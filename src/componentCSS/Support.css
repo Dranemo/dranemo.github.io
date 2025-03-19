@@ -1,15 +1,4 @@
-#CardSupport {
-    text-align: center;
-    display: flex;
-    
-    flex-direction: column;
 
-}
-
-.SupportLogos {
-    display: flex;
-    justify-content: space-evenly;
-}
 
 .SupportLogo {
     width: 10vw;

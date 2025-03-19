@@ -90,17 +90,17 @@ function Quests() {
             
     return (
             
-    <div className='Card' id='QuestCard'>
+    <div className='Card bg-color2 text-color1 text-align-center flex-direction-column'>
         <div>
-            <h2>{PagesFile.Quests.Title[defaultLanguage.Langue]}</h2>
-            <hr className='titleBar'/>
+            <h2 className='line-height-1-5'>{PagesFile.Quests.Title[defaultLanguage.Langue]}</h2>
+            <hr className='titleBar bg-color5'/>
         </div>
         <p></p>
 
         <div className='QuestBigPart'>
           {MainQuests.length > 0 && (
             <>
-            <h3 className='questSecondTitle'>{QuestTypeEnum.MAIN[defaultLanguage.Langue]}</h3>
+            <h3 className='text-underlined'>{QuestTypeEnum.MAIN[defaultLanguage.Langue]}</h3>
             
             {MainQuests.map((quest) => (
               <QuestPart quest={quest} />
@@ -110,7 +110,7 @@ function Quests() {
 
           {SideQuests.length > 0 && (
             <>
-            <h3 className='questSecondTitle'>{QuestTypeEnum.SIDE[defaultLanguage.Langue]}</h3>
+            <h3 className='text-underlined'>{QuestTypeEnum.SIDE[defaultLanguage.Langue]}</h3>
 
             {SideQuests.map((quest) => (
               <QuestPart quest={quest} />

@@ -25,7 +25,6 @@ const RarityEnum = {
 
   const NavState = {
     main: 'Main Menu',
-    skills: 'Skills',
     quest: 'Quest Log',
     achievements: 'Achievements',
     support: 'Support'

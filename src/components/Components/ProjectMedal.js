@@ -7,24 +7,12 @@ import { getMedalImage, getMedalImageWhole, defaultLanguage } from '../Variables
 
 
 function ProjectMedal({ ProjectStruct, showTechno = true, onClick }) {
-    document.addEventListener("DOMContentLoaded", function() {
-        const medal = document.querySelector('.Medal');
-        const projectImg = document.querySelector('.MedalImageCenter');
     
-        if (medal && projectImg) {
-            const medalHeight = medal.offsetHeight;
-            const newHeight = medalHeight * 0.7;
-            projectImg.style.height = `${newHeight}px`;
-            projectImg.style.width = `${newHeight}px`;
-        }
-    });
-
-
 
     return (
-        <div className='ProjectPart' onClick={onClick}>
+        <div className='ProjectPart flex-direction-column flex-align-center bg-color3 shadow trans-2s text-color3 hover-bg-color3 hover-shadow hover-pointer' onClick={onClick}>
             <div className='ProjectTitlePart'>
-                <div className='MedalImage'>
+                <div className='MedalImage flex-justify-content-center flex-align-center'>
                     <img src={getMedalImageWhole(ProjectStruct.badgeImg.rarity)} alt={`${ProjectStruct.badgeImg.rarity} whole medal`} className='Medal' />
                     <div className='MedalImageCenter'>
                         <img src={ProjectStruct.badgeImg.image} alt={`image project`} className='projectImg' />

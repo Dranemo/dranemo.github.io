@@ -6,6 +6,8 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 import '../../componentCSS/Components/QuestPart.css';
+import '../../App.css';
+
 import { StatusEnum } from '../Variables/Enums';
 
 import { getStatusColor, getRarityColor, defaultLanguage } from '../Variables/Getters';
@@ -47,32 +49,32 @@ function QuestPart( {quest} ) {
 
   
     return (
-    <div className='PartQuest' onClick={changeQuestOpen} id={questOpen ? 'lighterBackground' : undefined}>
-        <h4 id='colorBlue'> <FontAwesomeIcon icon={questOpen ? faCaretDown : faCaretRight} /> {quest.title[defaultLanguage.Langue]} (<span style={{color: getStatusColor(quest.status)}}>{quest.status[defaultLanguage.Langue]}</span>) - {quest.dateDesc[defaultLanguage.Langue]}</h4>
-        <div className={`quest-details ${questOpen ? 'open' : ''}`}>
+    <div className={`PartQuest shadow hover-bg-color3 hover-shadow hover-pointer trans-2s ${questOpen ? 'bg-color6' : 'bg-color3'}`} onClick={changeQuestOpen}>
+        <h4 className='text-color3'> <FontAwesomeIcon icon={questOpen ? faCaretDown : faCaretRight} /> {quest.title[defaultLanguage.Langue]} (<span style={{color: getStatusColor(quest.status)}}>{quest.status[defaultLanguage.Langue]}</span>) - {quest.dateDesc[defaultLanguage.Langue]}</h4>
+        <div className={`overflow-hidden quest-details ${questOpen ? 'open' : ''}`}>
         {questOpened && (
             <>
                 <hr className='titleBarQuest'/>
 
-                <p><span id='colorBlue' className='titleQuests'>{PagesFile.Quests.Loc[defaultLanguage.Langue]}</span> {quest.location[defaultLanguage.Langue]}</p>
+                <p><span className='text-color3 text-underlined'>{PagesFile.Quests.Loc[defaultLanguage.Langue]}</span> {quest.location[defaultLanguage.Langue]}</p>
 
                 {quest.status === StatusEnum.IN_PROGRESS ? (
-                    <p><span id='colorBlue' className='titleQuests'>{PagesFile.Quests.Started[defaultLanguage.Langue]}</span> {quest.dateDesc[defaultLanguage.Langue]} <br/>
-                        <span id='colorBlue' className='titleQuests'>{PagesFile.Quests.TimeUntilCompletion[defaultLanguage.Langue]}</span> {quest.timeDesc[defaultLanguage.Langue]}
+                    <p><span className='text-color3 text-underlined'>{PagesFile.Quests.Started[defaultLanguage.Langue]}</span> {quest.dateDesc[defaultLanguage.Langue]} <br/>
+                        <span className='text-color3 text-underlined'>{PagesFile.Quests.TimeUntilCompletion[defaultLanguage.Langue]}</span> {quest.timeDesc[defaultLanguage.Langue]}
                     </p>
                 ) : quest.status === StatusEnum.COMPLETED ? (
-                    <p><span id='colorBlue' className='titleQuests'>{PagesFile.Quests.Completed[defaultLanguage.Langue]}</span> {quest.dateDesc[defaultLanguage.Langue]} <br/>
-                        <span id='colorBlue' className='titleQuests'>{PagesFile.Quests.TimeTaken[defaultLanguage.Langue]}</span> {quest.timeDesc[defaultLanguage.Langue]}
+                    <p><span className='text-color3 text-underlined'>{PagesFile.Quests.Completed[defaultLanguage.Langue]}</span> {quest.dateDesc[defaultLanguage.Langue]} <br/>
+                        <span className='text-color3 text-underlined'>{PagesFile.Quests.TimeTaken[defaultLanguage.Langue]}</span> {quest.timeDesc[defaultLanguage.Langue]}
                     </p>
                 ) : quest.status === StatusEnum.NOT_STARTED ? (
-                    <p><span id='colorBlue' className='titleQuests'>{PagesFile.Quests.Starting[defaultLanguage.Langue]}</span> {quest.dateDesc[defaultLanguage.Langue]} <br/>
-                        <span id='colorBlue' className='titleQuests'>{PagesFile.Quests.TimeExpected[defaultLanguage.Langue]}</span> {quest.timeDesc[defaultLanguage.Langue]}
+                    <p><span className='text-color3 text-underlined'>{PagesFile.Quests.Starting[defaultLanguage.Langue]}</span> {quest.dateDesc[defaultLanguage.Langue]} <br/>
+                        <span className='text-color3 text-underlined'>{PagesFile.Quests.TimeExpected[defaultLanguage.Langue]}</span> {quest.timeDesc[defaultLanguage.Langue]}
                     </p>
                 ): null}
                 
                 {quest.rewards.length > 0 && (
                     <>
-                <p><span id='colorBlue' className='titleQuests'>{PagesFile.Quests.Rewards[defaultLanguage.Langue]}</span></p>
+                <p><span className='text-color3 text-underlined'>{PagesFile.Quests.Rewards[defaultLanguage.Langue]}</span></p>
                 <ul id='removeStyleList'>
                     {quest.rewards.map((reward, index) => (
                         <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
@@ -80,7 +82,7 @@ function QuestPart( {quest} ) {
                         </li>
                     ))}
                 </ul>
-                <p><span id='colorBlue' className='titleQuests'>{PagesFile.Quests.Desc[defaultLanguage.Langue]}</span><br/> {quest.description[defaultLanguage.Langue]}</p>
+                <p><span className='text-color3 text-underlined'>{PagesFile.Quests.Desc[defaultLanguage.Langue]}</span><br/> {quest.description[defaultLanguage.Langue]}</p>
                 </>)}
 
                 </>) }

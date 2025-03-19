@@ -13,9 +13,9 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
 
     
   return (
-    <div className='Nav'>
+    <div className='Nav flex-direction-column'>
 
-        <div className='Menu'>
+        <div className='Menu bg-color8 text-color3 flex-direction-column shadow'>
             {/*{navState !== NavState.skills ? (
                 <button className='button-as-text'
                         onClick={() => changeNavState(NavState.skills)}
@@ -37,7 +37,7 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
             )}*/}
 
             {navState !== NavState.quest ? (
-                <button className='button-as-text'
+                <button className='button-as-text hover-pointer'
                         onClick={() => changeNavState(NavState.quest)}
                         onMouseEnter={() => handleMouseEnter(NavState.quest)}
                         onMouseLeave={handleMouseLeave}
@@ -46,7 +46,7 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
                     &nbsp;{PagesFile.Quests.Title[defaultLanguage.Langue]}&nbsp;&nbsp;
                 </button>
             ) : (
-                <button className='button-as-text'
+                <button className='button-as-text hover-pointer'
                         onClick={() => changeNavState(NavState.main)}
                         onMouseEnter={() => handleMouseEnter(NavState.main)}
                         onMouseLeave={handleMouseLeave}
@@ -57,7 +57,7 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
             )}
 
             {navState !== NavState.achievements ? (
-                <button className='button-as-text'
+                <button className='button-as-text hover-pointer'
                         onClick={() => changeNavState(NavState.achievements)}
                         onMouseEnter={() => handleMouseEnter(NavState.achievements)}
                         onMouseLeave={handleMouseLeave}
@@ -66,7 +66,7 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
                     &nbsp;{PagesFile.Achievements.Title[defaultLanguage.Langue]}&nbsp;&nbsp;
                 </button>
             ) : (
-                <button className='button-as-text'
+                <button className='button-as-text hover-pointer'
                         onClick={() => changeNavState(NavState.main)}
                         onMouseEnter={() => handleMouseEnter(NavState.main)}
                         onMouseLeave={handleMouseLeave}
@@ -77,7 +77,7 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
             )}
 
             {navState !== NavState.support ? (
-                <button className='button-as-text'
+                <button className='button-as-text hover-pointer'
                         onClick={() => changeNavState(NavState.support)}
                         onMouseEnter={() => handleMouseEnter(NavState.support)}
                         onMouseLeave={handleMouseLeave}
@@ -86,7 +86,7 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
                     &nbsp;{PagesFile.Support.Title[defaultLanguage.Langue]}&nbsp;&nbsp;
                 </button>
             ) : (
-                <button className='button-as-text'
+                <button className='button-as-text hover-pointer'
                         onClick={() => changeNavState(NavState.main)}
                         onMouseEnter={() => handleMouseEnter(NavState.main)}
                         onMouseLeave={handleMouseLeave}
@@ -96,7 +96,7 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
                 </button>
             )}
 
-            <button className='button-as-text'
+            <button className='button-as-text hover-pointer'
                     onClick={() => changeLanguage()}
                     onMouseEnter={() => handleMouseEnter('Language')}
                     onMouseLeave={handleMouseLeave}

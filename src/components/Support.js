@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Gmail from '../assets/images/gmail.png';
-import Discord from '../assets/images/discord.png';
 import LinkedIn from '../assets/images/linkedin.png';
 import Github from '../assets/images/github.png';
 
@@ -13,13 +12,13 @@ import { defaultLanguage } from './Variables/Getters';
 function Support() {
 
   return (
-    <div className='Card' id='CardSupport'>
+    <div className='Card bg-color2 text-color1 line-height-1-5 flex-direction-column text-align-center'>
         <div>
             <h2>{PagesFile.Support.Title[defaultLanguage.Langue]}</h2>
-            <hr className='titleBar'/>
+            <hr className='titleBar bg-color5'/>
         </div>
         <p></p>
-        <div className='SupportLogos'>
+        <div className='flex-space-evenly'>
           <a href='mailto:ycaillot[at]gaming.com'>
             <img src={Gmail} alt='Gmail' className='SupportLogo' />
           </a>

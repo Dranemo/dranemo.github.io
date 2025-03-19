@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 
 import { BigImageGetter } from './Variables/ImageGetter';
 
@@ -44,36 +43,37 @@ const generateAdditionalContent = (nbspNumber) => {
 
 
     return (
-      <div className='Card' id='MainCard'>
+      <div className='Card bg-color2 text-color1 line-height-1-5' id='MainCard'>
 
-      <div className='MainTitle'>
-                <h2>{PagesFile.Main.BigTitle[defaultLanguage.Langue]}</h2>
-                <hr className='titleBar'/>
-            </div>
+        <div className='MainTitle text-align-center'>
+          <h2>{PagesFile.Main.BigTitle[defaultLanguage.Langue]}</h2>
+          <hr className='titleBar bg-color5'/>
+        </div>
 
-        <div className='MainFlex'>
-        <img src={BigImageGetter.projectPortfolio} alt="Moi" className='imageMoi'/>
-        <div className='divText'>
+        <div className='flex-space-evenly'>
+          <img src={BigImageGetter.projectPortfolio} alt="Moi" className='imageMoi'/>
+
+          <div className='flex-direction-column'>
 
 
             <div className='MainSections'>
                 <div className='MainSection'>
-                    <h4 className='titleSec'>{PagesFile.Main.Stats[defaultLanguage.Langue]}</h4>
-                    <p id='colorClair2'>{PagesFile.Main.Level[defaultLanguage.Langue]}20 <br/>
+                    <h4 className='text-underlined'>{PagesFile.Main.Stats[defaultLanguage.Langue]}</h4>
+                    <p className='text-color2'>{PagesFile.Main.Level[defaultLanguage.Langue]}20 <br/>
                         - {PagesFile.Main.Guild[defaultLanguage.Langue]}<br/>
                         - {PagesFile.Main.Server[defaultLanguage.Langue]}<br /></p>
-                    <p id='colorClair2'>{PagesFile.Main.EquippedTitle[defaultLanguage.Langue]}<span style={{ color: getRarityColor(PagesFile.Main.EquippedTitleTitle.Rarity) }}>{PagesFile.Main.EquippedTitleTitle.Title[defaultLanguage.Langue]} ({PagesFile.Main.EquippedTitleTitle.Rarity[defaultLanguage.Langue]})</span></p>
+                    <p className='text-color2'>{PagesFile.Main.EquippedTitle[defaultLanguage.Langue]}<span style={{ color: getRarityColor(PagesFile.Main.EquippedTitleTitle.Rarity) }}>{PagesFile.Main.EquippedTitleTitle.Title[defaultLanguage.Langue]} ({PagesFile.Main.EquippedTitleTitle.Rarity[defaultLanguage.Langue]})</span></p>
                 </div>
 
                 <div className='MainSection'>
-                    <h4 className='titleSec' >{PagesFile.Main.Inventory[defaultLanguage.Langue]}</h4>
-                    <ul id='removeStyleList'>
+                    <h4 className='text-underlined' >{PagesFile.Main.Inventory[defaultLanguage.Langue]}</h4>
+                    <ul className='text-color2' id='removeStyleList'>
                       {PagesFile.Main.InventoryItems.map((item, index) => (
                         <li key={index}>
                           - {item[defaultLanguage.Langue]} {item.download === true ? (
                             <>
                               {generateAdditionalContent(item.nbspNumber[defaultLanguage.Langue])}
-                              <a href={item.href} download={item.downloadLink} id='colorClair2'><FontAwesomeIcon icon={faDownload}></FontAwesomeIcon></a>
+                              <a href={item.href} download={item.downloadLink} className='text-color2 hover-pointer'><FontAwesomeIcon icon={faDownload}></FontAwesomeIcon></a>
                             </>
                           ) : null}
                         </li>
@@ -83,8 +83,8 @@ const generateAdditionalContent = (nbspNumber) => {
                 </div>
 
                 <div className='MainSection'>
-                    <h4 className='titleSec'>{PagesFile.Main.CharacterPreview[defaultLanguage.Langue]}</h4>
-                    <p id='colorClair2'>{PagesFile.Main.CharacterDescription[defaultLanguage.Langue]}<br/>
+                    <h4 className='text-underlined'>{PagesFile.Main.CharacterPreview[defaultLanguage.Langue]}</h4>
+                    <p className='text-color2'>{PagesFile.Main.CharacterDescription[defaultLanguage.Langue]}<br/>
                         {PagesFile.Main.CharacterDescription2[defaultLanguage.Langue]}</p>
                 </div>
             </div>

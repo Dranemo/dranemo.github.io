@@ -29,3 +29,133 @@ body {
   font-size: .9vw;
 }
 
+
+
+
+.bg-color-semi-black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-color1 {
+  background-color: #291e2c;
+}
+
+.bg-color2 {
+  background-color: #4e3644;
+}
+
+.bg-color3 {
+  background-color: #aa8284;
+}
+
+.bg-color4 {
+  background-color: #906e70;
+}
+
+.bg-color5 {
+  background-color: #ccb5c8;
+}
+
+.bg-color6 {
+  background-color: #c9a5a7;
+}
+
+.bg-color7 {
+  background-color: #4f1c1b;
+}
+
+.bg-color8 {
+  background-color: #906e70;
+}
+
+
+.text-color-black {
+  color: black;
+}
+
+.text-color1 {
+  color: #ccb5c8;
+}
+
+.text-color2 {
+  color: #b99fb5;
+}
+
+.text-color3 {
+  color: #4f1c1b;
+}
+
+.text-color4 {
+  color: #aa8284;
+}
+
+
+
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-underlined {
+  text-decoration: underline;
+}
+
+.line-height-1-5 {
+  line-height: 1.5;
+}
+
+
+
+.flex-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.shadow {
+  box-shadow: 0 .3vh .5vw black;
+}
+
+.trans-2s {
+  transition: .2s ease-in-out;
+}
+
+.hover-pointer:hover {
+  cursor: pointer;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 .5vh 1vw black;
+}
+
+.hover-bg-color3:hover {
+  background-color: #c9a5a7;
+}
+
+
+
+#removeStyleList {
+  padding-top: 0;
+  list-style-type: none;
+}
+
+
+.overflow-hidden {
+  overflow: hidden;
+}

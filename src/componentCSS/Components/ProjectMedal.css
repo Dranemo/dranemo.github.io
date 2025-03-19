@@ -2,45 +2,20 @@
     width: 100%;
     height: auto;
 
-    
-
     margin-top: 5vw;
     margin-bottom: 2vw;
 }
 
 .ProjectPart {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    background-color: #aa8284 ;
-    border-radius: 1vh;
-    color: #4f1c1b;
-    
-    box-shadow: 0 0.3vh 0.5vw black;
-    transition: .2s ease-in-out;
-    
+    border-radius: 1vh;    
     
     padding: 1rem;
     margin: 1%;
     width: 20%;
 }
 
-.ProjectPart:hover {
-    background-color: #c9a5a7;
-    cursor: pointer;
-
-    
-    box-shadow: 0 0.5vh 1vw black;
-    transition: .2s ease-in-out;
-}
-
 
 .MedalImage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     position: relative;
 }
 

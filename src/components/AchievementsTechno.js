@@ -1,12 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
 
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
-
-
 import '../componentCSS/Achievements.css';
 import ProjectMedal from './Components/ProjectMedal';
 import BigAchievement from './Components/BigAchievements';
@@ -75,9 +69,9 @@ function Achievements() {
     useEffect(() => {
         if (displayedProject) {
             console.log('Achievements useEffect', displayedProject);
-            document.body.classList.add('no-scroll');
+            document.body.classList.add('overflow-hidden');
         } else {
-            document.body.classList.remove('no-scroll');
+            document.body.classList.remove('overflow-hidden');
         }
     }, [displayedProject]);
 
@@ -90,10 +84,10 @@ function Achievements() {
 
 
     return (
-      <div className='Card' id='CardAch'>
+      <div className='Card bg-color2 text-color1 flex-direction-column text-align-center line-height-1-5'>
           <div>
               <h2>{PagesFile.Achievements.Title[defaultLanguage.Langue]}</h2>
-              <hr className='titleBar'/>
+              <hr className='titleBar bg-color5'/>
           </div>
 
 
@@ -125,7 +119,7 @@ function Achievements() {
           {/*********************** Project details **********************/}
           {displayedProject && (
             <>
-                <div className='overlay' onClick={() => handleProjectClick(null)}></div>
+                <div className='overlay bg-color-semi-black' onClick={() => handleProjectClick(null)}></div>
                 <BigAchievement displayedProject={displayedProject} />
             </>
             )}
@@ -136,7 +130,7 @@ function Achievements() {
           {UEAchievements.length > 0 && (
             <>
               <h3>{TechnoEnum.UNREALENGINE}:</h3>
-              <div className='divProjects'>
+              <div className='divProjects text-align-center flex-space-evenly'>
 
               {UEAchievements.map((project) => (
                 <ProjectMedal 
@@ -155,7 +149,7 @@ function Achievements() {
           {GodotAchievements.length > 0 && (
           <>
             <h3>{TechnoEnum.GODOT}:</h3>
-            <div className='divProjects'>
+            <div className='divProjects text-align-center flex-space-evenly'>
               
               {GodotAchievements.map((project) => (
                 <ProjectMedal 
@@ -173,7 +167,7 @@ function Achievements() {
           {UnityAchievements.length > 0 && (
           <>
             <h3>{TechnoEnum.UNITY}:</h3>
-            <div className='divProjects'>
+            <div className='divProjects text-align-center flex-space-evenly'>
               {UnityAchievements.map((project) => (
                 <ProjectMedal
                     ProjectStruct={project}
@@ -188,7 +182,7 @@ function Achievements() {
           {CppAchievements.length > 0 && (
           <>
             <h3>{TechnoEnum.CPP}:</h3>
-            <div className='divProjects'>
+            <div className='divProjects text-align-center flex-space-evenly'>
 
               {CppAchievements.map((project) => (
                 <ProjectMedal
@@ -204,7 +198,7 @@ function Achievements() {
           {CSharpAchievements.length > 0 && (
           <>
             <h3>{TechnoEnum.CSHARP}:</h3>
-            <div className='divProjects'>
+            <div className='divProjects text-align-center flex-space-evenly'>
               {CSharpAchievements.map((project) => (
                 <ProjectMedal
                     ProjectStruct={project}
@@ -219,7 +213,7 @@ function Achievements() {
           {OtherAchievements.length > 0 && (
           <>
             <h3>{PagesFile.Achievements.Other[defaultLanguage.Langue]}:</h3>
-            <div className='divProjects'>
+            <div className='divProjects text-align-center flex-space-evenly'>
               {OtherAchievements.map((project) => (
                 <ProjectMedal
                     ProjectStruct={project}

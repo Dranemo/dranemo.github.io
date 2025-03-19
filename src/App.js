@@ -9,8 +9,6 @@ import PagesFile from './components/Variables/Texts/PagesFile';
 import './App.css';
 
 import Nav from './components/Nav';
-
-import Skills from './components/Skills'; 
 import Achievements from './components/AchievementsTechno';
 import Support from './components/Support';
 import Main from './components/Main';
@@ -109,7 +107,6 @@ function App() {
 
       <main>
         {navState === NavState.quest && <Quests />} {/* Affiche la section des compétences */}
-        {navState === NavState.skills && <Skills />} {/* Affiche la section des compétences */}
         {navState === NavState.achievements && <Achievements />} {/* Affiche la section des succès */}
         {navState === NavState.support && <Support />} {/* Affiche la section du support */}
         {navState === NavState.main && <Main />} {/* Affiche la section principale */}
