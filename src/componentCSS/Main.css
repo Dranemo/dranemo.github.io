@@ -1,7 +1,29 @@
+@media (max-width: 600px) {
+    .imageMoi {
+        width: 0%;
+    }
+
+    .titleBar {
+        width: 80%;
+    }
+    
+}
+
+@media (min-width: 601px) {
+    .imageMoi {
+        width: 35%;
+    }
+    
+    .titleBar {
+        width: 40%;
+    }
+    
+}
+
+
 .imageMoi {
     height: 80vh;
-    position:sticky;    
-    width: 35%;
+    position:sticky;  
     top : 6vh;
     
     object-fit: cover;
@@ -22,7 +44,6 @@
 .titleBar {
     border: none;
     height: 2px;
-    width: 40%;
 }
 
 

@@ -19,7 +19,7 @@ function Support() {
             <hr className={`titleBar bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
         </div>
         <p></p>
-        <div className='flex-space-evenly'>
+        <div className='flex-space-evenly SupportPart'>
           <a href='mailto:ycaillot[at]gaming.com'>
             <img src={Gmail} alt='Gmail' className='SupportLogo' />
           </a>

@@ -1,38 +1,77 @@
-.Nav {
-    position: fixed;
-    flex-wrap: wrap-reverse;
+@media (max-width: 600px) {
+    .Menu {
+        height: 100%;
+    
+        padding-top: 20%;
+    
+        z-index: 5;
 
-    top: 3vh;
-    left: 3vw;
+        width: 100%;
+    }
 
-    width: auto;
+    .Nav {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 70%;
+    
+        z-index: 4;
 
-    z-index: 4;
+        font-size: 5vw;
+        
+        transition: ease-in-out 0.5s;
+    }
+
+    .Nav.closed {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .button-as-text {
+        padding: 0;
+        margin-top: 5%;
+      }
+}
+@media (min-width: 601px) {
+    .Menu {
+        width: auto;
+        height: auto;
+    
+        padding: 1vh 1vw;
+    
+        z-index: 5;
+        border-radius: 1vw;
+    }
+
+    .Nav {
+        position: fixed;
+        flex-wrap: wrap-reverse;
+    
+        top: 3vh;
+        left: 3vw;
+    
+        width: auto;
+    
+        z-index: 4;
+    }
+
+    .button-as-text {
+        padding: 0;
+        margin: 0;
+      }
 }
 
-.Menu {
-    width: auto;
-    height: auto;
-
-    padding: 1vh 1vw;
-    border-radius: 1vw;
-
-    z-index: 5;
-}
 
 
-#menuButton {
-    display: inline-block;
 
-}
+
+
 
 .button-as-text {
     background: none;
     border: none;
     color: inherit;
     font: inherit;
-    padding: 0;
-    margin: 0;
     text-decoration: none;
   }
 
@@ -41,4 +80,21 @@
     max-height: 3%;
     height: auto;
     width: auto;
+  }
+
+
+  .Lines {
+    position: fixed;
+    z-index: 6;
+    left: 2vw;
+    top: 2vh;
+    
+    font-size: 300%;
+
+    background: none; /* Supprime le fond */
+    border: none; /* Supprime le contour */
+    color: inherit; /* Utilise la couleur du texte héritée */
+    cursor: pointer; /* Change le curseur en pointeur */
+    padding: 0; /* Supprime les marges internes */
+    margin: 0; /* Supprime les marges externes */
   }

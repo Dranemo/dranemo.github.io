@@ -23,6 +23,7 @@ const Flag = {
 }
 
 const WIP = require('../../assets/images/bigImages/WIP.png');
+const Lines = require('../../assets/images/lines.png');
 
 const technoImages = {
     unreal: require('../../assets/images/logos/unreal.png'),
@@ -108,4 +109,4 @@ const SmallImageGetter = {
 
 
 
-export { Medal, Arrow, Flag, BigImageGetter, SmallImageGetter, technoImages, WIP };
+export { Medal, Arrow, Flag, BigImageGetter, SmallImageGetter, technoImages, WIP, Lines };

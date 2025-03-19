@@ -1,17 +1,23 @@
-.Card {
-  width: 96vw;
-  min-height: 96vh;
-  height: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 
-  border-radius: 2vw;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  margin: 2vh 2vw;
 
-  display: flex;
-  position: relative;
-}
+
+
+  /* Styles spécifiques aux écrans larges (PC) */
+  .Card {
+    width: 96vw;
+    min-height: 96vh;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    border-radius: 2vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    margin: 2vh 2vw;
+    
+    display: flex;
+    position: relative;
+  }

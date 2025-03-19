@@ -8,26 +8,24 @@
 body {
   background-color: #291e2c;
   font-family: 'PressStart', sans-serif;
-
-  
-  font-size: .9vw;
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 3.5vw;
+  }
+}
 
+@media (min-width: 601px) {
+  body {
+    font-size: .9vw;
+  }
+}
 
 
 
 
 ::-webkit-scrollbar {display:none;} 
-
-#CardMobile {
-  text-align: center;
-  font-size: 5vw;
-
-  display: flex;
-  flex-direction: column;
-}
-
 
 
 

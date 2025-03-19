@@ -1,3 +1,33 @@
+@media (max-width: 600px) {
+    .ProjectPart {
+        border-radius: 7vw;    
+        margin-bottom: 4%;
+        width: 70%;
+
+    }
+
+    .ProjectTitle {
+        margin-top: 20%;
+    }
+}
+
+@media (min-width: 601px) {
+    .ProjectPart {
+        border-radius: 1vh;    
+        margin: 1%;
+        width: 20%;
+    }
+
+    .ProjectTitle {
+        margin-top: 50%;
+    }
+}
+
+
+
+
+
+
 .ProjectTitlePart {
     width: 100%;
     height: auto;
@@ -7,11 +37,7 @@
 }
 
 .ProjectPart {
-    border-radius: 1vh;    
-    
     padding: 1rem;
-    margin: 1%;
-    width: 20%;
 }
 
 
@@ -39,9 +65,7 @@
     background-color: #222222, 0 ;
 }
 
-.ProjectTitle {
-    margin-top: 50%;
-}
+
 
 .MedalImageCenter {
     height: auto;

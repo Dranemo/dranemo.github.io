@@ -59,41 +59,6 @@ function App() {
 
 
 
-    // Détecter si la page est affichée sur un téléphone
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-      const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
-      };
-  
-      // Vérifier la taille de la fenêtre au chargement
-      handleResize();
-  
-      // Ajouter un écouteur d'événement pour les changements de taille de la fenêtre
-      window.addEventListener('resize', handleResize);
-  
-      // Nettoyer l'écouteur d'événement lors du démontage du composant
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-  
-    // Afficher un message si la page est affichée sur un téléphone
-    if (isMobile) {
-      return (
-        <div className='Card' id='CardMobile'>
-          <h3>{PagesFile.App.Sorry[defaultLanguage.Langue]}</h3>
-          <p>{PagesFile.App.CheckBack[defaultLanguage.Langue]}</p>
-          <img src={amagara} alt="Amagara"/>
-        </div>
-      );
-    }
-
-
-
-
-
 
 
 
