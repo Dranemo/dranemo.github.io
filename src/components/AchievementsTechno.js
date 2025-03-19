@@ -131,6 +131,7 @@ function Achievements() {
           <div className='bigDivAchievements'>
           {UEAchievements.length > 0 && (
             <>
+            <hr className={`titleBar2 bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <div className='DivLogo text-align-center '>
               <img src={technoImages.unreal} alt='Unreal Engine' className='TechnoImage' />
               <h3>{TechnoEnum.UNREALENGINE}:</h3>
@@ -153,6 +154,7 @@ function Achievements() {
 
           {GodotAchievements.length > 0 && (
           <>
+            <hr className={`titleBar2 bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <div className='DivLogo text-align-center '>
               <img src={technoImages.godot} alt='Godot' className='TechnoImage' />
               <h3>{TechnoEnum.GODOT}:</h3>
@@ -174,6 +176,7 @@ function Achievements() {
 
           {UnityAchievements.length > 0 && (
           <>
+            <hr className={`titleBar2 bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <div className='DivLogo text-align-center '>
               <img src={technoImages.unity} alt='Unity' className='TechnoImage' />
               <h3>{TechnoEnum.UNITY}:</h3>
@@ -192,6 +195,7 @@ function Achievements() {
 
           {CppAchievements.length > 0 && (
           <>
+            <hr className={`titleBar2 bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <div className='DivLogo text-align-center '>
               <img src={technoImages.cpp} alt='CPP' className='TechnoImage' />
               <h3>{TechnoEnum.CPP}:</h3>
@@ -211,6 +215,7 @@ function Achievements() {
 
           {CSharpAchievements.length > 0 && (
           <>
+            <hr className={`titleBar2 bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <div className='DivLogo text-align-center '>
               <img src={technoImages.csharp} alt='CSharp' className='TechnoImage' />
               <h3>{TechnoEnum.CSHARP}:</h3>
@@ -229,6 +234,7 @@ function Achievements() {
 
           {OtherAchievements.length > 0 && (
           <>
+            <hr className={`titleBar2 bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <div className='DivLogo text-align-center '>
               <h3>{PagesFile.Achievements.Other[defaultLanguage.Langue]}:</h3>
             </div>

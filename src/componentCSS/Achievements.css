@@ -48,3 +48,9 @@
     margin-top: 2%;
     width: 100%;
 }
+
+.titleBar2 {
+    border: none;
+    height: 2px;
+    width: 30%;
+}
