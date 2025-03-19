@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d8a02a37.css",
-    "main.js": "/static/js/main.1214d5df.js",
+    "main.css": "/static/css/main.13d1f5d3.css",
+    "main.js": "/static/js/main.e65f8607.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/goal.png": "/static/media/goal.65ec283ca3df06537648.png",
     "static/media/game1.png": "/static/media/game1.fd82cef16b84b9a94df7.png",
@@ -38,7 +38,10 @@
     "static/media/BuildToScale.png": "/static/media/BuildToScale.f612e91e8113a9a7253e.png",
     "static/media/ironMedal.png": "/static/media/ironMedal.6e148214c9e40affeb37.png",
     "static/media/BranCastle.jpg": "/static/media/BranCastle.820e6fd55a135b245d55.jpg",
+    "static/media/cs.png": "/static/media/cs.9c24106976ec9609c05b.png",
     "static/media/woodMedal.png": "/static/media/woodMedal.a8bc391a64be257d4256.png",
+    "static/media/cpp.png": "/static/media/cpp.cd3d67fc6a64d09c5d22.png",
+    "static/media/unreal.png": "/static/media/unreal.260e6259aef4f040d5a9.png",
     "static/media/IOP.png": "/static/media/IOP.b7c84511891e0eef1dd0.png",
     "static/media/en.png": "/static/media/en.8c19a11f7c1a2993a88a.png",
     "static/media/PressStart2P-Regular.ttf": "/static/media/PressStart2P-Regular.c5b470938391e423c6d6.ttf",
@@ -57,12 +60,12 @@
     "static/media/ArrowRight.png": "/static/media/ArrowRight.816f26f25988887ce4f0.png",
     "static/media/2.png": "/static/media/2.e83c17c305c5587be9fe.png",
     "index.html": "/index.html",
-    "main.d8a02a37.css.map": "/static/css/main.d8a02a37.css.map",
-    "main.1214d5df.js.map": "/static/js/main.1214d5df.js.map",
+    "main.13d1f5d3.css.map": "/static/css/main.13d1f5d3.css.map",
+    "main.e65f8607.js.map": "/static/js/main.e65f8607.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8a02a37.css",
-    "static/js/main.1214d5df.js"
+    "static/css/main.13d1f5d3.css",
+    "static/js/main.e65f8607.js"
   ]
 }
