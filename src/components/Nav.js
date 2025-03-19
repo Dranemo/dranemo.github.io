@@ -4,7 +4,6 @@ import '../componentCSS/Nav.css';
 
 import { NavState, ModeEnum } from './Variables/Enums';
 import { defaultLanguage, getFlagLanguage, defaultMode } from './Variables/Getters';
-import { Lines } from './Variables/ImageGetter';
 import PagesFile from './Variables/Texts/PagesFile';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,21 +51,19 @@ function Nav({ navState, changeNavState, changeLanguage, changeMode, hoveredButt
     if (isMobile) {
         return (
             <>
-            <button className='Lines' onClick={changeMenuOpen}><FontAwesomeIcon icon={faBars} /></button>
+            <button className='Lines' onClick={changeMenuOpen}><FontAwesomeIcon className={`text-color1 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`} icon={faBars} /></button>
             <div className={`Nav flex-direction-column ${isMenuOpen ? '' : 'closed'}`}>
                 <div className={`Menu bg-color8 text-color3 flex-direction-column shadow ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
                     {navState !== NavState.quest ? (
                         <button className='button-as-text hover-pointer'
                                 onClick={() => {changeNavState(NavState.quest); changeMenuOpen()}}
                         >
-                            {hoveredButton === NavState.quest ? '>' : '\u00A0'}
                             {PagesFile.Quests.Title[defaultLanguage.Langue]}
                         </button>
                     ) : (
                         <button className='button-as-text hover-pointer'
                                 onClick={() => {changeNavState(NavState.main); changeMenuOpen()}}
                         >
-                            {hoveredButton === NavState.main ? '>' : '\u00A0'}
                             {PagesFile.Main.Title[defaultLanguage.Langue]}
                         </button>
                     )}
@@ -75,14 +72,12 @@ function Nav({ navState, changeNavState, changeLanguage, changeMode, hoveredButt
                         <button className='button-as-text hover-pointer'
                                 onClick={() => {changeNavState(NavState.achievements); changeMenuOpen()}}
                         >
-                            {hoveredButton === NavState.achievements ? '>' : '\u00A0'}
                             {PagesFile.Achievements.Title[defaultLanguage.Langue]}
                         </button>
                     ) : (
                         <button className='button-as-text hover-pointer'
                                 onClick={() => {changeNavState(NavState.main); changeMenuOpen()}}
                         >
-                            {hoveredButton === NavState.main ? '>' : '\u00A0'}
                             {PagesFile.Main.Title[defaultLanguage.Langue]}
                         </button>
                     )}
@@ -91,14 +86,12 @@ function Nav({ navState, changeNavState, changeLanguage, changeMode, hoveredButt
                         <button className='button-as-text hover-pointer'
                                 onClick={() => {changeNavState(NavState.support); changeMenuOpen()}}
                         >
-                            {hoveredButton === NavState.support ? '>' : '\u00A0'}
                             {PagesFile.Support.Title[defaultLanguage.Langue]}
                         </button>
                     ) : (
                         <button className='button-as-text hover-pointer'
                                 onClick={() => {changeNavState(NavState.main); changeMenuOpen()}}
                         >
-                            {hoveredButton === NavState.main ? '>' : '\u00A0'}
                             {PagesFile.Main.Title[defaultLanguage.Langue]}
                         </button>
                     )}
@@ -106,7 +99,6 @@ function Nav({ navState, changeNavState, changeLanguage, changeMode, hoveredButt
                     <button className='button-as-text hover-pointer'
                             onClick={() => changeLanguage()}
                     >
-                        {hoveredButton === 'Language' ? '>' : '\u00A0'}
                         {PagesFile.Nav.Language[defaultLanguage.Langue]}: {defaultLanguage.Langue}
                         
                     </button>
@@ -114,7 +106,6 @@ function Nav({ navState, changeNavState, changeLanguage, changeMode, hoveredButt
                     <button className='button-as-text hover-pointer'
                             onClick={() => changeMode()}
                     >
-                        {hoveredButton === 'Mode' ? '>' : '\u00A0'}
                         {defaultMode[defaultLanguage.Langue]} <FontAwesomeIcon icon={defaultMode === ModeEnum.LIGHT ? faSun : faMoon} />
                         
                     </button>

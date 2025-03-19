@@ -17,7 +17,9 @@
     
         z-index: 4;
 
-        font-size: 5vw;
+        font-size: 4.5vw;
+        margin-left: .1%;
+        margin-right: .1%;
         
         transition: ease-in-out 0.5s;
     }
