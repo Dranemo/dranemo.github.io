@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb8a53e3.css",
-    "main.js": "/static/js/main.ab357d5a.js",
+    "main.css": "/static/css/main.b2f6f8bb.css",
+    "main.js": "/static/js/main.1214d5df.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/goal.png": "/static/media/goal.65ec283ca3df06537648.png",
     "static/media/game1.png": "/static/media/game1.fd82cef16b84b9a94df7.png",
@@ -48,7 +48,6 @@
     "static/media/Greedy.png": "/static/media/Greedy.220f0aaa62f77caa71f1.png",
     "static/media/github.png": "/static/media/github.ecb17f4fb1908a93bab3.png",
     "static/media/Fight.png": "/static/media/Fight.69b2fd815cd5b5ad9e7b.png",
-    "static/media/discord.png": "/static/media/discord.a63f82ebb176acf6db17.png",
     "static/media/TheFinalExit.png": "/static/media/TheFinalExit.478d57629094843cec66.png",
     "static/media/WIP.png": "/static/media/WIP.e2cbf774697080ce7199.png",
     "static/media/Stats.png": "/static/media/Stats.c9e017bf0259d735c12d.png",
@@ -58,12 +57,12 @@
     "static/media/ArrowRight.png": "/static/media/ArrowRight.816f26f25988887ce4f0.png",
     "static/media/2.png": "/static/media/2.e83c17c305c5587be9fe.png",
     "index.html": "/index.html",
-    "main.fb8a53e3.css.map": "/static/css/main.fb8a53e3.css.map",
-    "main.ab357d5a.js.map": "/static/js/main.ab357d5a.js.map",
+    "main.b2f6f8bb.css.map": "/static/css/main.b2f6f8bb.css.map",
+    "main.1214d5df.js.map": "/static/js/main.1214d5df.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb8a53e3.css",
-    "static/js/main.ab357d5a.js"
+    "static/css/main.b2f6f8bb.css",
+    "static/js/main.1214d5df.js"
   ]
 }
