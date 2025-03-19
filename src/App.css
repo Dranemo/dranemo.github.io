@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+body {
+  background-color: #291e2c;
+  font-family: 'PressStart', sans-serif;
+
+  
+  font-size: .9vw;
+}
 
 
 
@@ -19,14 +26,6 @@
 
   display: flex;
   flex-direction: column;
-}
-
-body {
-  background-color: #291e2c;
-  font-family: 'PressStart', sans-serif;
-
-  
-  font-size: .9vw;
 }
 
 
@@ -69,9 +68,7 @@ body {
 }
 
 
-.text-color-black {
-  color: black;
-}
+
 
 .text-color1 {
   color: #ccb5c8;
@@ -88,6 +85,68 @@ body {
 .text-color4 {
   color: #aa8284;
 }
+
+.text-color5 {
+  color: black;
+}
+
+
+/* Couleurs de fond inversées */
+.bg-color1.light-mode {
+  background-color: #d6e1d3;
+}
+
+.bg-color2.light-mode {
+  background-color: #b1c9bb;
+}
+
+.bg-color3.light-mode {
+  background-color: #557d7b;
+}
+
+.bg-color4.light-mode {
+  background-color: #6f9190;
+}
+
+.bg-color5.light-mode {
+  background-color: #334a37;
+}
+
+.bg-color6.light-mode {
+  background-color: #5c7f81; /* Version éclaircie de #365a58 */
+}
+
+.bg-color7.light-mode {
+  background-color: #b0e3e4;
+}
+
+.bg-color8.light-mode {
+  background-color: #6f9190;
+}
+
+/* Couleurs de texte inversées */
+.text-color1.light-mode {
+  color: #334a37;
+}
+
+.text-color2.light-mode {
+  color: #46604a;
+}
+
+.text-color3.light-mode {
+  color: #b0e3e4;
+}
+
+.text-color4.light-mode {
+  color: #557d7b;
+}
+
+.text-color5.light-mode {
+  color: #ffffff; /* Blanc, inverse du noir */
+}
+
+
+
 
 
 
@@ -146,6 +205,10 @@ body {
 
 .hover-bg-color3:hover {
   background-color: #c9a5a7;
+}
+
+.hover-bg-color3.light-mode:hover {
+  background-color: #5c7f81;
 }
 
 

@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 
-import { getRarityColor, defaultLanguage } from "../Variables/Getters";
+import { getRarityColor, defaultLanguage, defaultMode } from "../Variables/Getters";
 import { Arrow } from '../Variables/ImageGetter';
 
 import '../../componentCSS/Components/BigAchievement.css';
+import { ModeEnum } from '../Variables/Enums';
 
 
 
@@ -44,18 +45,18 @@ function BigAchievement({displayedProject}) {
 
 
 
-        <div className='ProjectDetails bg-color3 shadow text-color-black'>
+        <div className={`ProjectDetails bg-color3 shadow text-color5  ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
             <img src={displayedProject.badgeImg.image} alt={`image project`} className='projectImgDesc' />
                 
-            <h2 className='text-color3 text-underlined'>{displayedProject.badgeTitle[defaultLanguage.Langue]}</h2>
-            <hr className='titleBarProj bg-color7'/>
+            <h2 className={`text-color3 text-underlined ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>{displayedProject.badgeTitle[defaultLanguage.Langue]}</h2>
+            <hr className={`titleBarProj bg-color7 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <p>{displayedProject.dateDesc[defaultLanguage.Langue]}</p>
             <p>{displayedProject.timeDesc[defaultLanguage.Langue]}</p>
-            <hr className='titleBarProj2 bg-color7'/>
+            <hr className={`titleBarProj bg-color7 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
 
             <div>
-                <h3 className='text-color3 text-underlined'>{displayedProject.details.title[defaultLanguage.Langue]}</h3>
-                <hr className='titleBarProj bg-color7'/>
+                <h3 className={`text-color3 text-underlined ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>{displayedProject.details.title[defaultLanguage.Langue]}</h3>
+                <hr className={`titleBarProj bg-color7 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
 
                     
                 <p className='DescProject' dangerouslySetInnerHTML={{ __html: displayedProject.details.description[defaultLanguage.Langue] }}></p>
@@ -71,7 +72,7 @@ function BigAchievement({displayedProject}) {
 
             {displayedProject.details.carousel && displayedProject.details.carousel.length > 0 && (
                 <>
-                <hr className='titleBarProj bg-color7' id='BarFar'/>
+                <hr className={`titleBarProj bg-color7 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`} id='BarFar'/>
                 <div className='carouselDiv flex-space-evenly'>
                     <div className="arrowDiv hover-pointer" onClick={() => changeCarouselIndex('prev')}>
                     {carouselIndex > 0 && (
@@ -79,7 +80,7 @@ function BigAchievement({displayedProject}) {
                     )}
                     </div>
 
-                    <img src={displayedProject.details.carousel[carouselIndex].image} className='divInCarousel shadow trans-2s hover-pointer hover-shadow' id="buttonBrown" alt={displayedProject.details.carousel[carouselIndex].alt} onClick={() => setDisplayImage(true)}/>
+                    <img src={displayedProject.details.carousel[carouselIndex].image} className='divInCarousel shadow trans-2s hover-pointer hover-shadow' id="buttonAch" alt={displayedProject.details.carousel[carouselIndex].alt} onClick={() => setDisplayImage(true)}/>
                     
                     <div className="arrowDiv hover-pointer" onClick={() => changeCarouselIndex('next')}>
                     {displayedProject.details.carousel.length > carouselIndex + 1 && (
@@ -93,9 +94,9 @@ function BigAchievement({displayedProject}) {
             
             {displayedProject.links && displayedProject.links.length > 0 && (
                 <div className='flex-direction-column flex-align-center'>
-                    <hr className='titleBarProj bg-color7' id='BarFar'/>
+                    <hr className={`titleBarProj bg-color7 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`} id='BarFar'/>
                     {displayedProject.links.map((link, index) => (
-                        <a href={link.url} target='_blank' rel='noreferrer' key={index} className='link bg-color7 text-color4 shadow trans-2s hover-pointer hover-shadow' id='buttonBrown'>
+                        <a href={link.url} target='_blank' rel='noreferrer' key={index} className={`link bg-color7 text-color4 shadow trans-2s hover-pointer hover-shadow ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`} id='buttonAch'>
                             <p>{link.name}</p>
                         </a>
                     ))}

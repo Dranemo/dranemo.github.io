@@ -6,10 +6,10 @@ import ProjectMedal from './Components/ProjectMedal';
 import BigAchievement from './Components/BigAchievements';
 
 import ProjectsFile from './Variables/Texts/ProjectsFile';
-import { TechnoEnum, YearEnum  } from './Variables/Enums';
+import { TechnoEnum, YearEnum, ModeEnum  } from './Variables/Enums';
 import {Medal} from './Variables/ImageGetter';
 
-import { defaultLanguage } from './Variables/Getters';
+import { defaultLanguage, defaultMode } from './Variables/Getters';
 import PagesFile from './Variables/Texts/PagesFile';
 
 function Achievements() {
@@ -84,10 +84,10 @@ function Achievements() {
 
 
     return (
-      <div className='Card bg-color2 text-color1 flex-direction-column text-align-center line-height-1-5'>
+      <div className={`Card bg-color2 text-color1 flex-direction-column text-align-center line-height-1-5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
           <div>
               <h2>{PagesFile.Achievements.Title[defaultLanguage.Langue]}</h2>
-              <hr className='titleBar bg-color5'/>
+              <hr className={`titleBar bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
           </div>
 
 

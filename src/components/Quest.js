@@ -4,10 +4,10 @@ import QuestPart from './Components/QuestPart';
 import '../componentCSS/Card.css';
 import '../componentCSS/Quests.css';
 
-import { QuestTypeEnum, StatusEnum} from './Variables/Enums';
+import { QuestTypeEnum, StatusEnum, ModeEnum} from './Variables/Enums';
 import QuestsFile from './Variables/Texts/QuestsFile';
 import PagesFile from './Variables/Texts/PagesFile';
-import { defaultLanguage } from './Variables/Getters';
+import { defaultLanguage, defaultMode } from './Variables/Getters';
 
 
 // --------------------------------------------------------------------------------------------------------------------
@@ -90,10 +90,10 @@ function Quests() {
             
     return (
             
-    <div className='Card bg-color2 text-color1 text-align-center flex-direction-column'>
+    <div className={`Card bg-color2 text-color1 text-align-center flex-direction-column ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
         <div>
             <h2 className='line-height-1-5'>{PagesFile.Quests.Title[defaultLanguage.Langue]}</h2>
-            <hr className='titleBar bg-color5'/>
+            <hr className={`titleBar bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
         </div>
         <p></p>
 

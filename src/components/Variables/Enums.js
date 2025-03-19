@@ -90,4 +90,15 @@ const YearEnum = {
       }
     }
 
-    export { RarityEnum, NavState, YearEnum, StatusEnum, TechnoEnum, QuestTypeEnum, LanguageEnum };
+    const ModeEnum = {
+      LIGHT: {
+        "English": 'Light Mode',
+        "Français": 'Mode Clair'
+      },
+      DARK: {
+        "English": 'Dark Mode',
+        "Français": 'Mode Sombre'
+      }
+    }
+
+    export { RarityEnum, NavState, YearEnum, StatusEnum, TechnoEnum, QuestTypeEnum, LanguageEnum, ModeEnum };

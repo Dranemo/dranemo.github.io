@@ -7,15 +7,16 @@ import Github from '../assets/images/github.png';
 import '../componentCSS/Support.css';
 
 import PagesFile from './Variables/Texts/PagesFile';
-import { defaultLanguage } from './Variables/Getters';
+import { defaultLanguage, defaultMode } from './Variables/Getters';
+import { ModeEnum } from './Variables/Enums';
 
 function Support() {
 
   return (
-    <div className='Card bg-color2 text-color1 line-height-1-5 flex-direction-column text-align-center'>
+    <div className={`Card bg-color2 text-color1 line-height-1-5 flex-direction-column text-align-center ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
         <div>
             <h2>{PagesFile.Support.Title[defaultLanguage.Langue]}</h2>
-            <hr className='titleBar bg-color5'/>
+            <hr className={`titleBar bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
         </div>
         <p></p>
         <div className='flex-space-evenly'>

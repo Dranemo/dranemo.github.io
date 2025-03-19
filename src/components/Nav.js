@@ -1,41 +1,25 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import '../componentCSS/Nav.css';
 
-import { NavState } from './Variables/Enums';
-import { defaultLanguage, getFlagLanguage } from './Variables/Getters';
+import { NavState, ModeEnum } from './Variables/Enums';
+import { defaultLanguage, getFlagLanguage, defaultMode } from './Variables/Getters';
 import PagesFile from './Variables/Texts/PagesFile';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
 
 
-function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMouseEnter, handleMouseLeave }) {
+
+function Nav({ navState, changeNavState, changeLanguage, changeMode, hoveredButton, handleMouseEnter, handleMouseLeave }) {
 
     
   return (
     <div className='Nav flex-direction-column'>
 
-        <div className='Menu bg-color8 text-color3 flex-direction-column shadow'>
-            {/*{navState !== NavState.skills ? (
-                <button className='button-as-text'
-                        onClick={() => changeNavState(NavState.skills)}
-                        onMouseEnter={() => handleMouseEnter(NavState.skills)}
-                        onMouseLeave={handleMouseLeave}
-                >
-                    {hoveredButton === NavState.skills ? '>' : '\u00A0'}
-                    &nbsp;Skills&nbsp;&nbsp;
-                </button>
-            ) : (
-                <button className='button-as-text'
-                        onClick={() => changeNavState(NavState.main)}
-                        onMouseEnter={() => handleMouseEnter(NavState.main)}
-                        onMouseLeave={handleMouseLeave}
-                >
-                    {hoveredButton === NavState.main ? '>' : '\u00A0'}
-                    &nbsp;Main Menu&nbsp;&nbsp;
-                </button>
-            )}*/}
-
+        <div className={`Menu bg-color8 text-color3 flex-direction-column shadow ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
             {navState !== NavState.quest ? (
                 <button className='button-as-text hover-pointer'
                         onClick={() => changeNavState(NavState.quest)}
@@ -103,6 +87,16 @@ function Nav({ navState, changeNavState, changeLanguage, hoveredButton, handleMo
             >
                 {hoveredButton === 'Language' ? '>' : '\u00A0'}
                 &nbsp;{PagesFile.Nav.Language[defaultLanguage.Langue]}: {defaultLanguage.Langue}
+                &nbsp;&nbsp;
+            </button>
+
+            <button className='button-as-text hover-pointer'
+                    onClick={() => changeMode()}
+                    onMouseEnter={() => handleMouseEnter('Mode')}
+                    onMouseLeave={handleMouseLeave}
+            >
+                {hoveredButton === 'Mode' ? '>' : '\u00A0'}
+                &nbsp;{defaultMode[defaultLanguage.Langue]} <FontAwesomeIcon icon={defaultMode === ModeEnum.LIGHT ? faSun : faMoon} />
                 &nbsp;&nbsp;
             </button>
 

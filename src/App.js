@@ -2,8 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import amagara from './assets/images/bigImages/1024px-0698Amaura.png';
 
-import { NavState, LanguageEnum } from './components/Variables/Enums';
-import { defaultLanguage, setDefaultLanguage } from './components/Variables/Getters';
+import { NavState, LanguageEnum, ModeEnum } from './components/Variables/Enums';
+import { defaultLanguage, setDefaultLanguage, defaultMode, SetDefaultMode } from './components/Variables/Getters';
 import PagesFile from './components/Variables/Texts/PagesFile';
 
 import './App.css';
@@ -42,6 +42,15 @@ function App() {
         const nextIndex = (currentIndex + 1) % languagesPossible.length;
         setCurrentIndex(nextIndex);
         setDefaultLanguage(languagesPossible[nextIndex]);
+    };
+
+    const [currentMode, setCurrentMode] = useState(defaultMode);
+    const changeMode = () => {
+      setCurrentMode((prevMode) => {
+        const newMode = prevMode === ModeEnum.DARK ? ModeEnum.LIGHT : ModeEnum.DARK;
+        SetDefaultMode(newMode); // Utilisez la nouvelle valeur calculée
+        return newMode;
+      });
     };
 
 
@@ -93,12 +102,13 @@ function App() {
 
 
   return (
-    <div>
+    <div className='App'>
       <header>
         <Nav 
           navState={navState} 
           changeNavState={changeNavState}
           changeLanguage={goToNextLanguage}
+          changeMode={changeMode}
           hoveredButton={hoveredButton}
           handleMouseEnter={handleMouseEnter}
           handleMouseLeave={handleMouseLeave}

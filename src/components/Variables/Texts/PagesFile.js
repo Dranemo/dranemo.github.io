@@ -191,6 +191,11 @@ const PagesFile = {
         Language: {
             "English": "Language",
             "Français": "Langue"
+        },
+
+        Mode: {
+            "English": "Mode",
+            "Français": "Mode"
         }
     }
 }

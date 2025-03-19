@@ -1,7 +1,7 @@
 import { Medal, Flag } from './ImageGetter';
 
 
-import { RarityEnum, StatusEnum, YearEnum, LanguageEnum } from './Enums';
+import { RarityEnum, StatusEnum, YearEnum, LanguageEnum, ModeEnum } from './Enums';
 
 
 
@@ -9,19 +9,54 @@ import { RarityEnum, StatusEnum, YearEnum, LanguageEnum } from './Enums';
 const getRarityColor = (rarity) => {
     switch (rarity) {
         case RarityEnum.COMMON:
-            return '#737373';
+            switch (defaultMode) {
+                case ModeEnum.LIGHT:
+                    return '#BFBFBF'; // Gris clair pour contraster en mode clair
+                case ModeEnum.DARK:
+                    return '#737373'; // Même couleur que l'original en mode sombre
+                default:
+                    return 'black';
+            }
         case RarityEnum.UNCOMMON:
-            return '#4A7F32 ';
+            switch (defaultMode) {
+                case ModeEnum.LIGHT:
+                    return '#74C365'; // Vert plus clair pour un bon contraste
+                case ModeEnum.DARK:
+                    return '#4A7F32'; // Même couleur que l'original
+                default:
+                    return 'black';
+            }
         case RarityEnum.RARE:
-            return '#004aad';
+            switch (defaultMode) {
+                case ModeEnum.LIGHT:
+                    return '#3686FF'; // Bleu plus clair et vif pour un bon contraste
+                case ModeEnum.DARK:
+                    return '#004aad'; // Même couleur que l'original
+                default:
+                    return 'black';
+            }
         case RarityEnum.EPIC:
-            return '#8c52ff';
+            switch (defaultMode) {
+                case ModeEnum.LIGHT:
+                    return '#B480FF'; // Violet plus doux pour mode clair
+                case ModeEnum.DARK:
+                    return '#7A3D9B'; // Même couleur que l'original
+                default:
+                    return 'black';
+            }
         case RarityEnum.LEGENDARY:
-            return '#FFB800 '; 
+            switch (defaultMode) {
+                case ModeEnum.LIGHT:
+                    return '#B88D3C'; // Jaune plus doux mais toujours doré
+                case ModeEnum.DARK:
+                    return '#B77C1A'; // Même couleur que l'original
+                default:
+                    return 'black';
+            }
         default:
             return 'black';
     }
-  };
+};
 
 
   const getMedalImage = (rarity) => {
@@ -63,11 +98,32 @@ const getMedalImageWhole = (rarity) => {
 const getStatusColor = (status) => {
     switch (status) {
         case StatusEnum.IN_PROGRESS:
-            return '#9e582c';
+            switch (defaultMode) {
+                case ModeEnum.LIGHT:
+                    return '#FFC66D';
+                case ModeEnum.DARK:
+                    return '#9e582c';
+                default:
+                    return 'black';
+            }
         case StatusEnum.COMPLETED:
-            return '#4A7F32 ';
+            switch (defaultMode) {
+                case ModeEnum.LIGHT:
+                    return '#A0FF7A ';
+                case ModeEnum.DARK:
+                    return '#4A7F32 ';
+                default:
+                    return 'black';
+            }
         case StatusEnum.NOT_STARTED:
-            return '#B22222  ';
+            switch (defaultMode) {
+                case ModeEnum.LIGHT:
+                    return '#FF6B6B ';
+                case ModeEnum.DARK:
+                    return '#B22222  ';
+                default:
+                    return 'black';
+            }
         default:
             return 'black';
     }
@@ -77,6 +133,11 @@ var defaultLanguage = LanguageEnum.FR;
 const setDefaultLanguage = (language) => {
     defaultLanguage = language;
     document.documentElement.lang = language.html;
+}
+
+var defaultMode = ModeEnum.DARK;
+const SetDefaultMode = (mode) => {
+    defaultMode = mode;
 }
 
 const getFlagLanguage = (language) => {
@@ -92,4 +153,4 @@ const getFlagLanguage = (language) => {
 
 
 
-  export { getRarityColor, getMedalImage, getMedalImageWhole, getStatusColor, defaultLanguage, setDefaultLanguage, getFlagLanguage };
+  export { getRarityColor, getMedalImage, getMedalImageWhole, getStatusColor, defaultLanguage, setDefaultLanguage, getFlagLanguage, defaultMode, SetDefaultMode };
