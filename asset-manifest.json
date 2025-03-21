@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fbab650d.css",
-    "main.js": "/static/js/main.a722f979.js",
+    "main.css": "/static/css/main.54c915c8.css",
+    "main.js": "/static/js/main.ad842149.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/goal.png": "/static/media/goal.65ec283ca3df06537648.png",
     "static/media/game1.png": "/static/media/game1.fd82cef16b84b9a94df7.png",
@@ -22,7 +22,6 @@
     "static/media/scaling.png": "/static/media/scaling.90cce81c6f91356ee0ca.png",
     "static/media/RecipeNew.png": "/static/media/RecipeNew.0edac39d18a69e93ff49.png",
     "static/media/Recipe.png": "/static/media/Recipe.6aa0eb505703c7cfb054.png",
-    "static/media/1024px-0698Amaura.png": "/static/media/1024px-0698Amaura.82138810ab25c81f0403.png",
     "static/media/CV_English.pdf": "/static/media/CV_English.c758a0a0e77ec39c7076.pdf",
     "static/media/CV_French.pdf": "/static/media/CV_French.d5d0e4ae8e286ab90958.pdf",
     "static/media/VxV_Sample.png": "/static/media/VxV_Sample.9a16ee9dc3aa0c3d5fde.png",
@@ -60,12 +59,12 @@
     "static/media/ArrowRight.png": "/static/media/ArrowRight.816f26f25988887ce4f0.png",
     "static/media/2.png": "/static/media/2.e83c17c305c5587be9fe.png",
     "index.html": "/index.html",
-    "main.fbab650d.css.map": "/static/css/main.fbab650d.css.map",
-    "main.a722f979.js.map": "/static/js/main.a722f979.js.map",
+    "main.54c915c8.css.map": "/static/css/main.54c915c8.css.map",
+    "main.ad842149.js.map": "/static/js/main.ad842149.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbab650d.css",
-    "static/js/main.a722f979.js"
+    "static/css/main.54c915c8.css",
+    "static/js/main.ad842149.js"
   ]
 }
