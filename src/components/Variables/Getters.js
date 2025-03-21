@@ -140,6 +140,11 @@ const SetDefaultMode = (mode) => {
     defaultMode = mode;
 }
 
+var isMobile = false;
+const setIsMobile = (value) => {
+    isMobile = value;
+}
+
 const getFlagLanguage = (language) => {
     switch (language) {
         case LanguageEnum.FR:
@@ -153,4 +158,4 @@ const getFlagLanguage = (language) => {
 
 
 
-  export { getRarityColor, getMedalImage, getMedalImageWhole, getStatusColor, defaultLanguage, setDefaultLanguage, getFlagLanguage, defaultMode, SetDefaultMode };
+  export { getRarityColor, getMedalImage, getMedalImageWhole, getStatusColor, defaultLanguage, setDefaultLanguage, getFlagLanguage, defaultMode, SetDefaultMode, isMobile, setIsMobile };

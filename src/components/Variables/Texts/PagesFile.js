@@ -13,6 +13,12 @@ const PagesFile = {
             "English": "Please check back later, or use the desktop version!",
             "Français": "Veuillez revenir plus tard, ou utilisez la version bureau !"
         },
+
+
+        BetterOnDesktop: {
+            "English": "For the best experience, please view this portfolio on a desktop.",
+            "Français": "Pour une meilleure expérience, veuillez consulter ce portfolio sur un ordinateur."
+        },
     },
 
 

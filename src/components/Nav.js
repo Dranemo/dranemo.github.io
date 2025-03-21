@@ -3,7 +3,7 @@ import React, { useState, useEffect }from 'react';
 import '../componentCSS/Nav.css';
 
 import { NavState, ModeEnum } from './Variables/Enums';
-import { defaultLanguage, getFlagLanguage, defaultMode } from './Variables/Getters';
+import { defaultLanguage, getFlagLanguage, defaultMode, isMobile } from './Variables/Getters';
 import PagesFile from './Variables/Texts/PagesFile';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,38 +14,13 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 
+
 function Nav({ navState, changeNavState, changeLanguage, changeMode, hoveredButton, handleMouseEnter, handleMouseLeave }) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const changeMenuOpen = () => {
         setIsMenuOpen((prevMenuOpen) => !prevMenuOpen);
     };
-
-
-
-
-    // Détecter si la page est affichée sur un téléphone
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-      const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
-      };
-  
-      // Vérifier la taille de la fenêtre au chargement
-      handleResize();
-  
-      // Ajouter un écouteur d'événement pour les changements de taille de la fenêtre
-      window.addEventListener('resize', handleResize);
-  
-      // Nettoyer l'écouteur d'événement lors du démontage du composant
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-
-
-
   
     // Afficher un message si la page est affichée sur un téléphone
     if (isMobile) {
