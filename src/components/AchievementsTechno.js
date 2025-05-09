@@ -14,6 +14,7 @@ import PagesFile from './Variables/Texts/PagesFile';
 
 function Achievements() {
   {/*********************** Display Medals **********************/}
+    const [FeaturedAchievements, setFeaturedAchievements] = useState([]);
     const [UEAchievements, setUEAchievements] = useState([]);
     const [GodotAchievements, setGodotAchievements] = useState([]);
     const [UnityAchievements, setUnityAchievements] = useState([]);
@@ -22,6 +23,8 @@ function Achievements() {
     const [OtherAchievements, setOtherAchievements] = useState([]);
 
     useEffect(() => {
+      const featuredAchievement = [];
+
       const ueAchievements = [];
       const godotAchievements = [];
       const unityAchievements = [];
@@ -32,6 +35,10 @@ function Achievements() {
 
       ProjectsFile.forEach((project) => {
         if(project.show === false) return;
+
+        if (project.featured) {
+            featuredAchievement.push(project);
+        }
 
           switch (project.TechnoEnum) {
               case TechnoEnum.UNREALENGINE:
@@ -55,6 +62,8 @@ function Achievements() {
           }
       });
 
+        setFeaturedAchievements(featuredAchievement);
+
         setUEAchievements(ueAchievements);
         setGodotAchievements(godotAchievements);
         setUnityAchievements(unityAchievements);
@@ -62,6 +71,46 @@ function Achievements() {
         setCSharpAchievements(csharpAchievements);
         setOtherAchievements(otherAchievements);
     }, []);
+
+
+
+    const [FeaturedHidden, SetFeaturedHidden] = useState(false);
+    const [UEHidden, SetUEHidden] = useState(true);
+    const [GodotHidden, SetGodotHidden] = useState(true);
+    const [UnityHidden, SetUnityHidden] = useState(true);
+    const [CPPHidden, SetCPPHidden] = useState(true);
+    const [CSHidden, SetCSHidden] = useState(true);
+    const [OtherHidden, SetOtherHidden] = useState(true);
+
+
+    const changeStateHidden = (technoEnum) => {
+      if(technoEnum === "featured") {
+        SetFeaturedHidden(!FeaturedHidden);
+        return;
+      }
+
+      switch (technoEnum) {
+        case TechnoEnum.UNREALENGINE:
+          SetUEHidden(!UEHidden);
+          break;
+        case TechnoEnum.GODOT:
+          SetGodotHidden(!GodotHidden);
+          break;
+        case TechnoEnum.UNITY:
+          SetUnityHidden(!UnityHidden);
+          break;
+        case TechnoEnum.CPP:
+          SetCPPHidden(!CPPHidden);
+          break;
+        case TechnoEnum.CSHARP:
+          SetCSHidden(!CSHidden);
+          break;
+        default :
+          SetOtherHidden(!OtherHidden);
+          break;
+      }
+    };
+
 
 
 
@@ -129,24 +178,55 @@ function Achievements() {
 
           {/*********************** Display medals **********************/}
           <div className='bigDivAchievements'>
+          {FeaturedAchievements.length > 0 && (
+            <>
+            <hr className={`titleBar2 bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
+            <div className='DivLogo text-align-center '>
+              <img src={technoImages.featured} alt='Featured' className='TechnoImage' />
+              <h3>Featured:</h3>
+              <button className={`buttonHide bg-color3 shadow trans-2s text-color3 hover-bg-color3 hover-shadow hover-pointer ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`} onClick={() => changeStateHidden("featured")}>{FeaturedHidden ? PagesFile.Achievements.Show[defaultLanguage.Langue] : PagesFile.Achievements.Hide[defaultLanguage.Langue]}</button>
+            </div>
+            {!FeaturedHidden && (
+
+              <div className='divProjects text-align-center flex-space-evenly'>
+
+              {FeaturedAchievements.map((project) => (
+                <ProjectMedal 
+                ProjectStruct={project}
+                showTechno={true}
+                onClick={() => handleProjectClick(project)}
+                />
+              ))}
+
+              </div>
+            )}
+            </>
+          )}
+
+
+
           {UEAchievements.length > 0 && (
             <>
             <hr className={`titleBar2 bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <div className='DivLogo text-align-center '>
               <img src={technoImages.unreal} alt='Unreal Engine' className='TechnoImage' />
               <h3>{TechnoEnum.UNREALENGINE}:</h3>
+              <button className={`buttonHide bg-color3 shadow trans-2s text-color3 hover-bg-color3 hover-shadow hover-pointer ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`} onClick={() => changeStateHidden(TechnoEnum.UNREALENGINE)}>{UEHidden ? PagesFile.Achievements.Show[defaultLanguage.Langue] : PagesFile.Achievements.Hide[defaultLanguage.Langue]}</button>
             </div>
+            {!UEHidden && (
+
               <div className='divProjects text-align-center flex-space-evenly'>
 
               {UEAchievements.map((project) => (
                 <ProjectMedal 
-                    ProjectStruct={project}
-                    showTechno={true}
-                    onClick={() => handleProjectClick(project)}
-                  />
+                ProjectStruct={project}
+                showTechno={true}
+                onClick={() => handleProjectClick(project)}
+                />
               ))}
 
               </div>
+            )}
             </>
           )}
 
@@ -158,17 +238,20 @@ function Achievements() {
             <div className='DivLogo text-align-center '>
               <img src={technoImages.godot} alt='Godot' className='TechnoImage' />
               <h3>{TechnoEnum.GODOT}:</h3>
+              <button className={`buttonHide bg-color3 shadow trans-2s text-color3 hover-bg-color3 hover-shadow hover-pointer ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}  onClick={() => changeStateHidden(TechnoEnum.GODOT)}>{GodotHidden ? PagesFile.Achievements.Show[defaultLanguage.Langue] : PagesFile.Achievements.Hide[defaultLanguage.Langue]}</button>
             </div>
-            <div className='divProjects text-align-center flex-space-evenly'>
-              
-              {GodotAchievements.map((project) => (
-                <ProjectMedal 
-                    ProjectStruct={project}
-                    showTechno={true}
-                    onClick={() => handleProjectClick(project)}
-                  />
-              ))} 
-            </div>
+            {!GodotHidden && (
+              <div className='divProjects text-align-center flex-space-evenly'>
+                
+                {GodotAchievements.map((project) => (
+                  <ProjectMedal 
+                      ProjectStruct={project}
+                      showTechno={true}
+                      onClick={() => handleProjectClick(project)}
+                    />
+                ))} 
+              </div>
+            )}
           </>
           )}
 
@@ -180,8 +263,10 @@ function Achievements() {
             <div className='DivLogo text-align-center '>
               <img src={technoImages.unity} alt='Unity' className='TechnoImage' />
               <h3>{TechnoEnum.UNITY}:</h3>
+              <button className={`buttonHide bg-color3 shadow trans-2s text-color3 hover-bg-color3 hover-shadow hover-pointer ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}  onClick={() => changeStateHidden(TechnoEnum.UNITY)}>{UnityHidden ? PagesFile.Achievements.Show[defaultLanguage.Langue] : PagesFile.Achievements.Hide[defaultLanguage.Langue]}</button>
             </div>
-            <div className='divProjects text-align-center flex-space-evenly'>
+            {!UnityHidden && (
+              <div className='divProjects text-align-center flex-space-evenly'>
               {UnityAchievements.map((project) => (
                 <ProjectMedal
                     ProjectStruct={project}
@@ -190,6 +275,7 @@ function Achievements() {
                   />
               ))}
             </div>
+          )}
           </>
           )}
 
@@ -199,8 +285,10 @@ function Achievements() {
             <div className='DivLogo text-align-center '>
               <img src={technoImages.cpp} alt='CPP' className='TechnoImage' />
               <h3>{TechnoEnum.CPP}:</h3>
+              <button className={`buttonHide bg-color3 shadow trans-2s text-color3 hover-bg-color3 hover-shadow hover-pointer ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}  onClick={() => changeStateHidden(TechnoEnum.CPP)}>{CPPHidden ? PagesFile.Achievements.Show[defaultLanguage.Langue] : PagesFile.Achievements.Hide[defaultLanguage.Langue]}</button>
             </div>
-            <div className='divProjects text-align-center flex-space-evenly'>
+            {!CPPHidden && (
+              <div className='divProjects text-align-center flex-space-evenly'>
 
               {CppAchievements.map((project) => (
                 <ProjectMedal
@@ -210,6 +298,7 @@ function Achievements() {
                   />
               ))}
             </div>
+          )}
           </>
           )}
 
@@ -219,8 +308,10 @@ function Achievements() {
             <div className='DivLogo text-align-center '>
               <img src={technoImages.csharp} alt='CSharp' className='TechnoImage' />
               <h3>{TechnoEnum.CSHARP}:</h3>
+              <button className={`buttonHide bg-color3 shadow trans-2s text-color3 hover-bg-color3 hover-shadow hover-pointer ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}  onClick={() => changeStateHidden(TechnoEnum.CSHARP)}>{CSHidden ? PagesFile.Achievements.Show[defaultLanguage.Langue] : PagesFile.Achievements.Hide[defaultLanguage.Langue]}</button>
             </div>
-            <div className='divProjects text-align-center flex-space-evenly'>
+            {!CSHidden && (
+              <div className='divProjects text-align-center flex-space-evenly'>
               {CSharpAchievements.map((project) => (
                 <ProjectMedal
                     ProjectStruct={project}
@@ -229,6 +320,7 @@ function Achievements() {
                   />
               ))}
             </div>
+          )}
           </>
           )}
 
@@ -237,8 +329,10 @@ function Achievements() {
             <hr className={`titleBar2 bg-color5 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <div className='DivLogo text-align-center '>
               <h3>{PagesFile.Achievements.Other[defaultLanguage.Langue]}:</h3>
+              <button className={`buttonHide bg-color3 shadow trans-2s text-color3 hover-bg-color3 hover-shadow hover-pointer ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}  onClick={() => changeStateHidden()}>{OtherHidden ? PagesFile.Achievements.Show[defaultLanguage.Langue] : PagesFile.Achievements.Hide[defaultLanguage.Langue]}</button>
             </div>
-            <div className='divProjects text-align-center flex-space-evenly'>
+            {!OtherHidden && (
+              <div className='divProjects text-align-center flex-space-evenly'>
               {OtherAchievements.map((project) => (
                 <ProjectMedal
                     ProjectStruct={project}
@@ -247,6 +341,7 @@ function Achievements() {
                   />
               ))} 
             </div>
+          )}
           </>
           )}
 

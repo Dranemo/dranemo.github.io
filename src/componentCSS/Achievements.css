@@ -45,7 +45,15 @@
 }
 
 
+.buttonHide {
+    border: none;
+    font: inherit;
+    text-decoration: none;
 
+    padding: 1vh 3vw;
+    border-radius: 5vw;
+    margin-bottom: 1vh;
+}
 
 
 

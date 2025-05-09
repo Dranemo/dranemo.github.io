@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { getRarityColor, defaultLanguage, defaultMode } from "../Variables/Getters";
 import { Arrow } from '../Variables/ImageGetter';
 
 import '../../componentCSS/Components/BigAchievement.css';
-import { ModeEnum } from '../Variables/Enums';
+import { ModeEnum, RewardsItemEnum, RarityEnum } from '../Variables/Enums';
+import PagesFile from '../Variables/Texts/PagesFile';
 
 
 
@@ -20,6 +21,49 @@ function BigAchievement({displayedProject}) {
             setCarouselIndex(carouselIndex - 1);
         }
     };
+
+
+
+    const [Items, setItems] = useState([]);
+    const [Skills, setSkills] = useState([]);
+    const [Titles, setTitles] = useState([]);
+
+    useEffect(() => {
+        const items = [];
+        const skills = [];
+        const titles = [];
+
+
+      displayedProject.details.rewards.forEach((reward) => {
+
+          switch (reward.type) {
+              case RewardsItemEnum.ITEM:
+                  items.push(reward);
+                  break;
+                case RewardsItemEnum.SKILL:
+                    skills.push(reward);
+                    break;
+                case RewardsItemEnum.TITLE:
+                    titles.push(reward);
+                    break;
+              default:
+                  break;
+          }
+      });
+
+
+    items.sort((a, b) => Object.keys(RarityEnum).indexOf(b.rarity.English.toUpperCase()) - Object.keys(RarityEnum).indexOf(a.rarity.English.toUpperCase()));
+    skills.sort((a, b) => Object.keys(RarityEnum).indexOf(b.rarity.English.toUpperCase()) - Object.keys(RarityEnum).indexOf(a.rarity.English.toUpperCase()));
+    titles.sort((a, b) => Object.keys(RarityEnum).indexOf(b.rarity.English.toUpperCase()) - Object.keys(RarityEnum).indexOf(a.rarity.English.toUpperCase()));
+      
+
+      setItems(items);
+      setSkills(skills);
+      setTitles(titles);
+    }, []);
+
+
+
 
     
 
@@ -52,6 +96,7 @@ function BigAchievement({displayedProject}) {
             <hr className={`titleBarProj bg-color7 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
             <p>{displayedProject.dateDesc[defaultLanguage.Langue]}</p>
             <p>{displayedProject.timeDesc[defaultLanguage.Langue]}</p>
+            <p>{displayedProject.type[defaultLanguage.Langue]}</p>
             <hr className={`titleBarProj bg-color7 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
 
             <div>
@@ -60,13 +105,46 @@ function BigAchievement({displayedProject}) {
 
                     
                 <p className='DescProject' dangerouslySetInnerHTML={{ __html: displayedProject.details.description[defaultLanguage.Langue] }}></p>
-                <ul id='removeStyleList'>
-                    {displayedProject.details.rewards.map((reward, index) => (
-                        <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
-                            - {reward.name[defaultLanguage.Langue]} ({reward.rarity[defaultLanguage.Langue]})
-                        </li>
-                    ))}
-                </ul>
+                
+                {(Titles.length > 0 || Skills.length > 0 || Items.length > 0) && (
+                <>
+                    { Titles.length > 0 && (
+                    <>
+                        <hr className={`titleBarProj bg-color7 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}/>
+                        <p className={`text-underlined text-color3 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}> {PagesFile.Achievements.Rewards[defaultLanguage.Langue]}</p>
+                        <p>{RewardsItemEnum.TITLE[defaultLanguage.Langue]}:</p>
+                        <ul id='removeStyleList'>
+                            {Titles.map((reward, index) => (
+                                <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
+                                    - {reward.name[defaultLanguage.Langue]} ({reward.rarity[defaultLanguage.Langue]})
+                                </li>
+                            ))}
+                        </ul>
+                    </>)}
+
+                    {Skills.length > 0 && (
+                    <>
+                        <p>{RewardsItemEnum.SKILL[defaultLanguage.Langue]}:</p>
+                        <ul id='removeStyleList'>
+                            {Skills.map((reward, index) => (
+                                <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
+                                    - {reward.name[defaultLanguage.Langue]} ({reward.rarity[defaultLanguage.Langue]})
+                                </li>
+                            ))}
+                        </ul>
+                    </>)}
+                    {Items.length > 0 && (
+                    <>
+                        <p>{RewardsItemEnum.ITEM[defaultLanguage.Langue]}:</p>
+                        <ul id='removeStyleList'>
+                            {Items.map((reward, index) => (
+                                <li key={index} style={{ color: getRarityColor(reward.rarity) }}>
+                                    - {reward.name[defaultLanguage.Langue]} ({reward.rarity[defaultLanguage.Langue]})
+                                </li>
+                            ))}
+                        </ul>
+                    </>)}
+                </>)}
             </div>
 
 

@@ -41,8 +41,8 @@ const PagesFile = {
             "Français": "Niveau (Âge) : "
         },
         Guild: {
-            "English": "Guild (Job): Student",
-            "Français": "Guilde (Métier) : Étudiant"
+            "English": "Guild (Job): Gameplay Programmer (Student)",
+            "Français": "Guilde (Métier) : Développeur Gameplay (Etudiant)"
         },
         Server: {
             "English": "Server: France",
@@ -183,7 +183,20 @@ const PagesFile = {
         Other: {
             "English": "Other",
             "Français": "Autres"
-        }
+        },
+        Show: {
+            "English" : "Show",
+            "Français" : "Montrer"
+        },
+        Hide: {
+            "English" : "Hide",
+            "Français" : "Cacher"
+        },
+        
+        Rewards: {
+            "English": "Rewards:",
+            "Français": "Récompenses :"
+        },
     },
 
     Support: {

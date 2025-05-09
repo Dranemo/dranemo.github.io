@@ -13,13 +13,13 @@
 
 @media (min-width: 601px) {
     .ProjectPart {
-        border-radius: 1vh;    
+        border-radius: 1vw;    
         margin: 1%;
         width: 20%;
     }
 
     .ProjectTitle {
-        margin-top: 50%;
+        margin-top: 20%;
     }
 }
 

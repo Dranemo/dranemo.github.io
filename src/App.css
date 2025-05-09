@@ -102,11 +102,6 @@ body {
   transition: .1s ease-in-out;
 }
 
-.bg-color8 {
-  background-color: #906e70;
-  transition: .1s ease-in-out;
-}
-
 
 
 
@@ -163,10 +158,6 @@ body {
 
 .bg-color7.light-mode {
   background-color: #b0e3e4;
-}
-
-.bg-color8.light-mode {
-  background-color: #6f9190;
 }
 
 /* Couleurs de texte inversées */

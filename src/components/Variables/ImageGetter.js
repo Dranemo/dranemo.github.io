@@ -26,6 +26,7 @@ const WIP = require('../../assets/images/bigImages/WIP.png');
 const Lines = require('../../assets/images/lines.png');
 
 const technoImages = {
+    featured: require('../../assets/images/logos/featured.png'),
     unreal: require('../../assets/images/logos/unreal.png'),
     unity: require('../../assets/images/logos/unity.png'),
     csharp: require('../../assets/images/logos/cs.png'),
@@ -48,6 +49,7 @@ const BigImageGetter = {
     projectHoverRacing: require('../../assets/images/bigImages/HoverRacing.png'),
     projectCookingFry: require('../../assets/images/bigImages/beef_Steak_Cooked.png'),
     projectUnityShaders: require('../../assets/images/bigImages/Shaders.png'),
+    projectDreamVillage: require('../../assets/images/bigImages/DreamVillage.png'),
 }
 
 const SmallImageGetter = {
@@ -104,6 +106,12 @@ const SmallImageGetter = {
         {image: require('../../assets/images/smallImages/Shaders/Mountain.png'), alt: 'Shaders'},
         {image: require('../../assets/images/smallImages/Shaders/Landscape.png'), alt: 'Shaders'},
         {image: require('../../assets/images/smallImages/Shaders/Valley.png'), alt: 'Shaders'},
+    ],
+    projectDreamVillage: [
+        {image: require('../../assets/images/smallImages/DreamVillage/MainVillage.jpg'), alt: 'DreamVillage'},
+        {image: require('../../assets/images/smallImages/DreamVillage/Tuto.png'), alt: 'DreamVillage'},
+        {image: require('../../assets/images/smallImages/DreamVillage/EditMode.jpg'), alt: 'DreamVillage'},
+        {image: require('../../assets/images/smallImages/DreamVillage/DreamMachine.jpg'), alt: 'DreamVillage'},
     ],
 }
 

@@ -21,6 +21,21 @@ const RarityEnum = {
     }
   };
 
+const RewardsItemEnum = {
+  ITEM: {
+    "English": 'Item',
+    "Français": 'Objet'
+  },
+  SKILL: {
+    "English": 'Skill',
+    "Français": 'Compétence'
+  },
+  TITLE: {
+    "English": 'Title',
+    "Français": 'Titre'
+  }
+};
+
 
 
   const NavState = {
@@ -101,4 +116,4 @@ const YearEnum = {
       }
     }
 
-    export { RarityEnum, NavState, YearEnum, StatusEnum, TechnoEnum, QuestTypeEnum, LanguageEnum, ModeEnum };
+    export { RarityEnum, RewardsItemEnum, NavState, YearEnum, StatusEnum, TechnoEnum, QuestTypeEnum, LanguageEnum, ModeEnum };

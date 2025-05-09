@@ -1,6 +1,7 @@
 
 import { BigImageGetter, SmallImageGetter } from '../ImageGetter';
-import { TechnoEnum, RarityEnum, YearEnum } from '../Enums';
+import { TechnoEnum, RarityEnum, YearEnum, RewardsItemEnum } from '../Enums';
+import { type } from '@testing-library/user-event/dist/type';
 
 const ProjectsFile = [
 
@@ -42,31 +43,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Interactive Portfolio",
-                        "Français": "[Objet] Portfolio Interactif"
+                        "English": "Interactive Portfolio",
+                        "Français": "Portfolio Interactif"
                     },
-                    rarity: RarityEnum.EPIC 
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] React Development",
-                        "Français": "[Compétence] Développement React"
+                        "English": "React Development",
+                        "Français": "Développement React"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] UI/UX Design",
-                        "Français": "[Compétence] Conception UI/UX"
+                        "English": "UI/UX Design",
+                        "Français": "Conception UI/UX"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Aspiring Web Developer",
-                        "Français": "[Titre] Développeur Web Aspitant"
+                        "English": "Aspiring Web Developer",
+                        "Français": "Développeur Web Aspitant"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectPortfolio
@@ -81,9 +86,98 @@ const ProjectsFile = [
 
     
 // ----------------------------------------------------------------------- 3rd Year ----------------------------------------------------------------------- //
+    // Dream Village Mars - Avril 2025
+    {
+        show: true,
+        featured: true,
+
+        badgeTitle: {
+            "English": "Dream Village",
+            "Français": "Dream Village"
+        },
+        badgeImg: { image: BigImageGetter.projectDreamVillage, rarity: YearEnum.THIRD },
+        type: {
+            "English": "Group - School Project",
+            "Français": "Groupe - Projet Scolaire"
+        },
+        TechnoEnum: TechnoEnum.UNITY,
+        techno: {
+            "English": "Unity",
+            "Français": "Unity"
+        },
+        dateDesc: {
+            "English": "March - April 2025",
+            "Français": "Mars - Avril 2025"
+        },
+        timeDesc: {
+            "English": "2 months",
+            "Français": "2 mois"
+        },
+        details: {
+            title: {
+                "English": "Dream Village - Village Management Simulation",
+                "Français": "Dream Village - Simulation de Gestion de Village"
+            },
+            description: {
+                "English": "In <span style='font-weight: 900;'>Dream Village</span>, step into the shoes of a mayor by day and a dreambringer by night. Manage your village, gain the trust of its inhabitants, and decorate the town to their liking. At night, use your secret abilities as a dreambringer to craft dreams that positively affect the villagers, helping them wake up happier and more motivated. With a unique blend of management, customization, and light strategy, Dream Village offers a heartwarming and original gameplay experience.",
+                "Français": "Dans <span style='font-weight: 900;'>Dream Village</span>, incarnez un maire le jour et un porte-rêves la nuit. Gérez votre village, gagnez la confiance de ses habitants et décorez la ville selon leurs goûts. La nuit, utilisez vos capacités secrètes de porte-rêves pour créer des rêves qui affectent positivement les villageois, les aidant à se réveiller plus heureux et motivés. Avec un mélange unique de gestion, personnalisation et stratégie légère, Dream Village offre une expérience de jeu chaleureuse et originale."
+                },
+            rewards: [
+                { 
+                    name: {
+                        "English": "Dream Village Decoration",
+                        "Français": "Décoration de Village de Rêve"
+                    },
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
+                },
+                { 
+                    name: {
+                        "English": "Village Management",
+                        "Français": "Gestion de Village"
+                    },
+                    rarity: RarityEnum.RARE,
+                    type: RewardsItemEnum.SKILL
+                },
+                { 
+                    name: {
+                        "English": "Dream Crafting",
+                        "Français": "Création de Rêves"
+                    },
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
+                },
+                { 
+                    name: {
+                        "English": "Dreambringer Mayor",
+                        "Français": "Maire Porte-Rêves"
+                    },
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.TITLE
+                },
+                { 
+                    name: {
+                        "Français": "Grand Prix du jury, Gaming Campus Award 2025",
+                        "English": "Jury Grand Prize, Gaming Campus Award 2025"
+                    },
+                    rarity: RarityEnum.LEGENDARY ,
+                    type: RewardsItemEnum.TITLE
+                }
+            ],
+            carousel: SmallImageGetter.projectDreamVillage
+        },
+        links: [
+            {
+                name: "Itch.io",
+                url: "https://dranemo.Itch.io/dream-village"
+            }
+        ]
+    },
+
     // HoverRacing Mars 2025
     {
         show: true,
+        featured: true,
 
         badgeTitle: {
             "English": "Hover Racing",
@@ -210,31 +304,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Carnival Prototype",
-                        "Français": "[Objet] Prototype de Carnaval"
+                        "English": "Carnival Prototype",
+                        "Français": "Prototype de Carnaval"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] Unreal Engine Blueprints", 
-                        "Français": "[Compétence] Blueprints Unreal Engine"
+                        "English": "Unreal Engine Blueprints", 
+                        "Français": "Blueprints Unreal Engine"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Game Prototyping",
-                        "Français": "[Compétence] Prototypage de Jeu"
+                        "English": "Game Prototyping",
+                        "Français": "Prototypage de Jeu"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Blueprint Developer", 
-                        "Français": "[Titre] Développeur Blueprint"
+                        "English": "Blueprint Developer", 
+                        "Français": "Développeur Blueprint"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectCarnival
@@ -280,31 +378,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Cooking Fry Recipe Creation",
-                        "Français": "[Objet] Création de Recettes Cooking Fry"
+                        "English": "Cooking Fry Recipe Creation",
+                        "Français": "Création de Recettes Cooking Fry"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] UI Development",
-                        "Français": "[Compétence] Développement UI"
+                        "English": "UI Development",
+                        "Français": "Développement UI"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] 3D Game Interaction",
-                        "Français": "[Compétence] Interaction Jeu 3D"
+                        "English": "3D Game Interaction",
+                        "Français": "Interaction Jeu 3D"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] UI Cooking Beginner",
-                        "Français": "[Titre] Débutant UI Cuisine"
+                        "English": "UI Cooking Beginner",
+                        "Français": "Débutant UI Cuisine"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectCookingFry
@@ -359,31 +461,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Shader Graph Environment",
-                        "Français": "[Objet] Environnement Shader Graph"
+                        "English": "Shader Graph Environment",
+                        "Français": "Environnement Shader Graph"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] Shader Development",
-                        "Français": "[Compétence] Développement de Shaders"
+                        "English": "Shader Development",
+                        "Français": "Développement de Shaders"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Water Simulation",
-                        "Français": "[Compétence] Simulation d'Eau"
+                        "English": "Water Simulation",
+                        "Français": "Simulation d'Eau"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Shader Newcomer",
-                        "Français": "[Titre] Nouveau dans les Shaders"
+                        "English": "Shader Newcomer",
+                        "Français": "Nouveau dans les Shaders"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectUnityShaders
@@ -403,6 +509,7 @@ const ProjectsFile = [
     // The Final Exit Novembre 2024
     {
         show:true,
+        featured: true,
 
         badgeTitle: {
             "English": "The Final Exit",
@@ -438,38 +545,43 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] The Final Exit Button",
-                        "Français": "[Objet] Bouton de La Dernière Sortie"
+                        "English": "The Final Exit Button",
+                        "Français": "Bouton de La Dernière Sortie"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] Unity Development",
-                        "Français": "[Compétence] Développement Unity"
+                        "English": "Unity Development",
+                        "Français": "Développement Unity"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Horror Game Design",
-                        "Français": "[Compétence] Conception de Jeu d'Horreur"
+                        "English": "Horror Game Design",
+                        "Français": "Conception de Jeu d'Horreur"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Audio and Environmental Cues",
-                        "Français": "[Compétence] Indices Sonores et Environnementaux"
+                        "English": "Audio and Environmental Cues",
+                        "Français": "Indices Sonores et Environnementaux"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Hotel Escape Artist",
-                        "Français": "[Titre] Artiste de l'Évasion Hôtelière"
+                        "English": "Hotel Escape Artist",
+                        "Français": "Artiste de l'Évasion Hôtelière"
                     },
-                    rarity: RarityEnum.EPIC 
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectTheFinalExit
@@ -524,31 +636,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Pathfinding Grid Simulation",
-                        "Français": "[Objet] Simulation de Grille de Recherche de Chemin"
+                        "English": "Pathfinding Grid Simulation",
+                        "Français": "Simulation de Grille de Recherche de Chemin"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] C++ Development",
-                        "Français": "[Compétence] Développement C++"
+                        "English": "C++ Development",
+                        "Français": "Développement C++"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Algorithm Design",
-                        "Français": "[Compétence] Conception d'Algorithmes"
+                        "English": "Algorithm Design",
+                        "Français": "Conception d'Algorithmes"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Pathfinding Explorer",
-                        "Français": "[Titre] Explorateur de Recherche de Chemin"
+                        "English": "Pathfinding Explorer",
+                        "Français": "Explorateur de Recherche de Chemin"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectPathfinding
@@ -598,38 +714,43 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Bran Castle Defenders",
-                        "Français": "[Objet] Défenseurs du Château de Bran"
+                        "English": "Bran Castle Defenders",
+                        "Français": "Défenseurs du Château de Bran"
                     },
-                    rarity: RarityEnum.EPIC 
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] Unity Development",
-                        "Français": "[Compétence] Développement Unity"
+                        "English": "Unity Development",
+                        "Français": "Développement Unity"
                     },
-                    rarity: RarityEnum.EPIC 
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] 2D Game Design",
-                        "Français": "[Compétence] Conception de Jeu 2D"
+                        "English": "2D Game Design",
+                        "Français": "Conception de Jeu 2D"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Resource Management",
-                        "Français": "[Compétence] Gestion des Ressources"
+                        "English": "Resource Management",
+                        "Français": "Gestion des Ressources"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Vampire Lord of Bran",
-                        "Français": "[Titre] Seigneur Vampire de Bran"
+                        "English": "Vampire Lord of Bran",
+                        "Français": "Seigneur Vampire de Bran"
                     },
-                    rarity: RarityEnum.EPIC 
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectBranCastle
@@ -649,6 +770,7 @@ const ProjectsFile = [
     // Build to Scale Août 2024
     {
         show: true,
+        featured: true,
 
         badgeTitle: {
             "English": "Build to Scale (Game Jam GMTK 2024)",
@@ -684,38 +806,43 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] GMTK 2024 Submission (Build to Scale)",
-                        "Français": "[Objet] Soumission GMTK 2024 (Build to Scale)"
+                        "English": "GMTK 2024 Submission (Build to Scale)",
+                        "Français": "Soumission GMTK 2024 (Build to Scale)"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] Unity Development",
-                        "Français": "[Compétence] Développement Unity"
+                        "English": "Unity Development",
+                        "Français": "Développement Unity"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Game Prototyping",
-                        "Français": "[Compétence] Prototypage de Jeu"
+                        "English": "Game Prototyping",
+                        "Français": "Prototypage de Jeu"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Solo Game Jam Developer",
-                        "Français": "[Titre] Développeur Solo de Game Jam"
+                        "English": "Solo Game Jam Developer",
+                        "Français": "Développeur Solo de Game Jam"
                     },
-                    rarity: RarityEnum.EPIC 
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.TITLE
                 },
                 { 
                     name: {
-                        "English": "[Skill] Rapid Problem Solving",
-                        "Français": "[Compétence] Résolution de Problèmes Rapide"
+                        "English": "Rapid Problem Solving",
+                        "Français": "Résolution de Problèmes Rapide"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 }
             ],
             carousel: SmallImageGetter.projectBuildToScale
@@ -770,31 +897,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Custom OpenGL Engine",
-                        "Français": "[Objet] Moteur OpenGL Personnalisé"
+                        "English": "Custom OpenGL Engine",
+                        "Français": "Moteur OpenGL Personnalisé"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] OpenGL Rendering",
-                        "Français": "[Compétence] Rendu OpenGL"
+                        "English": "OpenGL Rendering",
+                        "Français": "Rendu OpenGL"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Engine Architecture",
-                        "Français": "[Compétence] Architecture de Moteur"
+                        "English": "Engine Architecture",
+                        "Français": "Architecture de Moteur"
                     },
-                    rarity: RarityEnum.EPIC 
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Game Engine Apprentice",
-                        "Français": "[Titre] Apprenti Moteur de Jeu"
+                        "English": "Game Engine Apprentice",
+                        "Français": "Apprenti Moteur de Jeu"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectVxVEngine
@@ -843,31 +974,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Fox League Soccer Match",
-                        "Français": "[Objet] Match de Football Fox League"
+                        "English": "Fox League Soccer Match",
+                        "Français": "Match de Football Fox League"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] Unity Development",
-                        "Français": "[Compétence] Développement Unity"
+                        "English": "Unity Development",
+                        "Français": "Développement Unity"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Multiplayer Game Design",
-                        "Français": "[Compétence] Conception de Jeu Multijoueur"
+                        "English": "Multiplayer Game Design",
+                        "Français": "Conception de Jeu Multijoueur"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Unity Soccer Rookie",
-                        "Français": "[Titre] Débutant en Football Unity"
+                        "English": "Unity Soccer Rookie",
+                        "Français": "Débutant en Football Unity"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectFoxLeague
@@ -922,31 +1057,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Pokéball",
-                        "Français": "[Objet] Pokéball"
+                        "English": "Pokéball",
+                        "Français": "Pokéball"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] C# Development",
-                        "Français": "[Compétence] Développement C#"
+                        "English": "C# Development",
+                        "Français": "Développement C#"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Console Game Design",
-                        "Français": "[Compétence] Conception de Jeux Console"
+                        "English": "Console Game Design",
+                        "Français": "Conception de Jeux Console"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Retro Game Developer",
-                        "Français": "[Titre] Développeur de Jeux Rétro"
+                        "English": "Retro Game Developer",
+                        "Français": "Développeur de Jeux Rétro"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectPokemonASCII
@@ -1001,31 +1140,35 @@ const ProjectsFile = [
                 rewards: [
                     { 
                         name: {
-                            "English": "[Item] Zorya Sisters Dolls",
-                            "Français": "[Objet] Poupées des Sœurs Zorya"
+                            "English": "Zorya Sisters Dolls",
+                            "Français": "Poupées des Sœurs Zorya"
                         },
-                        rarity: RarityEnum.UNCOMMON 
+                        rarity: RarityEnum.UNCOMMON ,
+                        type: RewardsItemEnum.ITEM
                     },
                     { 
                         name: {
-                            "English": "[Skill] Custom Game Engine Development",
-                            "Français": "[Compétence] Développement de Moteur de Jeu Personnalisé"
+                            "English": "Custom Game Engine Development",
+                            "Français": "Développement de Moteur de Jeu Personnalisé"
                         },
-                        rarity: RarityEnum.RARE 
+                        rarity: RarityEnum.RARE ,
+                        type: RewardsItemEnum.SKILL
                     },
                     { 
                         name: {
-                            "English": "[Skill] Puzzle Design",
-                            "Français": "[Compétence] Conception de Puzzles"
+                            "English": "Puzzle Design",
+                            "Français": "Conception de Puzzles"
                         },
-                        rarity: RarityEnum.UNCOMMON 
+                        rarity: RarityEnum.UNCOMMON ,
+                        type: RewardsItemEnum.SKILL
                     },
                     { 
                         name: {
-                            "English": "[Title] Platformer Creator",
-                            "Français": "[Titre] Créateur de Plateforme"
+                            "English": "Platformer Creator",
+                            "Français": "Créateur de Plateforme"
                         },
-                        rarity: RarityEnum.UNCOMMON 
+                        rarity: RarityEnum.UNCOMMON ,
+                        type: RewardsItemEnum.TITLE
                     }
                 ],
                 carousel: SmallImageGetter.projectZoryaSisters
@@ -1075,31 +1218,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Member of the Galactic Police Badge",
-                        "Français": "[Objet] Badge de Membre de la Police Galactique"
+                        "English": "Member of the Galactic Police Badge",
+                        "Français": "Badge de Membre de la Police Galactique"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] Python Programming",
-                        "Français": "[Compétence] Programmation Python"
+                        "English": "Python Programming",
+                        "Français": "Programmation Python"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] Pygame Development",
-                        "Français": "[Compétence] Développement Pygame"
+                        "English": "Pygame Development",
+                        "Français": "Développement Pygame"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Galactic Defender",
-                        "Français": "[Titre] Défenseur Galactique"
+                        "English": "Galactic Defender",
+                        "Français": "Défenseur Galactique"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.TITLE
                 }
 
             ],
@@ -1155,31 +1302,35 @@ const ProjectsFile = [
             rewards: [
                 { 
                     name: {
-                        "English": "[Item] Game of Life Grid",
-                        "Français": "[Objet] Grille du Jeu de la Vie"
+                        "English": "Game of Life Grid",
+                        "Français": "Grille du Jeu de la Vie"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.ITEM
                 },
                 { 
                     name: {
-                        "English": "[Skill] C Programming",
-                        "Français": "[Compétence] Programmation C"
+                        "English": "C Programming",
+                        "Français": "Programmation C"
                     },
-                    rarity: RarityEnum.RARE 
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Skill] SDL Development",
-                        "Français": "[Compétence] Développement SDL"
+                        "English": "SDL Development",
+                        "Français": "Développement SDL"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
                 },
                 { 
                     name: {
-                        "English": "[Title] Cellular Automaton Engineer",
-                        "Français": "[Titre] Ingénieur Automate Cellulaire"
+                        "English": "Cellular Automaton Engineer",
+                        "Français": "Ingénieur Automate Cellulaire"
                     },
-                    rarity: RarityEnum.UNCOMMON 
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.TITLE
                 }
             ],
             carousel: SmallImageGetter.projectGameOfLifeC

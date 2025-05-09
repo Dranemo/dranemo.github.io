@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState }from 'react';
 
 import '../componentCSS/Nav.css';
 
@@ -28,7 +28,7 @@ function Nav({ navState, changeNavState, changeLanguage, changeMode, hoveredButt
             <>
             <button className='Lines' onClick={changeMenuOpen}><FontAwesomeIcon className={`text-color1 ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`} icon={faBars} /></button>
             <div className={`Nav flex-direction-column ${isMenuOpen ? '' : 'closed'}`}>
-                <div className={`Menu bg-color8 text-color3 flex-direction-column shadow ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
+                <div className={`Menu bg-color6 text-color3 flex-direction-column shadow ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
                     {navState !== NavState.quest ? (
                         <button className='button-as-text hover-pointer'
                                 onClick={() => {changeNavState(NavState.quest); changeMenuOpen()}}
@@ -97,7 +97,7 @@ function Nav({ navState, changeNavState, changeLanguage, changeMode, hoveredButt
         return (
             <div className='Nav flex-direction-column'>
         
-                <div className={`Menu bg-color8 text-color3 flex-direction-column shadow ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
+                <div className={`Menu bg-color6 text-color3 flex-direction-column shadow ${defaultMode===ModeEnum.LIGHT ? 'light-mode' : ''}`}>
                     {navState !== NavState.quest ? (
                         <button className='button-as-text hover-pointer'
                                 onClick={() => changeNavState(NavState.quest)}
