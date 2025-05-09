@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.54c915c8.css",
-    "main.js": "/static/js/main.ad842149.js",
+    "main.css": "/static/css/main.aefe0423.css",
+    "main.js": "/static/js/main.7dc5c0b6.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/goal.png": "/static/media/goal.65ec283ca3df06537648.png",
     "static/media/game1.png": "/static/media/game1.fd82cef16b84b9a94df7.png",
@@ -11,6 +11,7 @@
     "static/media/boost.png": "/static/media/boost.0d103a782da99499b9f5.png",
     "static/media/Lvl1.png": "/static/media/Lvl1.e06ea9745c496fd9ed96.png",
     "static/media/Lvl2.png": "/static/media/Lvl2.1ea08f1362a6b8d71db8.png",
+    "static/media/Tuto.png": "/static/media/Tuto.bf4805b46a51e97cd9e5.png",
     "static/media/Power.png": "/static/media/Power.eab544bb19f05098199b.png",
     "static/media/Mountain.png": "/static/media/Mountain.48a33c2df43845b49649.png",
     "static/media/Shaders.png": "/static/media/Shaders.48a33c2df43845b49649.png",
@@ -19,6 +20,8 @@
     "static/media/HoverRacing.png": "/static/media/HoverRacing.36382c0cb6f78eba743f.png",
     "static/media/Valley.png": "/static/media/Valley.fe796185f9c1939fef7c.png",
     "static/media/Lvl3.png": "/static/media/Lvl3.12e1e24d68fcb8f95f6e.png",
+    "static/media/EditMode.jpg": "/static/media/EditMode.e5b8da6cb027238306b0.jpg",
+    "static/media/DreamMachine.jpg": "/static/media/DreamMachine.466e46cc953ff3dc8c15.jpg",
     "static/media/scaling.png": "/static/media/scaling.90cce81c6f91356ee0ca.png",
     "static/media/RecipeNew.png": "/static/media/RecipeNew.0edac39d18a69e93ff49.png",
     "static/media/Recipe.png": "/static/media/Recipe.6aa0eb505703c7cfb054.png",
@@ -26,6 +29,7 @@
     "static/media/CV_French.pdf": "/static/media/CV_French.d5d0e4ae8e286ab90958.pdf",
     "static/media/VxV_Sample.png": "/static/media/VxV_Sample.9a16ee9dc3aa0c3d5fde.png",
     "static/media/Cook.png": "/static/media/Cook.af012e38df4934156279.png",
+    "static/media/MainVillage.jpg": "/static/media/MainVillage.0d2cc593bafe5c782fd4.jpg",
     "static/media/takeItem.png": "/static/media/takeItem.65b9d231dd0f02be59f2.png",
     "static/media/goldMedal.png": "/static/media/goldMedal.7a01262297effe6fb4c5.png",
     "static/media/bronzeMedal.png": "/static/media/bronzeMedal.146c7b422ab45f4e442b.png",
@@ -37,6 +41,7 @@
     "static/media/BuildToScale.png": "/static/media/BuildToScale.f612e91e8113a9a7253e.png",
     "static/media/ironMedal.png": "/static/media/ironMedal.6e148214c9e40affeb37.png",
     "static/media/BranCastle.jpg": "/static/media/BranCastle.820e6fd55a135b245d55.jpg",
+    "static/media/DreamVillage.png": "/static/media/DreamVillage.c617df56430b95a9a87d.png",
     "static/media/cs.png": "/static/media/cs.9c24106976ec9609c05b.png",
     "static/media/woodMedal.png": "/static/media/woodMedal.a8bc391a64be257d4256.png",
     "static/media/cpp.png": "/static/media/cpp.cd3d67fc6a64d09c5d22.png",
@@ -55,16 +60,17 @@
     "static/media/Stats.png": "/static/media/Stats.c9e017bf0259d735c12d.png",
     "static/media/1.png": "/static/media/1.fefedb3e16dca81e4beb.png",
     "static/media/PokemonASCII.png": "/static/media/PokemonASCII.306a6525d820ab5eda60.png",
+    "static/media/featured.png": "/static/media/featured.05f3aae23d440e0d293c.png",
     "static/media/Chen.png": "/static/media/Chen.aeb0896cffa80601a086.png",
     "static/media/ArrowRight.png": "/static/media/ArrowRight.816f26f25988887ce4f0.png",
     "static/media/2.png": "/static/media/2.e83c17c305c5587be9fe.png",
     "index.html": "/index.html",
-    "main.54c915c8.css.map": "/static/css/main.54c915c8.css.map",
-    "main.ad842149.js.map": "/static/js/main.ad842149.js.map",
+    "main.aefe0423.css.map": "/static/css/main.aefe0423.css.map",
+    "main.7dc5c0b6.js.map": "/static/js/main.7dc5c0b6.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54c915c8.css",
-    "static/js/main.ad842149.js"
+    "static/css/main.aefe0423.css",
+    "static/js/main.7dc5c0b6.js"
   ]
 }
