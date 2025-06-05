@@ -8,6 +8,7 @@ const ProjectsFile = [
     // Portfolio 
     {
         show: true,
+        featured: false,
 
         badgeTitle: {
             "English": "Portfolio",
@@ -86,7 +87,7 @@ const ProjectsFile = [
 
     
 // ----------------------------------------------------------------------- 3rd Year ----------------------------------------------------------------------- //
-    // Dream Village Mars - Avril 2025
+    // Dream Village Mars - Avril 2025     /////// Featured ///////
     {
         show: true,
         featured: true,
@@ -174,7 +175,7 @@ const ProjectsFile = [
         ]
     },
 
-    // HoverRacing Mars 2025
+    // HoverRacing Mars 2025     /////// Featured ///////
     {
         show: true,
         featured: true,
@@ -506,7 +507,7 @@ const ProjectsFile = [
         ]
     },
 
-    // The Final Exit Novembre 2024
+    // The Final Exit Novembre 2024     /////// Featured ///////
     {
         show:true,
         featured: true,
@@ -767,7 +768,7 @@ const ProjectsFile = [
         ]
     },
 
-    // Build to Scale Août 2024
+    // Build to Scale Août 2024     /////// Featured ///////
     {
         show: true,
         featured: true,
