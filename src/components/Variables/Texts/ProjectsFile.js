@@ -1,7 +1,6 @@
 
 import { BigImageGetter, SmallImageGetter } from '../ImageGetter';
 import { TechnoEnum, RarityEnum, YearEnum, RewardsItemEnum } from '../Enums';
-import { type } from '@testing-library/user-event/dist/type';
 
 const ProjectsFile = [
 
@@ -87,6 +86,102 @@ const ProjectsFile = [
 
     
 // ----------------------------------------------------------------------- 3rd Year ----------------------------------------------------------------------- //
+    // Outer Seasons Juillet - Aout 2025     /////// Featured ///////
+    {
+        show: true,
+        featured: true,
+
+        badgeTitle: {
+            "English": "Outer Seasons (Game Jam GMTK 2025)",
+            "Français": "Outer Seasons (Game Jam GMTK 2025)"
+        },
+        badgeImg: { image: BigImageGetter.projectOuterSeasons, rarity: YearEnum.THIRD },
+        type: {
+            "English": "Solo - Personal Project (GameJam)",
+            "Français": "Solo - Projet Personnel (GameJam)"
+        },
+        TechnoEnum: TechnoEnum.UNITY,
+        techno: {
+            "English": "Unity",
+            "Français": "Unity"
+        },
+        dateDesc: {
+            "English": "August 2025",
+            "Français": "Août 2025"
+        },
+        timeDesc: {
+            "English": "4 days",
+            "Français": "4 jours"
+        },
+        details: {
+title: {
+    "English": "Outer Seasons - Shifting Worlds in a Timeless Loop",
+    "Français": "Outer Seasons - Mondes Changeants dans une Boucle Éternelle"
+},
+description: {
+    "English": "Enter the ever-changing universe of <span style='font-weight: 900;'>Outer Seasons</span>, an atmospheric exploration and puzzle game created for the <span style='font-weight: 900;'>GMTK 2025 Game Jam</span>. Teleported into a mysterious world bound by a <span style='font-weight: 900;'>time loop</span>, you must explore surreal landscapes, uncover hidden secrets, and solve intricate puzzles to piece together its history. A solo project inspired by <span style='font-weight: 900;'>Outer Wilds</span>, blending discovery, mystery, and creativity within just <span style='font-weight: 900;'>96 hours</span>!",
+    "Français": "Plongez dans l’univers en perpétuel changement de <span style='font-weight: 900;'>Outer Seasons</span>, un jeu d’exploration et d’énigmes atmosphérique créé pour le <span style='font-weight: 900;'>GMTK 2025 Game Jam</span>. Téléporté dans un monde mystérieux régi par une <span style='font-weight: 900;'>boucle temporelle</span>, vous devrez parcourir des paysages surréalistes, dévoiler des secrets enfouis et résoudre des énigmes complexes pour en reconstituer l’histoire. Un projet solo inspiré par <span style='font-weight: 900;'>Outer Wilds</span>, alliant découverte, mystère et créativité en seulement <span style='font-weight: 900;'>96 heures</span> !"
+},
+            rewards: [
+                { 
+                    name: {
+                        "English": "GMTK 2025 Submission (Outer Seasons)",
+                        "Français": "Soumission GMTK 2025 (Outer Seasons)"
+                    },
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.ITEM
+                },
+                { 
+                    name: {
+                        "English": "Unity Development",
+                        "Français": "Développement Unity"
+                    },
+                    rarity: RarityEnum.RARE ,
+                    type: RewardsItemEnum.SKILL
+                },
+                { 
+                    name: {
+                        "English": "Game Prototyping",
+                        "Français": "Prototypage de Jeu"
+                    },
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
+                },
+                { 
+                    name: {
+                        "English": "Solo Game Jam Developer",
+                        "Français": "Développeur Solo de Game Jam"
+                    },
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.TITLE
+                },
+                { 
+                    name: {
+                        "English": "Rapid Problem Solving",
+                        "Français": "Résolution de Problèmes Rapide"
+                    },
+                    rarity: RarityEnum.UNCOMMON ,
+                    type: RewardsItemEnum.SKILL
+                },
+                {
+                    name: {
+                        "English": "Placed 187 / 9660 on Narrative",
+                        "Français": "Placé 187 / 9660 sur la Narration"
+                    },
+                    rarity: RarityEnum.EPIC ,
+                    type: RewardsItemEnum.TITLE
+                }
+            ],
+            carousel: SmallImageGetter.projectOuterSeaons
+        },
+        links: [
+            { 
+                name: "Itch.io",
+                url: "https://dranemo.Itch.io/outer-seasons"
+            },
+        ]
+    },
+
     // Dream Village Mars - Avril 2025     /////// Featured ///////
     {
         show: true,
@@ -768,10 +863,10 @@ const ProjectsFile = [
         ]
     },
 
-    // Build to Scale Août 2024     /////// Featured ///////
+    // Build to Scale Août 2024   
     {
         show: true,
-        featured: true,
+        featured: false,
 
         badgeTitle: {
             "English": "Build to Scale (Game Jam GMTK 2024)",

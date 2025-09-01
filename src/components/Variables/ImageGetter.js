@@ -50,6 +50,7 @@ const BigImageGetter = {
     projectCookingFry: require('../../assets/images/bigImages/beef_Steak_Cooked.png'),
     projectUnityShaders: require('../../assets/images/bigImages/Shaders.png'),
     projectDreamVillage: require('../../assets/images/bigImages/DreamVillage.png'),
+    projectOuterSeasons: require('../../assets/images/bigImages/OuterSeasons.png'),
 }
 
 const SmallImageGetter = {
@@ -112,6 +113,14 @@ const SmallImageGetter = {
         {image: require('../../assets/images/smallImages/DreamVillage/Tuto.png'), alt: 'DreamVillage'},
         {image: require('../../assets/images/smallImages/DreamVillage/EditMode.jpg'), alt: 'DreamVillage'},
         {image: require('../../assets/images/smallImages/DreamVillage/DreamMachine.jpg'), alt: 'DreamVillage'},
+    ],
+    projectOuterSeaons: [
+        {image: require('../../assets/images/smallImages/OuterSeasons/LogoBig.png'), alt: 'MainMenu'},
+        {image: require('../../assets/images/smallImages/OuterSeasons/ScreenAltar.png'), alt: 'Altar'},
+        {image: require('../../assets/images/smallImages/OuterSeasons/ScreenChurchMidNight.png'), alt: 'ChurchMidNight'},
+        {image: require('../../assets/images/smallImages/OuterSeasons/ScreenSnowy.png'), alt: 'Snowy'},
+        {image: require('../../assets/images/smallImages/OuterSeasons/ScreenSunny.png'), alt: 'Sunny'},
+        {image: require('../../assets/images/smallImages/OuterSeasons/ScreenText.png'), alt: 'Text'},
     ],
 }
 
