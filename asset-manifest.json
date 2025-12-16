@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.676b4a8d.css",
-    "main.js": "/static/js/main.256c324d.js",
+    "main.js": "/static/js/main.2d54728d.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/goal.png": "/static/media/goal.65ec283ca3df06537648.png",
     "static/media/game1.png": "/static/media/game1.fd82cef16b84b9a94df7.png",
@@ -20,11 +20,16 @@
     "static/media/HoverRacing.png": "/static/media/HoverRacing.36382c0cb6f78eba743f.png",
     "static/media/Valley.png": "/static/media/Valley.fe796185f9c1939fef7c.png",
     "static/media/Lvl3.png": "/static/media/Lvl3.12e1e24d68fcb8f95f6e.png",
+    "static/media/MainMap.jpg": "/static/media/MainMap.c98453daec6843b78ee9.jpg",
     "static/media/ScreenSunny.png": "/static/media/ScreenSunny.5c5b8a3d73da913714c0.png",
     "static/media/EditMode.jpg": "/static/media/EditMode.e5b8da6cb027238306b0.jpg",
     "static/media/ScreenText.png": "/static/media/ScreenText.c634205f6ad6563d24b2.png",
+    "static/media/Grid.jpg": "/static/media/Grid.fa786e7cecfc2a9bca87.jpg",
+    "static/media/Escalator1.jpg": "/static/media/Escalator1.1625fedbe227a0c32712.jpg",
+    "static/media/Light.jpg": "/static/media/Light.46d40f1b9071c8fb0609.jpg",
     "static/media/DreamMachine.jpg": "/static/media/DreamMachine.466e46cc953ff3dc8c15.jpg",
     "static/media/ScreenAltar.png": "/static/media/ScreenAltar.78e5e56b2f8f2dad3b47.png",
+    "static/media/EscalatorPink.jpg": "/static/media/EscalatorPink.402f6332c71c67b809ba.jpg",
     "static/media/scaling.png": "/static/media/scaling.90cce81c6f91356ee0ca.png",
     "static/media/RecipeNew.png": "/static/media/RecipeNew.0edac39d18a69e93ff49.png",
     "static/media/Recipe.png": "/static/media/Recipe.6aa0eb505703c7cfb054.png",
@@ -49,9 +54,11 @@
     "static/media/BranCastle.jpg": "/static/media/BranCastle.820e6fd55a135b245d55.jpg",
     "static/media/ScreenSnowy.png": "/static/media/ScreenSnowy.d216488014b8cdc09c15.png",
     "static/media/DreamVillage.png": "/static/media/DreamVillage.c617df56430b95a9a87d.png",
+    "static/media/MetroFixUp.jpg": "/static/media/MetroFixUp.b81c93aa1ec69dfc559e.jpg",
     "static/media/cs.png": "/static/media/cs.9c24106976ec9609c05b.png",
     "static/media/woodMedal.png": "/static/media/woodMedal.a8bc391a64be257d4256.png",
     "static/media/cpp.png": "/static/media/cpp.cd3d67fc6a64d09c5d22.png",
+    "static/media/golem1.png": "/static/media/golem1.8a03ee0630987c0bc057.png",
     "static/media/unreal.png": "/static/media/unreal.260e6259aef4f040d5a9.png",
     "static/media/IOP.png": "/static/media/IOP.b7c84511891e0eef1dd0.png",
     "static/media/en.png": "/static/media/en.8c19a11f7c1a2993a88a.png",
@@ -73,11 +80,11 @@
     "static/media/2.png": "/static/media/2.e83c17c305c5587be9fe.png",
     "index.html": "/index.html",
     "main.676b4a8d.css.map": "/static/css/main.676b4a8d.css.map",
-    "main.256c324d.js.map": "/static/js/main.256c324d.js.map",
+    "main.2d54728d.js.map": "/static/js/main.2d54728d.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.676b4a8d.css",
-    "static/js/main.256c324d.js"
+    "static/js/main.2d54728d.js"
   ]
 }
